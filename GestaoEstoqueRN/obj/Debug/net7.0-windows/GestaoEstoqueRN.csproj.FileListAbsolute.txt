@@ -8,9 +8,6 @@ C:\Users\mathe\Desktop\GestaoEstoque_RN\GestaoEstoque_RN\GestaoEstoqueRN_git\Ges
 C:\Users\mathe\Desktop\GestaoEstoque_RN\GestaoEstoque_RN\GestaoEstoqueRN_git\GestaoEstoque_RnTelecom\GestaoEstoqueRN\bin\Debug\net7.0-windows\K4os.Compression.LZ4.dll
 C:\Users\mathe\Desktop\GestaoEstoque_RN\GestaoEstoque_RN\GestaoEstoqueRN_git\GestaoEstoque_RnTelecom\GestaoEstoqueRN\bin\Debug\net7.0-windows\K4os.Compression.LZ4.Streams.dll
 C:\Users\mathe\Desktop\GestaoEstoque_RN\GestaoEstoque_RN\GestaoEstoqueRN_git\GestaoEstoque_RnTelecom\GestaoEstoqueRN\bin\Debug\net7.0-windows\K4os.Hash.xxHash.dll
-C:\Users\mathe\Desktop\GestaoEstoque_RN\GestaoEstoque_RN\GestaoEstoqueRN_git\GestaoEstoque_RnTelecom\GestaoEstoqueRN\bin\Debug\net7.0-windows\MetroFramework.Design.dll
-C:\Users\mathe\Desktop\GestaoEstoque_RN\GestaoEstoque_RN\GestaoEstoqueRN_git\GestaoEstoque_RnTelecom\GestaoEstoqueRN\bin\Debug\net7.0-windows\MetroFramework.Fonts.dll
-C:\Users\mathe\Desktop\GestaoEstoque_RN\GestaoEstoque_RN\GestaoEstoqueRN_git\GestaoEstoque_RnTelecom\GestaoEstoqueRN\bin\Debug\net7.0-windows\MetroFramework.dll
 C:\Users\mathe\Desktop\GestaoEstoque_RN\GestaoEstoque_RN\GestaoEstoqueRN_git\GestaoEstoque_RnTelecom\GestaoEstoqueRN\bin\Debug\net7.0-windows\Microsoft.Extensions.DependencyInjection.Abstractions.dll
 C:\Users\mathe\Desktop\GestaoEstoque_RN\GestaoEstoque_RN\GestaoEstoqueRN_git\GestaoEstoque_RnTelecom\GestaoEstoqueRN\bin\Debug\net7.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
 C:\Users\mathe\Desktop\GestaoEstoque_RN\GestaoEstoque_RN\GestaoEstoqueRN_git\GestaoEstoque_RnTelecom\GestaoEstoqueRN\bin\Debug\net7.0-windows\MySql.Data.dll
