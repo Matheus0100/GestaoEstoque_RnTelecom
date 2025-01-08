@@ -1,25 +1,25 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Compile Update="Views\Estoque.cs">
+    <Compile Update="View\Estoque.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Views\AssociarAtivo.cs">
+    <Compile Update="View\AssociarAtivo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Views\ConfirmarCadastro.cs">
+    <Compile Update="View\ConfirmarCadastro.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Views\CadastroEstoque.cs">
+    <Compile Update="View\CadastroEstoque.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Views\CadastroAtivo.cs">
+    <Compile Update="View\CadastroAtivo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Views\Home.cs">
+    <Compile Update="View\Home.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Views\Login.cs">
+    <Compile Update="View\Login.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

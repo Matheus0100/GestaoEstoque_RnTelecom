@@ -18,6 +18,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Update="View\EstoqueAtivos.cs">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
 
   <ItemGroup>
@@ -25,6 +28,11 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Model\" />
+    <Folder Include="Controller\" />
   </ItemGroup>
 
 </Project>
