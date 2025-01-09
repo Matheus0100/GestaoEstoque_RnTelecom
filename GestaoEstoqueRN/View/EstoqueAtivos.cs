@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System;
-using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
@@ -12,16 +10,16 @@ using System.Windows.Forms;
 
 namespace GestaoEstoqueRN
 {
-    public partial class Login : Form
+    public partial class EstoqueAtivos : Form
     {
-        public Login()
+        public EstoqueAtivos()
         {
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-           
+
         }
     }
 }

@@ -1,4 +1,3 @@
-C:\Users\mathe\Desktop\GestaoEstoque_RN\GestaoEstoque_RN\GestaoEstoqueRN_git\GestaoEstoque_RnTelecom\GestaoEstoqueRN\obj\Debug\net7.0-windows\GestaoEstoqueRN.csproj.AssemblyReference.cache
 C:\Users\mathe\Desktop\GestaoEstoque_RN\GestaoEstoque_RN\GestaoEstoqueRN_git\GestaoEstoque_RnTelecom\GestaoEstoqueRN\bin\Debug\net7.0-windows\GestaoEstoqueRN.exe
 C:\Users\mathe\Desktop\GestaoEstoque_RN\GestaoEstoque_RN\GestaoEstoqueRN_git\GestaoEstoque_RnTelecom\GestaoEstoqueRN\bin\Debug\net7.0-windows\GestaoEstoqueRN.deps.json
 C:\Users\mathe\Desktop\GestaoEstoque_RN\GestaoEstoque_RN\GestaoEstoqueRN_git\GestaoEstoque_RnTelecom\GestaoEstoqueRN\bin\Debug\net7.0-windows\GestaoEstoqueRN.runtimeconfig.json
@@ -31,12 +30,14 @@ C:\Users\mathe\Desktop\GestaoEstoque_RN\GestaoEstoque_RN\GestaoEstoqueRN_git\Ges
 C:\Users\mathe\Desktop\GestaoEstoque_RN\GestaoEstoque_RN\GestaoEstoqueRN_git\GestaoEstoque_RnTelecom\GestaoEstoqueRN\bin\Debug\net7.0-windows\runtimes\win\lib\net7.0\System.Text.Encoding.CodePages.dll
 C:\Users\mathe\Desktop\GestaoEstoque_RN\GestaoEstoque_RN\GestaoEstoqueRN_git\GestaoEstoque_RnTelecom\GestaoEstoqueRN\bin\Debug\net7.0-windows\runtimes\browser\lib\net7.0\System.Text.Encodings.Web.dll
 C:\Users\mathe\Desktop\GestaoEstoque_RN\GestaoEstoque_RN\GestaoEstoqueRN_git\GestaoEstoque_RnTelecom\GestaoEstoqueRN\bin\Debug\net7.0-windows\runtimes\win\lib\net7.0\System.Windows.Extensions.dll
+C:\Users\mathe\Desktop\GestaoEstoque_RN\GestaoEstoque_RN\GestaoEstoqueRN_git\GestaoEstoque_RnTelecom\GestaoEstoqueRN\obj\Debug\net7.0-windows\GestaoEstoqueRN.csproj.AssemblyReference.cache
 C:\Users\mathe\Desktop\GestaoEstoque_RN\GestaoEstoque_RN\GestaoEstoqueRN_git\GestaoEstoque_RnTelecom\GestaoEstoqueRN\obj\Debug\net7.0-windows\GestaoEstoqueRN.Properties.Resources.resources
 C:\Users\mathe\Desktop\GestaoEstoque_RN\GestaoEstoque_RN\GestaoEstoqueRN_git\GestaoEstoque_RnTelecom\GestaoEstoqueRN\obj\Debug\net7.0-windows\WindowsFormsApp6.AssociarAtivo.resources
 C:\Users\mathe\Desktop\GestaoEstoque_RN\GestaoEstoque_RN\GestaoEstoqueRN_git\GestaoEstoque_RnTelecom\GestaoEstoqueRN\obj\Debug\net7.0-windows\WindowsFormsApp6.CadastroAtivo.resources
 C:\Users\mathe\Desktop\GestaoEstoque_RN\GestaoEstoque_RN\GestaoEstoqueRN_git\GestaoEstoque_RnTelecom\GestaoEstoqueRN\obj\Debug\net7.0-windows\WindowsFormsApp6.CadastroEstoque.resources
 C:\Users\mathe\Desktop\GestaoEstoque_RN\GestaoEstoque_RN\GestaoEstoqueRN_git\GestaoEstoque_RnTelecom\GestaoEstoqueRN\obj\Debug\net7.0-windows\WindowsFormsApp6.ConfirmarCadastro.resources
 C:\Users\mathe\Desktop\GestaoEstoque_RN\GestaoEstoque_RN\GestaoEstoqueRN_git\GestaoEstoque_RnTelecom\GestaoEstoqueRN\obj\Debug\net7.0-windows\GestaoEstoqueRN.Estoque.resources
+C:\Users\mathe\Desktop\GestaoEstoque_RN\GestaoEstoque_RN\GestaoEstoqueRN_git\GestaoEstoque_RnTelecom\GestaoEstoqueRN\obj\Debug\net7.0-windows\GestaoEstoqueRN.EstoqueAtivos.resources
 C:\Users\mathe\Desktop\GestaoEstoque_RN\GestaoEstoque_RN\GestaoEstoqueRN_git\GestaoEstoque_RnTelecom\GestaoEstoqueRN\obj\Debug\net7.0-windows\GestaoEstoqueRN.Views.Home.resources
 C:\Users\mathe\Desktop\GestaoEstoque_RN\GestaoEstoque_RN\GestaoEstoqueRN_git\GestaoEstoque_RnTelecom\GestaoEstoqueRN\obj\Debug\net7.0-windows\GestaoEstoqueRN.Login.resources
 C:\Users\mathe\Desktop\GestaoEstoque_RN\GestaoEstoque_RN\GestaoEstoqueRN_git\GestaoEstoque_RnTelecom\GestaoEstoqueRN\obj\Debug\net7.0-windows\GestaoEstoqueRN.csproj.GenerateResource.cache
