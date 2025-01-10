@@ -3,7 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\mathe\\OneDrive\\\u00C1rea de Trabalho\\GestaoEstoque_RN\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\dotnet\\sdk\\9.0.101\\Sdks\\Microsoft.NET.Sdk\\targets\\Microsoft.NET.EolTargetFrameworks.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{5E29D0CA-5636-4D81-81EF-56800C5AD77F}|GestaoEstoqueRN\\GestaoEstoqueRN.csproj|c:\\users\\mathe\\onedrive\\\u00E1rea de trabalho\\gestaoestoque_rn\\gestaoestoquern\\view\\exibirtecnico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{5E29D0CA-5636-4D81-81EF-56800C5AD77F}|GestaoEstoqueRN\\GestaoEstoqueRN.csproj|solutionrelative:gestaoestoquern\\view\\exibirtecnico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,15 +19,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Microsoft.NET.EolTargetFrameworks.targets",
-              "DocumentMoniker": "C:\\Program Files\\dotnet\\sdk\\9.0.101\\Sdks\\Microsoft.NET.Sdk\\targets\\Microsoft.NET.EolTargetFrameworks.targets",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\Program Files\\dotnet\\sdk\\9.0.101\\Sdks\\Microsoft.NET.Sdk\\targets\\Microsoft.NET.EolTargetFrameworks.targets",
-              "ToolTip": "C:\\Program Files\\dotnet\\sdk\\9.0.101\\Sdks\\Microsoft.NET.Sdk\\targets\\Microsoft.NET.EolTargetFrameworks.targets",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\Program Files\\dotnet\\sdk\\9.0.101\\Sdks\\Microsoft.NET.Sdk\\targets\\Microsoft.NET.EolTargetFrameworks.targets",
-              "ViewState": "AgIAABUAAAAAAAAAAAAAABcAAAA7AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
-              "WhenOpened": "2025-01-08T20:09:15.014Z",
-              "EditorCaption": ""
+              "Title": "ExibirTecnico.cs [Projeto]",
+              "DocumentMoniker": "C:\\Users\\mathe\\OneDrive\\\u00C1rea de Trabalho\\GestaoEstoque_RN\\GestaoEstoqueRN\\View\\ExibirTecnico.cs",
+              "RelativeDocumentMoniker": "GestaoEstoqueRN\\View\\ExibirTecnico.cs",
+              "ToolTip": "C:\\Users\\mathe\\OneDrive\\\u00C1rea de Trabalho\\GestaoEstoque_RN\\GestaoEstoqueRN\\View\\ExibirTecnico.cs [Projeto]",
+              "RelativeToolTip": "GestaoEstoqueRN\\View\\ExibirTecnico.cs [Projeto]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-10T12:51:39.964Z",
+              "EditorCaption": " [Projeto]"
             }
           ]
         }
