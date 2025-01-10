@@ -16,7 +16,22 @@
     <Compile Update="View\CadastroAtivo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="View\Home.cs">
+    <Compile Update="View\DesignarTecnico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="View\InformacaoEstoque.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="View\InformacaoAtivo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="View\MotivoRetorno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="View\CadastroRetornoEstoqueAtivo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="View\Principal.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="View\Login.cs">

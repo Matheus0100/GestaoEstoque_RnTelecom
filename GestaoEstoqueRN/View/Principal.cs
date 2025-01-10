@@ -10,12 +10,13 @@ using System.Windows.Forms;
 
 namespace GestaoEstoqueRN.Views
 {
-    public partial class Home : Form
+    public partial class Principal : Form
     {
-        public Home()
+        public Principal()
         {
             InitializeComponent();
             this.LayoutMdi(MdiLayout.TileHorizontal);
+            
         }
 
         private void toolStripButton3_Click(object sender, EventArgs e)
@@ -24,6 +25,7 @@ namespace GestaoEstoqueRN.Views
             {
                 Estoque frmEstoque = new();
                 frmEstoque.MdiParent = this;
+                frmEstoque.Dock= DockStyle.Fill;
                 frmEstoque.Show();
             }
             catch (Exception ex)
@@ -37,11 +39,27 @@ namespace GestaoEstoqueRN.Views
             {
                 EstoqueAtivos frmEstoqueAtivos = new();
                 frmEstoqueAtivos.MdiParent = this;
+                frmEstoqueAtivos.Dock= DockStyle.Fill;
                 frmEstoqueAtivos.Show();
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Ocorreu um erro ao clicar no botão estoque ativos. Erro: " + ex.Message);
+            }
+        }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                ExibirTecnico frmDesignarTecnico = new();
+                frmDesignarTecnico.MdiParent = this;
+                frmDesignarTecnico.Dock = DockStyle.Fill;
+                frmDesignarTecnico.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ocorreu um erro ao clicar no botão Designar para Técnico. Erro: " + ex.Message);
             }
         }
     }

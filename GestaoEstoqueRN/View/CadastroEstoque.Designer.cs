@@ -1,4 +1,4 @@
-﻿namespace WindowsFormsApp6
+﻿namespace GestaoEstoqueRN.Views
 {
     partial class CadastroEstoque
     {

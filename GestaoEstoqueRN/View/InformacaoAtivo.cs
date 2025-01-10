@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace GestaoEstoqueRN.Views
 {
-    public partial class CadastroAtivo : Form
+    public partial class InformacaoAtivo : Form
     {
-        public CadastroAtivo()
+        public InformacaoAtivo()
         {
             InitializeComponent();
-        }
-
-        private void textBox18_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

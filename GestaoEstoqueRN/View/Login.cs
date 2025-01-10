@@ -29,7 +29,7 @@ namespace GestaoEstoqueRN
         {
             try
             {
-                Form frmHome = new Home();
+                Form frmHome = new Principal();
                 this.Hide();
                 frmHome.ShowDialog();
                 

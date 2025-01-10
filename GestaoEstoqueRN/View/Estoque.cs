@@ -15,6 +15,8 @@ namespace GestaoEstoqueRN
         public Estoque()
         {
             InitializeComponent();
+            this.Dock = DockStyle.Fill;
+            //this.WindowState = FormWindowState.Maximized;
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)

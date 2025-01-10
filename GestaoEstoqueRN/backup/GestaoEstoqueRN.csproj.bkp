@@ -15,9 +15,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Update="View\ExibirTecnico.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="View\EstoqueAtivos.cs">
       <SubType>Form</SubType>
     </Compile>

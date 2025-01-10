@@ -8,16 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace GestaoEstoqueRN.Views
+namespace GestaoEstoqueRN
 {
-    public partial class CadastroAtivo : Form
+    public partial class ExibirTecnico : Form
     {
-        public CadastroAtivo()
+        public ExibirTecnico()
         {
             InitializeComponent();
+            this.Dock = DockStyle.Fill;
+            //this.WindowState = FormWindowState.Maximized;
         }
 
-        private void textBox18_TextChanged(object sender, EventArgs e)
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
