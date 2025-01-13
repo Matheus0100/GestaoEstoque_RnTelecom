@@ -10,7 +10,7 @@ namespace GestaoEstoqueRN.DAO
 {
     public class Database
     {
-        public static string conn = "server=SERVIDOR;User Id=USUARIO;database=BANCO; password=SENHA";
+        public static string conn = "Server=localhost;Port=3306;Database=estoquedb;Uid=root;Pwd=RN@33660356;";
         //MySqlConnection conexao = new MySqlConnection(conn);
         DataGridView gridView = new DataGridView();
 
