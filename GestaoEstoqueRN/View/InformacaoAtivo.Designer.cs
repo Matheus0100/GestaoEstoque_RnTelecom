@@ -28,347 +28,355 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox17 = new System.Windows.Forms.TextBox();
-            this.textBox16 = new System.Windows.Forms.TextBox();
-            this.textBox15 = new System.Windows.Forms.TextBox();
-            this.textBox13 = new System.Windows.Forms.TextBox();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox20 = new System.Windows.Forms.TextBox();
-            this.textBox21 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox14 = new System.Windows.Forms.TextBox();
-            this.SuspendLayout();
+            button2 = new Button();
+            textBox17 = new TextBox();
+            textBox16 = new TextBox();
+            textBox15 = new TextBox();
+            textBox13 = new TextBox();
+            textBox12 = new TextBox();
+            textBox11 = new TextBox();
+            textBox10 = new TextBox();
+            textBox8 = new TextBox();
+            textBox7 = new TextBox();
+            textBox6 = new TextBox();
+            textBox5 = new TextBox();
+            textBox4 = new TextBox();
+            textBox3 = new TextBox();
+            textBox2 = new TextBox();
+            comboBox3 = new ComboBox();
+            comboBox2 = new ComboBox();
+            comboBox1 = new ComboBox();
+            textBox1 = new TextBox();
+            label1 = new Label();
+            textBox20 = new TextBox();
+            textBox21 = new TextBox();
+            textBox9 = new TextBox();
+            textBox14 = new TextBox();
+            SuspendLayout();
             // 
             // button2
             // 
-            this.button2.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button2.Location = new System.Drawing.Point(688, 405);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(91, 28);
-            this.button2.TabIndex = 100;
-            this.button2.Text = "CONFIRMAR";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Maroon;
-            this.button1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button1.Location = new System.Drawing.Point(26, 401);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(98, 32);
-            this.button1.TabIndex = 99;
-            this.button1.Text = "VOLTAR";
-            this.button1.UseVisualStyleBackColor = false;
+            button2.Font = new Font("Verdana", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            button2.ForeColor = Color.FromArgb(192, 0, 0);
+            button2.Location = new Point(803, 467);
+            button2.Margin = new Padding(4, 3, 4, 3);
+            button2.Name = "button2";
+            button2.Size = new Size(106, 32);
+            button2.TabIndex = 100;
+            button2.Text = "CONFIRMAR";
+            button2.UseVisualStyleBackColor = true;
             // 
             // textBox17
             // 
-            this.textBox17.BackColor = System.Drawing.Color.Maroon;
-            this.textBox17.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox17.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox17.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.textBox17.Location = new System.Drawing.Point(52, 304);
-            this.textBox17.Multiline = true;
-            this.textBox17.Name = "textBox17";
-            this.textBox17.Size = new System.Drawing.Size(117, 26);
-            this.textBox17.TabIndex = 98;
-            this.textBox17.Text = "OBSERVAÇÃO";
+            textBox17.BackColor = Color.Maroon;
+            textBox17.BorderStyle = BorderStyle.None;
+            textBox17.Font = new Font("Arial", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            textBox17.ForeColor = SystemColors.ButtonFace;
+            textBox17.Location = new Point(61, 351);
+            textBox17.Margin = new Padding(4, 3, 4, 3);
+            textBox17.Multiline = true;
+            textBox17.Name = "textBox17";
+            textBox17.Size = new Size(136, 30);
+            textBox17.TabIndex = 98;
+            textBox17.Text = "OBSERVAÇÃO";
             // 
             // textBox16
             // 
-            this.textBox16.BackColor = System.Drawing.Color.Maroon;
-            this.textBox16.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox16.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox16.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.textBox16.Location = new System.Drawing.Point(52, 232);
-            this.textBox16.Multiline = true;
-            this.textBox16.Name = "textBox16";
-            this.textBox16.Size = new System.Drawing.Size(108, 26);
-            this.textBox16.TabIndex = 97;
-            this.textBox16.Text = "NOTA FISCAL";
+            textBox16.BackColor = Color.Maroon;
+            textBox16.BorderStyle = BorderStyle.None;
+            textBox16.Font = new Font("Arial", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            textBox16.ForeColor = SystemColors.ButtonFace;
+            textBox16.Location = new Point(61, 268);
+            textBox16.Margin = new Padding(4, 3, 4, 3);
+            textBox16.Multiline = true;
+            textBox16.Name = "textBox16";
+            textBox16.Size = new Size(126, 30);
+            textBox16.TabIndex = 97;
+            textBox16.Text = "NOTA FISCAL";
             // 
             // textBox15
             // 
-            this.textBox15.BackColor = System.Drawing.Color.Maroon;
-            this.textBox15.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox15.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox15.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.textBox15.Location = new System.Drawing.Point(329, 232);
-            this.textBox15.Multiline = true;
-            this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(141, 26);
-            this.textBox15.TabIndex = 96;
-            this.textBox15.Text = "DATA DE COMPRA";
+            textBox15.BackColor = Color.Maroon;
+            textBox15.BorderStyle = BorderStyle.None;
+            textBox15.Font = new Font("Arial", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            textBox15.ForeColor = SystemColors.ButtonFace;
+            textBox15.Location = new Point(384, 268);
+            textBox15.Margin = new Padding(4, 3, 4, 3);
+            textBox15.Multiline = true;
+            textBox15.Name = "textBox15";
+            textBox15.Size = new Size(164, 30);
+            textBox15.TabIndex = 96;
+            textBox15.Text = "DATA DE COMPRA";
             // 
             // textBox13
             // 
-            this.textBox13.BackColor = System.Drawing.Color.Maroon;
-            this.textBox13.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox13.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox13.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.textBox13.Location = new System.Drawing.Point(582, 150);
-            this.textBox13.Multiline = true;
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(149, 26);
-            this.textBox13.TabIndex = 94;
-            this.textBox13.Text = "VALOR";
+            textBox13.BackColor = Color.Maroon;
+            textBox13.BorderStyle = BorderStyle.None;
+            textBox13.Font = new Font("Arial", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            textBox13.ForeColor = SystemColors.ButtonFace;
+            textBox13.Location = new Point(679, 173);
+            textBox13.Margin = new Padding(4, 3, 4, 3);
+            textBox13.Multiline = true;
+            textBox13.Name = "textBox13";
+            textBox13.Size = new Size(174, 30);
+            textBox13.TabIndex = 94;
+            textBox13.Text = "VALOR";
             // 
             // textBox12
             // 
-            this.textBox12.BackColor = System.Drawing.Color.Maroon;
-            this.textBox12.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox12.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox12.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.textBox12.Location = new System.Drawing.Point(329, 150);
-            this.textBox12.Multiline = true;
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(135, 26);
-            this.textBox12.TabIndex = 93;
-            this.textBox12.Text = "PATRIMÔNIO";
+            textBox12.BackColor = Color.Maroon;
+            textBox12.BorderStyle = BorderStyle.None;
+            textBox12.Font = new Font("Arial", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            textBox12.ForeColor = SystemColors.ButtonFace;
+            textBox12.Location = new Point(384, 173);
+            textBox12.Margin = new Padding(4, 3, 4, 3);
+            textBox12.Multiline = true;
+            textBox12.Name = "textBox12";
+            textBox12.Size = new Size(158, 30);
+            textBox12.TabIndex = 93;
+            textBox12.Text = "PATRIMÔNIO";
             // 
             // textBox11
             // 
-            this.textBox11.BackColor = System.Drawing.Color.Maroon;
-            this.textBox11.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox11.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox11.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.textBox11.Location = new System.Drawing.Point(52, 150);
-            this.textBox11.Multiline = true;
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(108, 26);
-            this.textBox11.TabIndex = 92;
-            this.textBox11.Text = "SERIAL";
+            textBox11.BackColor = Color.Maroon;
+            textBox11.BorderStyle = BorderStyle.None;
+            textBox11.Font = new Font("Arial", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            textBox11.ForeColor = SystemColors.ButtonFace;
+            textBox11.Location = new Point(61, 173);
+            textBox11.Margin = new Padding(4, 3, 4, 3);
+            textBox11.Multiline = true;
+            textBox11.Name = "textBox11";
+            textBox11.Size = new Size(126, 30);
+            textBox11.TabIndex = 92;
+            textBox11.Text = "SERIAL";
             // 
             // textBox10
             // 
-            this.textBox10.Location = new System.Drawing.Point(52, 330);
-            this.textBox10.Multiline = true;
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(431, 53);
-            this.textBox10.TabIndex = 91;
-            this.textBox10.Text = "INSERIR";
+            textBox10.Location = new Point(61, 381);
+            textBox10.Margin = new Padding(4, 3, 4, 3);
+            textBox10.Multiline = true;
+            textBox10.Name = "textBox10";
+            textBox10.Size = new Size(502, 61);
+            textBox10.TabIndex = 91;
+            textBox10.Text = "INSERIR";
             // 
             // textBox8
             // 
-            this.textBox8.Location = new System.Drawing.Point(582, 176);
-            this.textBox8.Multiline = true;
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(175, 34);
-            this.textBox8.TabIndex = 89;
-            this.textBox8.Text = "INSERIR";
+            textBox8.Location = new Point(679, 203);
+            textBox8.Margin = new Padding(4, 3, 4, 3);
+            textBox8.Multiline = true;
+            textBox8.Name = "textBox8";
+            textBox8.Size = new Size(204, 39);
+            textBox8.TabIndex = 89;
+            textBox8.Text = "INSERIR";
             // 
             // textBox7
             // 
-            this.textBox7.Location = new System.Drawing.Point(329, 258);
-            this.textBox7.Multiline = true;
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(182, 34);
-            this.textBox7.TabIndex = 88;
-            this.textBox7.Text = "INSERIR";
+            textBox7.Location = new Point(384, 298);
+            textBox7.Margin = new Padding(4, 3, 4, 3);
+            textBox7.Multiline = true;
+            textBox7.Name = "textBox7";
+            textBox7.Size = new Size(212, 39);
+            textBox7.TabIndex = 88;
+            textBox7.Text = "INSERIR";
             // 
             // textBox6
             // 
-            this.textBox6.Location = new System.Drawing.Point(329, 176);
-            this.textBox6.Multiline = true;
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(182, 34);
-            this.textBox6.TabIndex = 87;
-            this.textBox6.Text = "INSERIR";
+            textBox6.Location = new Point(384, 203);
+            textBox6.Margin = new Padding(4, 3, 4, 3);
+            textBox6.Multiline = true;
+            textBox6.Name = "textBox6";
+            textBox6.Size = new Size(212, 39);
+            textBox6.TabIndex = 87;
+            textBox6.Text = "INSERIR";
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(52, 258);
-            this.textBox5.Multiline = true;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(179, 34);
-            this.textBox5.TabIndex = 86;
-            this.textBox5.Text = "INSERIR";
+            textBox5.Location = new Point(61, 298);
+            textBox5.Margin = new Padding(4, 3, 4, 3);
+            textBox5.Multiline = true;
+            textBox5.Name = "textBox5";
+            textBox5.Size = new Size(208, 39);
+            textBox5.TabIndex = 86;
+            textBox5.Text = "INSERIR";
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(52, 176);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(179, 34);
-            this.textBox4.TabIndex = 85;
-            this.textBox4.Text = "INSERIR";
+            textBox4.Location = new Point(61, 203);
+            textBox4.Margin = new Padding(4, 3, 4, 3);
+            textBox4.Multiline = true;
+            textBox4.Name = "textBox4";
+            textBox4.Size = new Size(208, 39);
+            textBox4.TabIndex = 85;
+            textBox4.Text = "INSERIR";
             // 
             // textBox3
             // 
-            this.textBox3.BackColor = System.Drawing.Color.Maroon;
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox3.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.textBox3.Location = new System.Drawing.Point(582, 69);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 18);
-            this.textBox3.TabIndex = 84;
-            this.textBox3.Text = "MODELO";
+            textBox3.BackColor = Color.Maroon;
+            textBox3.BorderStyle = BorderStyle.None;
+            textBox3.Font = new Font("Arial", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            textBox3.ForeColor = SystemColors.ButtonFace;
+            textBox3.Location = new Point(679, 80);
+            textBox3.Margin = new Padding(4, 3, 4, 3);
+            textBox3.Name = "textBox3";
+            textBox3.Size = new Size(117, 18);
+            textBox3.TabIndex = 84;
+            textBox3.Text = "MODELO";
             // 
             // textBox2
             // 
-            this.textBox2.BackColor = System.Drawing.Color.Maroon;
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.textBox2.Location = new System.Drawing.Point(329, 67);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(63, 26);
-            this.textBox2.TabIndex = 83;
-            this.textBox2.Text = "MARCA";
+            textBox2.BackColor = Color.Maroon;
+            textBox2.BorderStyle = BorderStyle.None;
+            textBox2.Font = new Font("Arial", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            textBox2.ForeColor = SystemColors.ButtonFace;
+            textBox2.Location = new Point(384, 77);
+            textBox2.Margin = new Padding(4, 3, 4, 3);
+            textBox2.Multiline = true;
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(74, 30);
+            textBox2.TabIndex = 83;
+            textBox2.Text = "MARCA";
             // 
             // comboBox3
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(582, 93);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(175, 21);
-            this.comboBox3.TabIndex = 82;
+            comboBox3.FormattingEnabled = true;
+            comboBox3.Location = new Point(679, 107);
+            comboBox3.Margin = new Padding(4, 3, 4, 3);
+            comboBox3.Name = "comboBox3";
+            comboBox3.Size = new Size(204, 23);
+            comboBox3.TabIndex = 82;
             // 
             // comboBox2
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(329, 93);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(182, 21);
-            this.comboBox2.TabIndex = 81;
+            comboBox2.FormattingEnabled = true;
+            comboBox2.Location = new Point(384, 107);
+            comboBox2.Margin = new Padding(4, 3, 4, 3);
+            comboBox2.Name = "comboBox2";
+            comboBox2.Size = new Size(212, 23);
+            comboBox2.TabIndex = 81;
             // 
             // comboBox1
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(52, 93);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(179, 21);
-            this.comboBox1.TabIndex = 80;
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Location = new Point(61, 107);
+            comboBox1.Margin = new Padding(4, 3, 4, 3);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(208, 23);
+            comboBox1.TabIndex = 80;
             // 
             // textBox1
             // 
-            this.textBox1.BackColor = System.Drawing.Color.Maroon;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.textBox1.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.textBox1.Location = new System.Drawing.Point(52, 67);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(117, 26);
-            this.textBox1.TabIndex = 79;
-            this.textBox1.Text = "TIPO DE ATIVO";
+            textBox1.BackColor = Color.Maroon;
+            textBox1.BorderStyle = BorderStyle.None;
+            textBox1.Font = new Font("Arial", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            textBox1.ForeColor = SystemColors.ButtonFace;
+            textBox1.Location = new Point(61, 77);
+            textBox1.Margin = new Padding(4, 3, 4, 3);
+            textBox1.Multiline = true;
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(136, 30);
+            textBox1.TabIndex = 79;
+            textBox1.Text = "TIPO DE ATIVO";
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label1.Location = new System.Drawing.Point(22, 7);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(257, 23);
-            this.label1.TabIndex = 78;
-            this.label1.Text = "INFORMAÇÕES DO ATIVO";
+            label1.AutoSize = true;
+            label1.Font = new Font("Verdana", 14.25F, FontStyle.Underline, GraphicsUnit.Point);
+            label1.ForeColor = SystemColors.ButtonFace;
+            label1.Location = new Point(26, 8);
+            label1.Margin = new Padding(4, 0, 4, 0);
+            label1.Name = "label1";
+            label1.Size = new Size(257, 23);
+            label1.TabIndex = 78;
+            label1.Text = "INFORMAÇÕES DO ATIVO";
             // 
             // textBox20
             // 
-            this.textBox20.BackColor = System.Drawing.Color.Maroon;
-            this.textBox20.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox20.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox20.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.textBox20.Location = new System.Drawing.Point(582, 315);
-            this.textBox20.Multiline = true;
-            this.textBox20.Name = "textBox20";
-            this.textBox20.Size = new System.Drawing.Size(157, 15);
-            this.textBox20.TabIndex = 104;
-            this.textBox20.Text = "COD. DO PRODUTO";
+            textBox20.BackColor = Color.Maroon;
+            textBox20.BorderStyle = BorderStyle.None;
+            textBox20.Font = new Font("Arial", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            textBox20.ForeColor = SystemColors.ButtonFace;
+            textBox20.Location = new Point(679, 363);
+            textBox20.Margin = new Padding(4, 3, 4, 3);
+            textBox20.Multiline = true;
+            textBox20.Name = "textBox20";
+            textBox20.Size = new Size(183, 17);
+            textBox20.TabIndex = 104;
+            textBox20.Text = "COD. DO PRODUTO";
             // 
             // textBox21
             // 
-            this.textBox21.Location = new System.Drawing.Point(582, 336);
-            this.textBox21.Multiline = true;
-            this.textBox21.Name = "textBox21";
-            this.textBox21.Size = new System.Drawing.Size(175, 34);
-            this.textBox21.TabIndex = 103;
-            this.textBox21.Text = "INSERIR";
+            textBox21.Location = new Point(679, 388);
+            textBox21.Margin = new Padding(4, 3, 4, 3);
+            textBox21.Multiline = true;
+            textBox21.Name = "textBox21";
+            textBox21.Size = new Size(204, 39);
+            textBox21.TabIndex = 103;
+            textBox21.Text = "INSERIR";
             // 
             // textBox9
             // 
-            this.textBox9.BackColor = System.Drawing.Color.Maroon;
-            this.textBox9.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox9.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox9.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.textBox9.Location = new System.Drawing.Point(582, 232);
-            this.textBox9.Multiline = true;
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(157, 26);
-            this.textBox9.TabIndex = 106;
-            this.textBox9.Text = "DATA DE GARANTIA";
+            textBox9.BackColor = Color.Maroon;
+            textBox9.BorderStyle = BorderStyle.None;
+            textBox9.Font = new Font("Arial", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            textBox9.ForeColor = SystemColors.ButtonFace;
+            textBox9.Location = new Point(679, 268);
+            textBox9.Margin = new Padding(4, 3, 4, 3);
+            textBox9.Multiline = true;
+            textBox9.Name = "textBox9";
+            textBox9.Size = new Size(183, 30);
+            textBox9.TabIndex = 106;
+            textBox9.Text = "DATA DE GARANTIA";
             // 
             // textBox14
             // 
-            this.textBox14.Location = new System.Drawing.Point(582, 258);
-            this.textBox14.Multiline = true;
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(175, 34);
-            this.textBox14.TabIndex = 105;
-            this.textBox14.Text = "INSERIR";
+            textBox14.Location = new Point(679, 298);
+            textBox14.Margin = new Padding(4, 3, 4, 3);
+            textBox14.Multiline = true;
+            textBox14.Name = "textBox14";
+            textBox14.Size = new Size(204, 39);
+            textBox14.TabIndex = 105;
+            textBox14.Text = "INSERIR";
             // 
-            // Form11
+            // InformacaoAtivo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Maroon;
-            this.ClientSize = new System.Drawing.Size(800, 447);
-            this.Controls.Add(this.textBox9);
-            this.Controls.Add(this.textBox14);
-            this.Controls.Add(this.textBox20);
-            this.Controls.Add(this.textBox21);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox17);
-            this.Controls.Add(this.textBox16);
-            this.Controls.Add(this.textBox15);
-            this.Controls.Add(this.textBox13);
-            this.Controls.Add(this.textBox12);
-            this.Controls.Add(this.textBox11);
-            this.Controls.Add(this.textBox10);
-            this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.comboBox3);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label1);
-            this.Name = "Form11";
-            this.Text = "Form11";
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.Maroon;
+            ClientSize = new Size(933, 516);
+            Controls.Add(textBox9);
+            Controls.Add(textBox14);
+            Controls.Add(textBox20);
+            Controls.Add(textBox21);
+            Controls.Add(button2);
+            Controls.Add(textBox17);
+            Controls.Add(textBox16);
+            Controls.Add(textBox15);
+            Controls.Add(textBox13);
+            Controls.Add(textBox12);
+            Controls.Add(textBox11);
+            Controls.Add(textBox10);
+            Controls.Add(textBox8);
+            Controls.Add(textBox7);
+            Controls.Add(textBox6);
+            Controls.Add(textBox5);
+            Controls.Add(textBox4);
+            Controls.Add(textBox3);
+            Controls.Add(textBox2);
+            Controls.Add(comboBox3);
+            Controls.Add(comboBox2);
+            Controls.Add(comboBox1);
+            Controls.Add(textBox1);
+            Controls.Add(label1);
+            Margin = new Padding(4, 3, 4, 3);
+            Name = "InformacaoAtivo";
+            Text = "Form11";
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox textBox17;
         private System.Windows.Forms.TextBox textBox16;
         private System.Windows.Forms.TextBox textBox15;

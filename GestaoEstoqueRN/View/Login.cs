@@ -44,7 +44,7 @@ namespace GestaoEstoqueRN
                 using (MySqlConnection conn = new MySqlConnection(Database.conn))
                 {
                     conn.Open();
-                    string query = "SELECT COUNT(*) FROM usuarios WHERE username = @usuario AND password = @senha";
+                    string query = "SELECT COUNT(*) FROM usuarios WHERE usuario = @usuario AND senha = @senha";
                     using (MySqlCommand cmd = new MySqlCommand(query, conn))
                     {
                         cmd.Parameters.AddWithValue("@usuario", usuario);
@@ -76,6 +76,39 @@ namespace GestaoEstoqueRN
         private void label5_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void txtSenha_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            CancelarEnter(sender, e);
+        }
+
+        private void CancelarEnter(object sender, KeyPressEventArgs e)
+        {
+            try 
+            {
+                //O enter é usado para pular linha quando ativa o multiline da textbox, então eu criei este método para efetuar o login e não pular a linha.
+                switch (e.KeyChar)
+                {
+                    case '\r':
+                        e.Handled = true;
+                        btnEntrar_Click(sender, e);
+                        break;
+
+                    default:
+                        break;
+                }
+            }
+            catch(NotImplementedException ex)
+            {
+                MessageBox.Show("Erro: " + ex.Message);
+            }
+            
+        }
+
+        private void txtUsuario_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            CancelarEnter(sender, e);
         }
     }
 }

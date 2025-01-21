@@ -53,17 +53,19 @@
             // 
             // txtUsuario
             // 
-            txtUsuario.Font = new Font("Segoe UI", 17F, FontStyle.Regular, GraphicsUnit.Point);
+            txtUsuario.Font = new Font("Segoe UI", 20F, FontStyle.Regular, GraphicsUnit.Point);
             txtUsuario.Location = new Point(54, 173);
             txtUsuario.Margin = new Padding(4, 3, 4, 3);
             txtUsuario.Multiline = true;
             txtUsuario.Name = "txtUsuario";
             txtUsuario.Size = new Size(449, 52);
             txtUsuario.TabIndex = 1;
+            txtUsuario.TextAlign = HorizontalAlignment.Center;
+            txtUsuario.KeyPress += txtUsuario_KeyPress;
             // 
             // txtSenha
             // 
-            txtSenha.Font = new Font("Segoe UI", 17F, FontStyle.Regular, GraphicsUnit.Point);
+            txtSenha.Font = new Font("Segoe UI", 20F, FontStyle.Regular, GraphicsUnit.Point);
             txtSenha.Location = new Point(54, 286);
             txtSenha.Margin = new Padding(4, 3, 4, 3);
             txtSenha.Multiline = true;
@@ -71,6 +73,8 @@
             txtSenha.PasswordChar = '*';
             txtSenha.Size = new Size(449, 52);
             txtSenha.TabIndex = 2;
+            txtSenha.TextAlign = HorizontalAlignment.Center;
+            txtSenha.KeyPress += txtSenha_KeyPress;
             // 
             // label2
             // 
@@ -115,13 +119,14 @@
             // btnEntrar
             // 
             btnEntrar.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            btnEntrar.AutoSize = true;
             btnEntrar.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             btnEntrar.FlatStyle = FlatStyle.Flat;
             btnEntrar.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            btnEntrar.Location = new Point(410, 355);
+            btnEntrar.Location = new Point(416, 350);
             btnEntrar.Margin = new Padding(1);
             btnEntrar.Name = "btnEntrar";
-            btnEntrar.Size = new Size(94, 39);
+            btnEntrar.Size = new Size(88, 44);
             btnEntrar.TabIndex = 12;
             btnEntrar.Text = "Entrar";
             btnEntrar.UseVisualStyleBackColor = true;
@@ -130,9 +135,10 @@
             // lblMensagem
             // 
             lblMensagem.AutoSize = true;
-            lblMensagem.Location = new Point(54, 372);
+            lblMensagem.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            lblMensagem.Location = new Point(54, 364);
             lblMensagem.Name = "lblMensagem";
-            lblMensagem.Size = new Size(66, 15);
+            lblMensagem.Size = new Size(105, 25);
             lblMensagem.TabIndex = 13;
             lblMensagem.Text = "Mensagem";
             lblMensagem.Visible = false;

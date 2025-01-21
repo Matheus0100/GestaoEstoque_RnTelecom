@@ -15,8 +15,6 @@ namespace GestaoEstoqueRN.Views
         public Principal()
         {
             InitializeComponent();
-            this.LayoutMdi(MdiLayout.TileHorizontal);
-            
         }
 
         private void btnEstoque_Click(object sender, EventArgs e)
@@ -24,7 +22,7 @@ namespace GestaoEstoqueRN.Views
             try
             {
                 // Verifica se o formulário já está aberto
-                Form frm = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is Estoque);
+                Form ?frm = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is Estoque);
 
                 MudarCorTitulo(btnEstoque);
 
@@ -41,10 +39,7 @@ namespace GestaoEstoqueRN.Views
                     frm.Dock = DockStyle.Fill;
                     frm.Show();
                 }
-                //Estoque frmEstoque = new();
-                //frmEstoque.MdiParent = this;
-                //frmEstoque.Dock= DockStyle.Fill;
-                //frmEstoque.Show();
+
             }
             catch (Exception ex)
             {
@@ -55,7 +50,7 @@ namespace GestaoEstoqueRN.Views
         {
             try
             {
-                Form frm = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is EstoqueAtivos);
+                Form ?frm = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is EstoqueAtivos);
 
                 MudarCorTitulo(btnEstoqueAtivos);
 
@@ -73,10 +68,7 @@ namespace GestaoEstoqueRN.Views
                     frm.Dock = DockStyle.Fill;
                     frm.Show();
                 }
-                //EstoqueAtivos frmEstoqueAtivos = new();
-                //frmEstoqueAtivos.MdiParent = this;
-                //frmEstoqueAtivos.Dock= DockStyle.Fill;
-                //frmEstoqueAtivos.Show();
+               
             }
             catch (Exception ex)
             {
@@ -88,7 +80,7 @@ namespace GestaoEstoqueRN.Views
         {
             try
             {
-                Form frm = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is ExibirTecnico);
+                Form ?frm = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is ExibirTecnico);
 
                 //this.toolStripButton1.ForeColor = Color.Black;
                 MudarCorTitulo(btnDesignarTecnico);
@@ -106,10 +98,7 @@ namespace GestaoEstoqueRN.Views
                     frm.Dock = DockStyle.Fill;
                     frm.Show();
                 }
-                //ExibirTecnico frmDesignarTecnico = new();
-                //frmDesignarTecnico.MdiParent = this;
-                //frmDesignarTecnico.Dock = DockStyle.Fill;
-                //frmDesignarTecnico.Show();
+
             }
             catch (Exception ex)
             {
@@ -120,10 +109,9 @@ namespace GestaoEstoqueRN.Views
         {
             try
             {
-                //pinta o botão clicado de preto e o resto de branco
-                
-                var numero = toolStrip1.Items.Count;
-                for (int i = 0; i < numero; i++)
+                //pinta o botão selecionado de preto e o resto de branco
+                var numeroItens = toolStrip1.Items.Count;
+                for (int i = 0; i < numeroItens; i++)
                 {
                     toolStrip1.Items[i].ForeColor = Color.White;
                 }

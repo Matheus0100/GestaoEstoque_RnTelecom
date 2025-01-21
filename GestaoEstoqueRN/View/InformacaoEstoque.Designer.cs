@@ -28,277 +28,306 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox17 = new System.Windows.Forms.TextBox();
-            this.textBox16 = new System.Windows.Forms.TextBox();
-            this.textBox15 = new System.Windows.Forms.TextBox();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox19 = new System.Windows.Forms.TextBox();
-            this.textBox14 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.SuspendLayout();
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Maroon;
-            this.button1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button1.Location = new System.Drawing.Point(28, 404);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(101, 36);
-            this.button1.TabIndex = 73;
-            this.button1.Text = "VOLTAR";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // textBox17
-            // 
-            this.textBox17.BackColor = System.Drawing.Color.Maroon;
-            this.textBox17.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox17.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox17.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.textBox17.Location = new System.Drawing.Point(54, 307);
-            this.textBox17.Multiline = true;
-            this.textBox17.Name = "textBox17";
-            this.textBox17.Size = new System.Drawing.Size(117, 20);
-            this.textBox17.TabIndex = 72;
-            this.textBox17.Text = "OBSERVAÇÃO";
-            // 
-            // textBox16
-            // 
-            this.textBox16.BackColor = System.Drawing.Color.Maroon;
-            this.textBox16.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox16.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox16.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.textBox16.Location = new System.Drawing.Point(54, 223);
-            this.textBox16.Multiline = true;
-            this.textBox16.Name = "textBox16";
-            this.textBox16.Size = new System.Drawing.Size(108, 20);
-            this.textBox16.TabIndex = 71;
-            this.textBox16.Text = "NOTA FISCAL";
-            // 
-            // textBox15
-            // 
-            this.textBox15.BackColor = System.Drawing.Color.Maroon;
-            this.textBox15.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox15.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox15.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.textBox15.Location = new System.Drawing.Point(331, 223);
-            this.textBox15.Multiline = true;
-            this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(141, 20);
-            this.textBox15.TabIndex = 70;
-            this.textBox15.Text = "DATA DE COMPRA";
-            // 
-            // textBox12
-            // 
-            this.textBox12.BackColor = System.Drawing.Color.Maroon;
-            this.textBox12.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox12.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox12.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.textBox12.Location = new System.Drawing.Point(331, 119);
-            this.textBox12.Multiline = true;
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(135, 20);
-            this.textBox12.TabIndex = 67;
-            this.textBox12.Text = "VALOR UNITÁRIO";
-            // 
-            // textBox11
-            // 
-            this.textBox11.BackColor = System.Drawing.Color.Maroon;
-            this.textBox11.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox11.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox11.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.textBox11.Location = new System.Drawing.Point(54, 119);
-            this.textBox11.Multiline = true;
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(108, 20);
-            this.textBox11.TabIndex = 66;
-            this.textBox11.Text = "NOME";
-            // 
-            // textBox10
-            // 
-            this.textBox10.Location = new System.Drawing.Point(54, 333);
-            this.textBox10.Multiline = true;
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(431, 47);
-            this.textBox10.TabIndex = 65;
-            this.textBox10.Text = "INSERIR";
-            // 
-            // textBox7
-            // 
-            this.textBox7.Location = new System.Drawing.Point(331, 249);
-            this.textBox7.Multiline = true;
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(182, 28);
-            this.textBox7.TabIndex = 62;
-            this.textBox7.Text = "DESCRIÇÃO";
-            // 
-            // textBox6
-            // 
-            this.textBox6.Location = new System.Drawing.Point(331, 153);
-            this.textBox6.Multiline = true;
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(182, 28);
-            this.textBox6.TabIndex = 61;
-            this.textBox6.Text = "DESCRIÇÃO";
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(54, 249);
-            this.textBox5.Multiline = true;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(179, 28);
-            this.textBox5.TabIndex = 60;
-            this.textBox5.Text = "DESCRIÇÃO";
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(54, 153);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(179, 28);
-            this.textBox4.TabIndex = 59;
-            this.textBox4.Text = "DESCRIÇÃO";
+            label1 = new Label();
+            txtTipo = new ComboBox();
+            txtNome = new TextBox();
+            label11 = new Label();
+            nudQtdEstoque = new NumericUpDown();
+            nudPreco = new NumericUpDown();
+            txtModelo = new TextBox();
+            txtMarca = new TextBox();
+            dtpDataCompra = new DateTimePicker();
+            dtpDataGarantia = new DateTimePicker();
+            label10 = new Label();
+            label9 = new Label();
+            label8 = new Label();
+            label7 = new Label();
+            label6 = new Label();
+            label5 = new Label();
+            label4 = new Label();
+            label3 = new Label();
+            label2 = new Label();
+            txtDescricao = new TextBox();
+            txtNotaFiscal = new TextBox();
+            ((System.ComponentModel.ISupportInitialize)nudQtdEstoque).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)nudPreco).BeginInit();
+            SuspendLayout();
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label1.Location = new System.Drawing.Point(24, 10);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(290, 23);
-            this.label1.TabIndex = 52;
-            this.label1.Text = "INFORMAÇÕES DO ESTOQUE";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            label1.AutoSize = true;
+            label1.Font = new Font("Verdana", 14.25F, FontStyle.Underline, GraphicsUnit.Point);
+            label1.ForeColor = SystemColors.ButtonFace;
+            label1.Location = new Point(28, 12);
+            label1.Margin = new Padding(4, 0, 4, 0);
+            label1.Name = "label1";
+            label1.Size = new Size(290, 23);
+            label1.TabIndex = 52;
+            label1.Text = "INFORMAÇÕES DO ESTOQUE";
+            label1.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // textBox19
+            // txtTipo
             // 
-            this.textBox19.BackColor = System.Drawing.Color.Maroon;
-            this.textBox19.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox19.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox19.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.textBox19.Location = new System.Drawing.Point(593, 223);
-            this.textBox19.Multiline = true;
-            this.textBox19.Name = "textBox19";
-            this.textBox19.Size = new System.Drawing.Size(157, 20);
-            this.textBox19.TabIndex = 80;
-            this.textBox19.Text = "DATA DE GARANTIA";
+            txtTipo.FormattingEnabled = true;
+            txtTipo.Items.AddRange(new object[] { "Fibra", "Conector", "Outro" });
+            txtTipo.Location = new Point(28, 150);
+            txtTipo.Name = "txtTipo";
+            txtTipo.Size = new Size(213, 23);
+            txtTipo.TabIndex = 105;
             // 
-            // textBox14
+            // txtNome
             // 
-            this.textBox14.BackColor = System.Drawing.Color.Maroon;
-            this.textBox14.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox14.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox14.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.textBox14.Location = new System.Drawing.Point(593, 119);
-            this.textBox14.Multiline = true;
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(157, 20);
-            this.textBox14.TabIndex = 78;
-            this.textBox14.Text = "QUANTIDADE";
-            this.textBox14.TextChanged += new System.EventHandler(this.textBox14_TextChanged);
+            txtNome.Location = new Point(28, 80);
+            txtNome.Margin = new Padding(4, 3, 4, 3);
+            txtNome.Multiline = true;
+            txtNome.Name = "txtNome";
+            txtNome.PlaceholderText = "INSERIR";
+            txtNome.Size = new Size(213, 23);
+            txtNome.TabIndex = 104;
             // 
-            // textBox1
+            // label11
             // 
-            this.textBox1.Location = new System.Drawing.Point(593, 249);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(182, 28);
-            this.textBox1.TabIndex = 81;
-            this.textBox1.Text = "DESCRIÇÃO";
+            label11.AutoSize = true;
+            label11.Font = new Font("Arial", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label11.ForeColor = SystemColors.Control;
+            label11.Location = new Point(28, 59);
+            label11.Name = "label11";
+            label11.Size = new Size(54, 18);
+            label11.TabIndex = 103;
+            label11.Text = "NOME";
             // 
-            // textBox9
+            // nudQtdEstoque
             // 
-            this.textBox9.Location = new System.Drawing.Point(593, 153);
-            this.textBox9.Multiline = true;
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(175, 28);
-            this.textBox9.TabIndex = 82;
-            this.textBox9.Text = "DESCRIÇÃO";
+            nudQtdEstoque.Location = new Point(316, 226);
+            nudQtdEstoque.Name = "nudQtdEstoque";
+            nudQtdEstoque.Size = new Size(213, 23);
+            nudQtdEstoque.TabIndex = 102;
             // 
-            // textBox2
+            // nudPreco
             // 
-            this.textBox2.Location = new System.Drawing.Point(593, 342);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(182, 28);
-            this.textBox2.TabIndex = 84;
-            this.textBox2.Text = "DESCRIÇÃO";
+            nudPreco.DecimalPlaces = 2;
+            nudPreco.Location = new Point(28, 294);
+            nudPreco.Maximum = new decimal(new int[] { 999999999, 0, 0, 0 });
+            nudPreco.Name = "nudPreco";
+            nudPreco.Size = new Size(213, 23);
+            nudPreco.TabIndex = 101;
             // 
-            // textBox3
+            // txtModelo
             // 
-            this.textBox3.BackColor = System.Drawing.Color.Maroon;
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox3.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.textBox3.Location = new System.Drawing.Point(593, 316);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(157, 20);
-            this.textBox3.TabIndex = 83;
-            this.textBox3.Text = "COD. DO PRODUTO";
+            txtModelo.Location = new Point(28, 225);
+            txtModelo.Margin = new Padding(4, 3, 4, 3);
+            txtModelo.Multiline = true;
+            txtModelo.Name = "txtModelo";
+            txtModelo.PlaceholderText = "INSERIR";
+            txtModelo.Size = new Size(213, 23);
+            txtModelo.TabIndex = 100;
             // 
-            // Form10
+            // txtMarca
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Maroon;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox9);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.textBox19);
-            this.Controls.Add(this.textBox14);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox17);
-            this.Controls.Add(this.textBox16);
-            this.Controls.Add(this.textBox15);
-            this.Controls.Add(this.textBox12);
-            this.Controls.Add(this.textBox11);
-            this.Controls.Add(this.textBox10);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.label1);
-            this.Name = "Form10";
-            this.Text = "Form10";
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            txtMarca.Location = new Point(317, 150);
+            txtMarca.Margin = new Padding(4, 3, 4, 3);
+            txtMarca.Multiline = true;
+            txtMarca.Name = "txtMarca";
+            txtMarca.PlaceholderText = "INSERIR";
+            txtMarca.Size = new Size(212, 23);
+            txtMarca.TabIndex = 99;
+            // 
+            // dtpDataCompra
+            // 
+            dtpDataCompra.Format = DateTimePickerFormat.Short;
+            dtpDataCompra.Location = new Point(28, 361);
+            dtpDataCompra.Name = "dtpDataCompra";
+            dtpDataCompra.Size = new Size(213, 23);
+            dtpDataCompra.TabIndex = 98;
+            // 
+            // dtpDataGarantia
+            // 
+            dtpDataGarantia.Format = DateTimePickerFormat.Short;
+            dtpDataGarantia.Location = new Point(317, 361);
+            dtpDataGarantia.Name = "dtpDataGarantia";
+            dtpDataGarantia.Size = new Size(212, 23);
+            dtpDataGarantia.TabIndex = 97;
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Font = new Font("Arial", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label10.ForeColor = SystemColors.Control;
+            label10.Location = new Point(28, 405);
+            label10.Name = "label10";
+            label10.Size = new Size(97, 18);
+            label10.TabIndex = 96;
+            label10.Text = "DESCRIÇÃO";
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Font = new Font("Arial", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label9.ForeColor = SystemColors.Control;
+            label9.Location = new Point(317, 272);
+            label9.Name = "label9";
+            label9.Size = new Size(104, 18);
+            label9.TabIndex = 95;
+            label9.Text = "NOTA FISCAL";
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Font = new Font("Arial", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label8.ForeColor = SystemColors.Control;
+            label8.Location = new Point(28, 272);
+            label8.Name = "label8";
+            label8.Size = new Size(133, 18);
+            label8.TabIndex = 94;
+            label8.Text = "VALOR UNITÁRIO";
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Font = new Font("Arial", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label7.ForeColor = SystemColors.Control;
+            label7.Location = new Point(317, 204);
+            label7.Name = "label7";
+            label7.Size = new Size(106, 18);
+            label7.TabIndex = 93;
+            label7.Text = "QUANTIDADE";
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Arial", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label6.ForeColor = SystemColors.Control;
+            label6.Location = new Point(317, 340);
+            label6.Name = "label6";
+            label6.Size = new Size(148, 18);
+            label6.TabIndex = 92;
+            label6.Text = "DATA DE GARANTIA";
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Arial", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label5.ForeColor = SystemColors.Control;
+            label5.Location = new Point(28, 340);
+            label5.Name = "label5";
+            label5.Size = new Size(139, 18);
+            label5.TabIndex = 91;
+            label5.Text = "DATA DE COMPRA";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Arial", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label4.ForeColor = SystemColors.Control;
+            label4.Location = new Point(29, 204);
+            label4.Name = "label4";
+            label4.Size = new Size(75, 18);
+            label4.TabIndex = 90;
+            label4.Text = "MODELO";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Arial", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label3.ForeColor = SystemColors.Control;
+            label3.Location = new Point(317, 129);
+            label3.Name = "label3";
+            label3.Size = new Size(61, 18);
+            label3.TabIndex = 89;
+            label3.Text = "MARCA";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Arial", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label2.ForeColor = SystemColors.Control;
+            label2.Location = new Point(28, 129);
+            label2.Name = "label2";
+            label2.Size = new Size(44, 18);
+            label2.TabIndex = 88;
+            label2.Text = "TIPO";
+            // 
+            // txtDescricao
+            // 
+            txtDescricao.Location = new Point(31, 426);
+            txtDescricao.Margin = new Padding(4, 3, 4, 3);
+            txtDescricao.Multiline = true;
+            txtDescricao.Name = "txtDescricao";
+            txtDescricao.PlaceholderText = "INSERIR";
+            txtDescricao.Size = new Size(498, 86);
+            txtDescricao.TabIndex = 86;
+            // 
+            // txtNotaFiscal
+            // 
+            txtNotaFiscal.Location = new Point(317, 293);
+            txtNotaFiscal.Margin = new Padding(4, 3, 4, 3);
+            txtNotaFiscal.Multiline = true;
+            txtNotaFiscal.Name = "txtNotaFiscal";
+            txtNotaFiscal.PlaceholderText = "INSERIR";
+            txtNotaFiscal.Size = new Size(212, 23);
+            txtNotaFiscal.TabIndex = 85;
+            // 
+            // InformacaoEstoque
+            // 
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.Maroon;
+            ClientSize = new Size(557, 536);
+            Controls.Add(txtTipo);
+            Controls.Add(txtNome);
+            Controls.Add(label11);
+            Controls.Add(nudQtdEstoque);
+            Controls.Add(nudPreco);
+            Controls.Add(txtModelo);
+            Controls.Add(txtMarca);
+            Controls.Add(dtpDataCompra);
+            Controls.Add(dtpDataGarantia);
+            Controls.Add(label10);
+            Controls.Add(label9);
+            Controls.Add(label8);
+            Controls.Add(label7);
+            Controls.Add(label6);
+            Controls.Add(label5);
+            Controls.Add(label4);
+            Controls.Add(label3);
+            Controls.Add(label2);
+            Controls.Add(txtDescricao);
+            Controls.Add(txtNotaFiscal);
+            Controls.Add(label1);
+            Margin = new Padding(4, 3, 4, 3);
+            MaximizeBox = false;
+            MaximumSize = new Size(573, 575);
+            MinimumSize = new Size(573, 575);
+            Name = "InformacaoEstoque";
+            Text = "Exibição das informações do estoque";
+            Load += InformacaoEstoque_Load;
+            ((System.ComponentModel.ISupportInitialize)nudQtdEstoque).EndInit();
+            ((System.ComponentModel.ISupportInitialize)nudPreco).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
-
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox17;
-        private System.Windows.Forms.TextBox textBox16;
-        private System.Windows.Forms.TextBox textBox15;
-        private System.Windows.Forms.TextBox textBox12;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox19;
-        private System.Windows.Forms.TextBox textBox14;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private ComboBox txtTipo;
+        private TextBox txtNome;
+        private Label label11;
+        private NumericUpDown nudQtdEstoque;
+        private NumericUpDown nudPreco;
+        private TextBox txtModelo;
+        private TextBox txtMarca;
+        private DateTimePicker dtpDataCompra;
+        private DateTimePicker dtpDataGarantia;
+        private Label label10;
+        private Label label9;
+        private Label label8;
+        private Label label7;
+        private Label label6;
+        private Label label5;
+        private Label label4;
+        private Label label3;
+        private Label label2;
+        private TextBox txtDescricao;
+        private TextBox txtNotaFiscal;
     }
 }

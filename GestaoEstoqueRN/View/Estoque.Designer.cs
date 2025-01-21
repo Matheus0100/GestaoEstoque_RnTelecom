@@ -28,110 +28,129 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.SuspendLayout();
+            dataGridView1 = new DataGridView();
+            btnAdicionar = new Button();
+            btnExcluir = new Button();
+            btnExportar = new Button();
+            btnEditar = new Button();
+            txtSearch = new TextBox();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            SuspendLayout();
             // 
             // dataGridView1
             // 
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 81);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 29;
-            this.dataGridView1.Size = new System.Drawing.Size(747, 415);
-            this.dataGridView1.TabIndex = 7;
+            dataGridView1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(12, 81);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersWidth = 51;
+            dataGridView1.RowTemplate.Height = 29;
+            dataGridView1.Size = new Size(1160, 595);
+            dataGridView1.TabIndex = 7;
+            dataGridView1.CellClick += dataGridView1_CellClick;
             // 
-            // button1
+            // btnAdicionar
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button1.Location = new System.Drawing.Point(181, 44);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(116, 31);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "Adicionar";
-            this.button1.UseVisualStyleBackColor = true;
+            btnAdicionar.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            btnAdicionar.FlatAppearance.BorderColor = Color.White;
+            btnAdicionar.FlatStyle = FlatStyle.Popup;
+            btnAdicionar.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            btnAdicionar.ForeColor = SystemColors.ControlLightLight;
+            btnAdicionar.Location = new Point(388, 44);
+            btnAdicionar.Name = "btnAdicionar";
+            btnAdicionar.Size = new Size(116, 31);
+            btnAdicionar.TabIndex = 8;
+            btnAdicionar.Text = "Adicionar";
+            btnAdicionar.UseVisualStyleBackColor = true;
+            btnAdicionar.Click += button1_Click;
             // 
-            // button2
+            // btnExcluir
             // 
-            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button2.Location = new System.Drawing.Point(334, 44);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(117, 31);
-            this.button2.TabIndex = 9;
-            this.button2.Text = "Excluir";
-            this.button2.UseVisualStyleBackColor = true;
+            btnExcluir.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            btnExcluir.FlatStyle = FlatStyle.Popup;
+            btnExcluir.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            btnExcluir.ForeColor = SystemColors.ControlLightLight;
+            btnExcluir.Location = new Point(541, 44);
+            btnExcluir.Name = "btnExcluir";
+            btnExcluir.Size = new Size(117, 31);
+            btnExcluir.TabIndex = 9;
+            btnExcluir.Text = "Excluir";
+            btnExcluir.UseVisualStyleBackColor = true;
+            btnExcluir.Click += button2_Click;
             // 
-            // button3
+            // btnExportar
             // 
-            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button3.Location = new System.Drawing.Point(492, 44);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(117, 31);
-            this.button3.TabIndex = 10;
-            this.button3.Text = "Exportar";
-            this.button3.UseVisualStyleBackColor = true;
+            btnExportar.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            btnExportar.FlatStyle = FlatStyle.Popup;
+            btnExportar.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            btnExportar.ForeColor = SystemColors.ControlLightLight;
+            btnExportar.Location = new Point(699, 44);
+            btnExportar.Name = "btnExportar";
+            btnExportar.Size = new Size(117, 31);
+            btnExportar.TabIndex = 10;
+            btnExportar.Text = "Exportar";
+            btnExportar.UseVisualStyleBackColor = true;
+            btnExportar.Click += button3_Click;
             // 
-            // button4
+            // btnEditar
             // 
-            this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button4.Location = new System.Drawing.Point(641, 44);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(118, 31);
-            this.button4.TabIndex = 11;
-            this.button4.Text = "Editar";
-            this.button4.UseVisualStyleBackColor = true;
+            btnEditar.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            btnEditar.FlatStyle = FlatStyle.Popup;
+            btnEditar.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            btnEditar.ForeColor = SystemColors.ControlLightLight;
+            btnEditar.Location = new Point(848, 44);
+            btnEditar.Name = "btnEditar";
+            btnEditar.Size = new Size(118, 31);
+            btnEditar.TabIndex = 11;
+            btnEditar.Text = "Editar";
+            btnEditar.UseVisualStyleBackColor = true;
+            btnEditar.Click += button4_Click;
+            // 
+            // txtSearch
+            // 
+            txtSearch.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            txtSearch.Font = new Font("Segoe UI", 14F, FontStyle.Bold, GraphicsUnit.Point);
+            txtSearch.Location = new Point(972, 44);
+            txtSearch.Multiline = true;
+            txtSearch.Name = "txtSearch";
+            txtSearch.PlaceholderText = "Pesquisar";
+            txtSearch.Size = new Size(180, 31);
+            txtSearch.TabIndex = 12;
+            txtSearch.TextChanged += txtSearch_TextChanged;
             // 
             // Estoque
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.DarkRed;
-            this.ClientSize = new System.Drawing.Size(771, 508);
-            this.ControlBox = false;
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.dataGridView1);
-            this.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.MdiChildrenMinimizedAnchorBottom = false;
-            this.MinimizeBox = false;
-            this.Name = "Estoque";
-            this.ShowIcon = false;
-            this.ShowInTaskbar = false;
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.ResumeLayout(false);
-
+            AutoScaleDimensions = new SizeF(7F, 13F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.DarkRed;
+            ClientSize = new Size(1184, 688);
+            ControlBox = false;
+            Controls.Add(txtSearch);
+            Controls.Add(btnEditar);
+            Controls.Add(btnExportar);
+            Controls.Add(btnExcluir);
+            Controls.Add(btnAdicionar);
+            Controls.Add(dataGridView1);
+            Font = new Font("Times New Roman", 8.25F, FontStyle.Bold, GraphicsUnit.Point);
+            FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(4, 3, 4, 3);
+            MdiChildrenMinimizedAnchorBottom = false;
+            MinimizeBox = false;
+            Name = "Estoque";
+            ShowIcon = false;
+            ShowInTaskbar = false;
+            Load += Estoque_Load;
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
         private DataGridView dataGridView1;
-        private Button button1;
-        private Button button2;
-        private Button button3;
-        private Button button4;
+        private Button btnAdicionar;
+        private Button btnExcluir;
+        private Button btnExportar;
+        private Button btnEditar;
+        private TextBox txtSearch;
     }
 }
