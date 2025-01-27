@@ -53,7 +53,7 @@ namespace GestaoEstoqueRN
                 {
                     conn.Open();
 
-                    string query = "SELECT IdProduto, Nome, Descricao, Preco, QtdEstoque FROM produtos";
+                    string query = "SELECT IdProduto, Nome, Descricao, Preco, QtdEstoque FROM produtos WHERE Status <> 5 OR Status IS NULL order by Status asc";
 
                     using (MySqlDataAdapter adapter = new MySqlDataAdapter(query, conn))
                     {
@@ -108,13 +108,15 @@ namespace GestaoEstoqueRN
                 int idProduto = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells["IdProduto"].Value);
 
                 // Abre o formulário secundário e passa o ID do produto
-                InformacaoEstoque formDetalhes = new(idProduto);
+                CadastroEstoque formDetalhes = new(idProduto);
+                formDetalhes.btnCadastrar.Visible = false;
+                formDetalhes.Text = "Exibição de Informações";
                 formDetalhes.ShowDialog();
             }
         }
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {
-            // Filtra os dados com base no texto da pesquisa
+            // Filtra os dados com base no texto da pesquisa 
             string filter = txtSearch.Text.Trim();
 
             if (produtosTable != null)
@@ -129,6 +131,7 @@ namespace GestaoEstoqueRN
         private void button1_Click(object sender, EventArgs e)
         {
             CadastroEstoque frmCadastroEstoque = new();
+            frmCadastroEstoque.Text = "Cadastro de Estoque";
             frmCadastroEstoque.Show();
         }
 
@@ -180,7 +183,7 @@ namespace GestaoEstoqueRN
                             int idProduto = Convert.ToInt32(row.Cells["IdProduto"].Value);
 
                             // Comando SQL para exclusão
-                            string query = "DELETE FROM produtos WHERE IdProduto = @IdProduto";
+                            string query = "UPDATE produtos SET Status = 5 WHERE IdProduto = @IdProduto";
 
                             using (MySqlCommand cmd = new MySqlCommand(query, conn))
                             {
@@ -333,6 +336,7 @@ namespace GestaoEstoqueRN
 
             // Abre o formulário de adicionar/editar com o ID do registro
             var formAdicionar = new CadastroEstoque(idProduto);
+            formAdicionar.Text = "Editar Estoque";
             formAdicionar.ShowDialog();
 
             // Atualiza a grid após a edição (se necessário)

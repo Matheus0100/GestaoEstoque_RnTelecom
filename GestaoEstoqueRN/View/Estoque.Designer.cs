@@ -55,7 +55,9 @@
             btnAdicionar.FlatAppearance.BorderColor = Color.White;
             btnAdicionar.FlatStyle = FlatStyle.Popup;
             btnAdicionar.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            btnAdicionar.ForeColor = SystemColors.ControlLightLight;
+            btnAdicionar.ForeColor = SystemColors.ActiveCaptionText;
+            btnAdicionar.Image = Properties.Resources.add_circle_outline;
+            btnAdicionar.ImageAlign = ContentAlignment.MiddleLeft;
             btnAdicionar.Location = new Point(388, 44);
             btnAdicionar.Name = "btnAdicionar";
             btnAdicionar.Size = new Size(116, 31);
@@ -122,6 +124,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 13F);
             AutoScaleMode = AutoScaleMode.Font;
+            AutoValidate = AutoValidate.Disable;
             BackColor = Color.DarkRed;
             ClientSize = new Size(1184, 688);
             ControlBox = false;

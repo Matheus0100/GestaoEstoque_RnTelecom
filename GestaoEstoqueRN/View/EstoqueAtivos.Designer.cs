@@ -115,6 +115,7 @@
             btnAdicionar.TabIndex = 13;
             btnAdicionar.Text = "Adicionar";
             btnAdicionar.UseVisualStyleBackColor = true;
+            btnAdicionar.Click += btnAdicionar_Click;
             // 
             // EstoqueAtivos
             // 

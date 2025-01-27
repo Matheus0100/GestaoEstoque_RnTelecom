@@ -79,6 +79,7 @@
             // label2
             // 
             label2.Font = new Font("Segoe UI", 20F, FontStyle.Regular, GraphicsUnit.Point);
+            label2.ForeColor = SystemColors.ActiveCaptionText;
             label2.Location = new Point(54, 133);
             label2.Name = "label2";
             label2.Size = new Size(449, 37);
@@ -89,6 +90,7 @@
             // label3
             // 
             label3.Font = new Font("Segoe UI", 20F, FontStyle.Regular, GraphicsUnit.Point);
+            label3.ForeColor = SystemColors.ActiveCaptionText;
             label3.Location = new Point(54, 246);
             label3.Name = "label3";
             label3.Size = new Size(449, 37);
@@ -109,6 +111,7 @@
             // label4
             // 
             label4.Font = new Font("Microsoft Sans Serif", 28.2F, FontStyle.Regular, GraphicsUnit.Point);
+            label4.ForeColor = SystemColors.ActiveCaptionText;
             label4.Location = new Point(54, 66);
             label4.Name = "label4";
             label4.Size = new Size(449, 37);
@@ -123,12 +126,16 @@
             btnEntrar.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             btnEntrar.FlatStyle = FlatStyle.Flat;
             btnEntrar.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            btnEntrar.Location = new Point(416, 350);
+            btnEntrar.ForeColor = SystemColors.ActiveCaptionText;
+            btnEntrar.Image = Properties.Resources.log_in_outline1;
+            btnEntrar.ImageAlign = ContentAlignment.MiddleLeft;
+            btnEntrar.Location = new Point(384, 350);
             btnEntrar.Margin = new Padding(1);
             btnEntrar.Name = "btnEntrar";
-            btnEntrar.Size = new Size(88, 44);
+            btnEntrar.Size = new Size(120, 44);
             btnEntrar.TabIndex = 12;
             btnEntrar.Text = "Entrar";
+            btnEntrar.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnEntrar.UseVisualStyleBackColor = true;
             btnEntrar.Click += btnEntrar_Click;
             // 
@@ -136,6 +143,7 @@
             // 
             lblMensagem.AutoSize = true;
             lblMensagem.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            lblMensagem.ForeColor = SystemColors.ActiveCaptionText;
             lblMensagem.Location = new Point(54, 364);
             lblMensagem.Name = "lblMensagem";
             lblMensagem.Size = new Size(105, 25);

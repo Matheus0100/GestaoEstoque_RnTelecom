@@ -37,6 +37,7 @@ namespace GestaoEstoqueRN.Views
                     frm = new Estoque();
                     frm.MdiParent = this;
                     frm.Dock = DockStyle.Fill;
+                    //frm.Text = "";
                     frm.Show();
                 }
 

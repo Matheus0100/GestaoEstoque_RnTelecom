@@ -28,14 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            button2 = new Button();
-            textBox10 = new TextBox();
-            textBox4 = new TextBox();
-            comboBox3 = new ComboBox();
-            comboBox2 = new ComboBox();
-            comboBox1 = new ComboBox();
-            label1 = new Label();
-            button3 = new Button();
+            btnCadastrar = new Button();
+            txtObservacao = new TextBox();
+            txtSerial = new TextBox();
+            cboAtivo = new ComboBox();
+            btnRetorno = new Button();
             dtpDataCompra = new DateTimePicker();
             dtpDataGarantia = new DateTimePicker();
             label6 = new Label();
@@ -48,98 +45,75 @@
             label9 = new Label();
             label10 = new Label();
             label11 = new Label();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            textBox3 = new TextBox();
+            txtPatrimonio = new TextBox();
+            txtNotaFiscal = new TextBox();
+            txtModelo = new TextBox();
+            txtMarca = new TextBox();
+            nudValor = new NumericUpDown();
+            ((System.ComponentModel.ISupportInitialize)nudValor).BeginInit();
             SuspendLayout();
             // 
-            // button2
+            // btnCadastrar
             // 
-            button2.Font = new Font("Verdana", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            button2.ForeColor = Color.FromArgb(192, 0, 0);
-            button2.Location = new Point(573, 589);
-            button2.Margin = new Padding(4, 3, 4, 3);
-            button2.Name = "button2";
-            button2.Size = new Size(132, 42);
-            button2.TabIndex = 48;
-            button2.Text = "CADASTRAR\r\n ATIVO";
-            button2.UseVisualStyleBackColor = true;
+            btnCadastrar.Font = new Font("Segoe UI", 13F, FontStyle.Bold, GraphicsUnit.Point);
+            btnCadastrar.ForeColor = Color.Black;
+            btnCadastrar.Image = Properties.Resources.save_outline1;
+            btnCadastrar.ImageAlign = ContentAlignment.MiddleLeft;
+            btnCadastrar.Location = new Point(435, 526);
+            btnCadastrar.Margin = new Padding(4, 3, 4, 3);
+            btnCadastrar.Name = "btnCadastrar";
+            btnCadastrar.Size = new Size(108, 42);
+            btnCadastrar.TabIndex = 48;
+            btnCadastrar.Text = "Salvar";
+            btnCadastrar.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnCadastrar.UseVisualStyleBackColor = true;
+            btnCadastrar.Click += btnCadastrar_Click;
             // 
-            // textBox10
+            // txtObservacao
             // 
-            textBox10.Location = new Point(63, 577);
-            textBox10.Margin = new Padding(4, 3, 4, 3);
-            textBox10.Multiline = true;
-            textBox10.Name = "textBox10";
-            textBox10.Size = new Size(502, 54);
-            textBox10.TabIndex = 39;
-            textBox10.Text = "INSERIR";
+            txtObservacao.Location = new Point(63, 454);
+            txtObservacao.Margin = new Padding(4, 3, 4, 3);
+            txtObservacao.Multiline = true;
+            txtObservacao.Name = "txtObservacao";
+            txtObservacao.PlaceholderText = "INSERIR";
+            txtObservacao.Size = new Size(215, 114);
+            txtObservacao.TabIndex = 39;
             // 
-            // textBox4
+            // txtSerial
             // 
-            textBox4.Location = new Point(63, 203);
-            textBox4.Margin = new Padding(4, 3, 4, 3);
-            textBox4.Multiline = true;
-            textBox4.Name = "textBox4";
-            textBox4.PlaceholderText = "INSERIR";
-            textBox4.Size = new Size(215, 23);
-            textBox4.TabIndex = 33;
+            txtSerial.Location = new Point(63, 284);
+            txtSerial.Margin = new Padding(4, 3, 4, 3);
+            txtSerial.Multiline = true;
+            txtSerial.Name = "txtSerial";
+            txtSerial.PlaceholderText = "INSERIR";
+            txtSerial.Size = new Size(215, 23);
+            txtSerial.TabIndex = 33;
             // 
-            // comboBox3
+            // cboAtivo
             // 
-            comboBox3.FormattingEnabled = true;
-            comboBox3.Location = new Point(681, 111);
-            comboBox3.Margin = new Padding(4, 3, 4, 3);
-            comboBox3.Name = "comboBox3";
-            comboBox3.Size = new Size(204, 23);
-            comboBox3.TabIndex = 30;
+            cboAtivo.FormattingEnabled = true;
+            cboAtivo.Location = new Point(63, 111);
+            cboAtivo.Margin = new Padding(4, 3, 4, 3);
+            cboAtivo.Name = "cboAtivo";
+            cboAtivo.Size = new Size(215, 23);
+            cboAtivo.TabIndex = 28;
             // 
-            // comboBox2
+            // btnRetorno
             // 
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(386, 111);
-            comboBox2.Margin = new Padding(4, 3, 4, 3);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(212, 23);
-            comboBox2.TabIndex = 29;
-            // 
-            // comboBox1
-            // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(63, 111);
-            comboBox1.Margin = new Padding(4, 3, 4, 3);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(215, 23);
-            comboBox1.TabIndex = 28;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 15F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point);
-            label1.ForeColor = SystemColors.ButtonFace;
-            label1.Location = new Point(63, 14);
-            label1.Margin = new Padding(4, 0, 4, 0);
-            label1.Name = "label1";
-            label1.Size = new Size(215, 28);
-            label1.TabIndex = 26;
-            label1.Text = "CADASTRO DE ATIVO";
-            // 
-            // button3
-            // 
-            button3.Font = new Font("Verdana", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            button3.ForeColor = Color.FromArgb(192, 0, 0);
-            button3.Location = new Point(762, 14);
-            button3.Margin = new Padding(4, 3, 4, 3);
-            button3.Name = "button3";
-            button3.Size = new Size(123, 41);
-            button3.TabIndex = 51;
-            button3.Text = "RETORNANDO AO\r\n ESTOQUE";
-            button3.UseVisualStyleBackColor = true;
+            btnRetorno.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            btnRetorno.ForeColor = Color.FromArgb(192, 0, 0);
+            btnRetorno.Location = new Point(420, 14);
+            btnRetorno.Margin = new Padding(4, 3, 4, 3);
+            btnRetorno.Name = "btnRetorno";
+            btnRetorno.Size = new Size(123, 41);
+            btnRetorno.TabIndex = 51;
+            btnRetorno.Text = "RETORNANDO AO\r\n ESTOQUE";
+            btnRetorno.UseVisualStyleBackColor = true;
             // 
             // dtpDataCompra
             // 
             dtpDataCompra.Format = DateTimePickerFormat.Short;
-            dtpDataCompra.Location = new Point(63, 383);
+            dtpDataCompra.Location = new Point(328, 454);
             dtpDataCompra.Name = "dtpDataCompra";
             dtpDataCompra.Size = new Size(215, 23);
             dtpDataCompra.TabIndex = 55;
@@ -147,9 +121,9 @@
             // dtpDataGarantia
             // 
             dtpDataGarantia.Format = DateTimePickerFormat.Short;
-            dtpDataGarantia.Location = new Point(312, 383);
+            dtpDataGarantia.Location = new Point(328, 370);
             dtpDataGarantia.Name = "dtpDataGarantia";
-            dtpDataGarantia.Size = new Size(212, 23);
+            dtpDataGarantia.Size = new Size(215, 23);
             dtpDataGarantia.TabIndex = 54;
             // 
             // label6
@@ -157,7 +131,7 @@
             label6.AutoSize = true;
             label6.Font = new Font("Arial", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             label6.ForeColor = SystemColors.Control;
-            label6.Location = new Point(312, 362);
+            label6.Location = new Point(328, 349);
             label6.Name = "label6";
             label6.Size = new Size(148, 18);
             label6.TabIndex = 53;
@@ -168,7 +142,7 @@
             label5.AutoSize = true;
             label5.Font = new Font("Arial", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             label5.ForeColor = SystemColors.Control;
-            label5.Location = new Point(63, 362);
+            label5.Location = new Point(328, 433);
             label5.Name = "label5";
             label5.Size = new Size(139, 18);
             label5.TabIndex = 52;
@@ -179,7 +153,7 @@
             label2.AutoSize = true;
             label2.Font = new Font("Arial", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             label2.ForeColor = SystemColors.Control;
-            label2.Location = new Point(63, 276);
+            label2.Location = new Point(63, 349);
             label2.Name = "label2";
             label2.Size = new Size(104, 18);
             label2.TabIndex = 56;
@@ -190,7 +164,7 @@
             label3.AutoSize = true;
             label3.Font = new Font("Arial", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             label3.ForeColor = SystemColors.Control;
-            label3.Location = new Point(681, 182);
+            label3.Location = new Point(328, 263);
             label3.Name = "label3";
             label3.Size = new Size(57, 18);
             label3.TabIndex = 57;
@@ -201,7 +175,7 @@
             label4.AutoSize = true;
             label4.Font = new Font("Arial", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             label4.ForeColor = SystemColors.Control;
-            label4.Location = new Point(386, 182);
+            label4.Location = new Point(328, 177);
             label4.Name = "label4";
             label4.Size = new Size(102, 18);
             label4.TabIndex = 58;
@@ -212,7 +186,7 @@
             label7.AutoSize = true;
             label7.Font = new Font("Arial", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             label7.ForeColor = SystemColors.Control;
-            label7.Location = new Point(63, 182);
+            label7.Location = new Point(63, 263);
             label7.Name = "label7";
             label7.Size = new Size(61, 18);
             label7.TabIndex = 59;
@@ -234,7 +208,7 @@
             label9.AutoSize = true;
             label9.Font = new Font("Arial", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             label9.ForeColor = SystemColors.Control;
-            label9.Location = new Point(386, 90);
+            label9.Location = new Point(328, 90);
             label9.Name = "label9";
             label9.Size = new Size(61, 18);
             label9.TabIndex = 61;
@@ -245,7 +219,7 @@
             label10.AutoSize = true;
             label10.Font = new Font("Arial", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             label10.ForeColor = SystemColors.Control;
-            label10.Location = new Point(681, 90);
+            label10.Location = new Point(63, 177);
             label10.Name = "label10";
             label10.Size = new Size(75, 18);
             label10.TabIndex = 62;
@@ -256,51 +230,72 @@
             label11.AutoSize = true;
             label11.Font = new Font("Arial", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             label11.ForeColor = SystemColors.Control;
-            label11.Location = new Point(63, 556);
+            label11.Location = new Point(63, 433);
             label11.Name = "label11";
             label11.Size = new Size(111, 18);
             label11.TabIndex = 63;
             label11.Text = "OBSERVAÇÃO";
             // 
-            // textBox1
+            // txtPatrimonio
             // 
-            textBox1.Location = new Point(386, 203);
-            textBox1.Margin = new Padding(4, 3, 4, 3);
-            textBox1.Multiline = true;
-            textBox1.Name = "textBox1";
-            textBox1.PlaceholderText = "INSERIR";
-            textBox1.Size = new Size(215, 23);
-            textBox1.TabIndex = 64;
+            txtPatrimonio.Location = new Point(328, 198);
+            txtPatrimonio.Margin = new Padding(4, 3, 4, 3);
+            txtPatrimonio.Multiline = true;
+            txtPatrimonio.Name = "txtPatrimonio";
+            txtPatrimonio.PlaceholderText = "INSERIR";
+            txtPatrimonio.Size = new Size(215, 23);
+            txtPatrimonio.TabIndex = 64;
             // 
-            // textBox2
+            // txtNotaFiscal
             // 
-            textBox2.Location = new Point(681, 203);
-            textBox2.Margin = new Padding(4, 3, 4, 3);
-            textBox2.Multiline = true;
-            textBox2.Name = "textBox2";
-            textBox2.PlaceholderText = "INSERIR";
-            textBox2.Size = new Size(215, 23);
-            textBox2.TabIndex = 65;
+            txtNotaFiscal.Location = new Point(63, 370);
+            txtNotaFiscal.Margin = new Padding(4, 3, 4, 3);
+            txtNotaFiscal.Multiline = true;
+            txtNotaFiscal.Name = "txtNotaFiscal";
+            txtNotaFiscal.PlaceholderText = "INSERIR";
+            txtNotaFiscal.Size = new Size(215, 23);
+            txtNotaFiscal.TabIndex = 66;
             // 
-            // textBox3
+            // txtModelo
             // 
-            textBox3.Location = new Point(63, 297);
-            textBox3.Margin = new Padding(4, 3, 4, 3);
-            textBox3.Multiline = true;
-            textBox3.Name = "textBox3";
-            textBox3.PlaceholderText = "INSERIR";
-            textBox3.Size = new Size(215, 23);
-            textBox3.TabIndex = 66;
+            txtModelo.Location = new Point(63, 198);
+            txtModelo.Margin = new Padding(4, 3, 4, 3);
+            txtModelo.Multiline = true;
+            txtModelo.Name = "txtModelo";
+            txtModelo.PlaceholderText = "INSERIR";
+            txtModelo.Size = new Size(215, 23);
+            txtModelo.TabIndex = 67;
+            // 
+            // txtMarca
+            // 
+            txtMarca.Location = new Point(328, 111);
+            txtMarca.Margin = new Padding(4, 3, 4, 3);
+            txtMarca.Multiline = true;
+            txtMarca.Name = "txtMarca";
+            txtMarca.PlaceholderText = "INSERIR";
+            txtMarca.Size = new Size(215, 23);
+            txtMarca.TabIndex = 68;
+            // 
+            // nudValor
+            // 
+            nudValor.DecimalPlaces = 2;
+            nudValor.Location = new Point(328, 285);
+            nudValor.Maximum = new decimal(new int[] { 999999999, 0, 0, 0 });
+            nudValor.Name = "nudValor";
+            nudValor.Size = new Size(215, 23);
+            nudValor.TabIndex = 69;
             // 
             // CadastroAtivo
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Maroon;
-            ClientSize = new Size(933, 643);
-            Controls.Add(textBox3);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
+            ClientSize = new Size(607, 589);
+            Controls.Add(nudValor);
+            Controls.Add(txtMarca);
+            Controls.Add(txtModelo);
+            Controls.Add(txtNotaFiscal);
+            Controls.Add(txtPatrimonio);
             Controls.Add(label11);
             Controls.Add(label10);
             Controls.Add(label9);
@@ -313,31 +308,31 @@
             Controls.Add(dtpDataGarantia);
             Controls.Add(label6);
             Controls.Add(label5);
-            Controls.Add(button3);
-            Controls.Add(button2);
-            Controls.Add(textBox10);
-            Controls.Add(textBox4);
-            Controls.Add(comboBox3);
-            Controls.Add(comboBox2);
-            Controls.Add(comboBox1);
-            Controls.Add(label1);
+            Controls.Add(btnRetorno);
+            Controls.Add(btnCadastrar);
+            Controls.Add(txtObservacao);
+            Controls.Add(txtSerial);
+            Controls.Add(cboAtivo);
             Margin = new Padding(4, 3, 4, 3);
+            MaximizeBox = false;
+            MaximumSize = new Size(623, 628);
+            MinimumSize = new Size(623, 628);
             Name = "CadastroAtivo";
             Text = "Cadastrar Ativo";
+            ((System.ComponentModel.ISupportInitialize)nudValor).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.Button btnCadastrar;
+        private System.Windows.Forms.TextBox txtObservacao;
+        private System.Windows.Forms.TextBox txtSerial;
         private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.ComboBox cboAtivo;
+        private System.Windows.Forms.Button btnRetorno;
         private DateTimePicker dtpDataCompra;
         private DateTimePicker dtpDataGarantia;
         private Label label6;
@@ -350,8 +345,10 @@
         private Label label9;
         private Label label10;
         private Label label11;
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private TextBox textBox3;
+        private TextBox txtPatrimonio;
+        private TextBox txtNotaFiscal;
+        private TextBox txtModelo;
+        private TextBox txtMarca;
+        private NumericUpDown nudValor;
     }
 }

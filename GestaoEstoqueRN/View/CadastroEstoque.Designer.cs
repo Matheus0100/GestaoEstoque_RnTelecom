@@ -28,10 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
             txtNotaFiscal = new TextBox();
             txtDescricao = new TextBox();
-            btnCadastrar = new Button();
             label2 = new Label();
             label3 = new Label();
             label4 = new Label();
@@ -50,21 +48,10 @@
             txtNome = new TextBox();
             label11 = new Label();
             txtTipo = new ComboBox();
+            btnCadastrar = new Button();
             ((System.ComponentModel.ISupportInitialize)nudPreco).BeginInit();
             ((System.ComponentModel.ISupportInitialize)nudQtdEstoque).BeginInit();
             SuspendLayout();
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 15F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point);
-            label1.ForeColor = SystemColors.ButtonFace;
-            label1.Location = new Point(62, 9);
-            label1.Margin = new Padding(4, 0, 4, 0);
-            label1.Name = "label1";
-            label1.Size = new Size(244, 28);
-            label1.TabIndex = 0;
-            label1.Text = "CADASTRO DE ESTOQUE";
             // 
             // txtNotaFiscal
             // 
@@ -85,19 +72,6 @@
             txtDescricao.PlaceholderText = "INSERIR";
             txtDescricao.Size = new Size(498, 86);
             txtDescricao.TabIndex = 16;
-            // 
-            // btnCadastrar
-            // 
-            btnCadastrar.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            btnCadastrar.ForeColor = Color.FromArgb(192, 0, 0);
-            btnCadastrar.Location = new Point(431, 541);
-            btnCadastrar.Margin = new Padding(4, 3, 4, 3);
-            btnCadastrar.Name = "btnCadastrar";
-            btnCadastrar.Size = new Size(132, 42);
-            btnCadastrar.TabIndex = 25;
-            btnCadastrar.Text = "CADASTRAR\r\n  ESTOQUE";
-            btnCadastrar.UseVisualStyleBackColor = true;
-            btnCadastrar.Click += btnCadastrar_Click;
             // 
             // label2
             // 
@@ -280,12 +254,29 @@
             txtTipo.Size = new Size(213, 23);
             txtTipo.TabIndex = 46;
             // 
+            // btnCadastrar
+            // 
+            btnCadastrar.Font = new Font("Segoe UI", 13F, FontStyle.Bold, GraphicsUnit.Point);
+            btnCadastrar.ForeColor = Color.Black;
+            btnCadastrar.Image = Properties.Resources.save_outline1;
+            btnCadastrar.ImageAlign = ContentAlignment.MiddleLeft;
+            btnCadastrar.Location = new Point(455, 541);
+            btnCadastrar.Margin = new Padding(4, 3, 4, 3);
+            btnCadastrar.Name = "btnCadastrar";
+            btnCadastrar.Size = new Size(108, 42);
+            btnCadastrar.TabIndex = 49;
+            btnCadastrar.Text = "Salvar";
+            btnCadastrar.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnCadastrar.UseVisualStyleBackColor = true;
+            btnCadastrar.Click += btnCadastrar_Click;
+            // 
             // CadastroEstoque
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Maroon;
             ClientSize = new Size(618, 595);
+            Controls.Add(btnCadastrar);
             Controls.Add(txtTipo);
             Controls.Add(txtNome);
             Controls.Add(label11);
@@ -304,10 +295,8 @@
             Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(label2);
-            Controls.Add(btnCadastrar);
             Controls.Add(txtDescricao);
             Controls.Add(txtNotaFiscal);
-            Controls.Add(label1);
             Margin = new Padding(4, 3, 4, 3);
             MaximizeBox = false;
             MaximumSize = new Size(634, 634);
@@ -321,8 +310,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
         //private System.Windows.Forms.ComboBox cboTipo;
         //private System.Windows.Forms.ComboBox txtMarca;
         private System.Windows.Forms.ComboBox cboModelo;
@@ -330,7 +317,6 @@
         private System.Windows.Forms.TextBox txtNotaFiscal;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.TextBox txtDescricao;
-        private System.Windows.Forms.Button btnCadastrar;
         private Label label2;
         private Label label3;
         private Label label4;
@@ -350,5 +336,6 @@
         private TextBox txtNome;
         private Label label11;
         private ComboBox txtTipo;
+        public Button btnCadastrar;
     }
 }

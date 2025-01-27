@@ -34,7 +34,7 @@ namespace GestaoEstoqueRN
                 {
                     conn.Open();
 
-                    string query = "SELECT IdAtivo, Nome, Descricao, Preco, Serial, Patrimonio FROM ativos";
+                    string query = "SELECT IdAtivo, Nome, Descricao, Preco, Serial, Patrimonio FROM ativos WHERE Status <> 5 OR Status IS NULL ORDER BY Status asc";
 
                     using (MySqlDataAdapter adapter = new MySqlDataAdapter(query, conn))
                     {
@@ -159,7 +159,7 @@ namespace GestaoEstoqueRN
                             int idAtivo = Convert.ToInt32(row.Cells["IdAtivo"].Value);
 
                             // Comando SQL para exclusão
-                            string query = "DELETE FROM ativos WHERE IdAtivo = @IdAtivo";
+                            string query = "UPDATE ativos SET Status = 5 WHERE IdAtivo = @IdAtivo";
 
                             using (MySqlCommand cmd = new MySqlCommand(query, conn))
                             {
@@ -264,6 +264,13 @@ namespace GestaoEstoqueRN
             // Atualiza a grid após a edição (se necessário)
             ConfigurarDataGridView();
             CarregarDados();
+        }
+
+        private void btnAdicionar_Click(object sender, EventArgs e)
+        {
+            CadastroAtivo frmCadastroAtivo = new();
+            frmCadastroAtivo.Text = "Cadastro de Ativo";
+            frmCadastroAtivo.Show();
         }
     }
 }

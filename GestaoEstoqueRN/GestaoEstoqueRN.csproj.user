@@ -7,9 +7,6 @@
     <Compile Update="View\AssociarAtivo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="View\ConfirmarCadastro.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="View\CadastroEstoque.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -17,15 +14,6 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="View\DesignarTecnico.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="View\InformacaoEstoque.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="View\InformacaoAtivo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="View\MotivoRetorno.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="View\CadastroRetornoEstoqueAtivo.cs">
