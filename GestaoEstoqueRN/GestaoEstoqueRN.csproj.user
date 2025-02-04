@@ -16,9 +16,6 @@
     <Compile Update="View\DesignarTecnico.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="View\CadastroRetornoEstoqueAtivo.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="View\Principal.cs">
       <SubType>Form</SubType>
     </Compile>

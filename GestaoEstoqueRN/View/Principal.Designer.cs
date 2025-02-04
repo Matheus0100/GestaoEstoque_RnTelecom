@@ -113,6 +113,7 @@
             Name = "Principal";
             Text = "Gestão de Estoque - RN Telecom";
             WindowState = FormWindowState.Maximized;
+            FormClosing += Principal_FormClosing;
             toolStrip1.ResumeLayout(false);
             toolStrip1.PerformLayout();
             ResumeLayout(false);

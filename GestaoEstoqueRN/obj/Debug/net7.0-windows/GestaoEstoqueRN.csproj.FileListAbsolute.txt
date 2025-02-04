@@ -103,7 +103,6 @@ H:\Documents\GestaoEstoque_RN\GestaoEstoqueRN\obj\Debug\net7.0-windows\GestaoEst
 H:\Documents\GestaoEstoque_RN\GestaoEstoqueRN\obj\Debug\net7.0-windows\GestaoEstoqueRN.Views.AssociarAtivo.resources
 H:\Documents\GestaoEstoque_RN\GestaoEstoqueRN\obj\Debug\net7.0-windows\GestaoEstoqueRN.Views.CadastroAtivo.resources
 H:\Documents\GestaoEstoque_RN\GestaoEstoqueRN\obj\Debug\net7.0-windows\GestaoEstoqueRN.Views.CadastroEstoque.resources
-H:\Documents\GestaoEstoque_RN\GestaoEstoqueRN\obj\Debug\net7.0-windows\GestaoEstoqueRN.Views.CadastroRetornoEstoqueAtivo.resources
 H:\Documents\GestaoEstoque_RN\GestaoEstoqueRN\obj\Debug\net7.0-windows\GestaoEstoqueRN.Views.DesignarTecnico.resources
 H:\Documents\GestaoEstoque_RN\GestaoEstoqueRN\obj\Debug\net7.0-windows\GestaoEstoqueRN.Estoque.resources
 H:\Documents\GestaoEstoque_RN\GestaoEstoqueRN\obj\Debug\net7.0-windows\GestaoEstoqueRN.EstoqueAtivos.resources

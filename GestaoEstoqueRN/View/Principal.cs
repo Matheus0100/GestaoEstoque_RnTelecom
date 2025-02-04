@@ -22,7 +22,7 @@ namespace GestaoEstoqueRN.Views
             try
             {
                 // Verifica se o formulário já está aberto
-                Form ?frm = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is Estoque);
+                Form? frm = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is Estoque);
 
                 MudarCorTitulo(btnEstoque);
 
@@ -51,7 +51,7 @@ namespace GestaoEstoqueRN.Views
         {
             try
             {
-                Form ?frm = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is EstoqueAtivos);
+                Form? frm = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is EstoqueAtivos);
 
                 MudarCorTitulo(btnEstoqueAtivos);
 
@@ -69,7 +69,7 @@ namespace GestaoEstoqueRN.Views
                     frm.Dock = DockStyle.Fill;
                     frm.Show();
                 }
-               
+
             }
             catch (Exception ex)
             {
@@ -81,7 +81,7 @@ namespace GestaoEstoqueRN.Views
         {
             try
             {
-                Form ?frm = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is ExibirTecnico);
+                Form? frm = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is ExibirTecnico);
 
                 //this.toolStripButton1.ForeColor = Color.Black;
                 MudarCorTitulo(btnDesignarTecnico);
@@ -122,6 +122,11 @@ namespace GestaoEstoqueRN.Views
             {
                 MessageBox.Show("Ocorreu um erro ao mudar a cor do título. Erro: " + ex.Message);
             }
+        }
+
+        private void Principal_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

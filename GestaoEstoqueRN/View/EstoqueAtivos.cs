@@ -21,11 +21,6 @@ namespace GestaoEstoqueRN
         {
             InitializeComponent();
         }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
         private void CarregarDados()
         {
             try
@@ -34,7 +29,7 @@ namespace GestaoEstoqueRN
                 {
                     conn.Open();
 
-                    string query = "SELECT IdAtivo, Nome, Descricao, Preco, Serial, Patrimonio FROM ativos WHERE Status <> 5 OR Status IS NULL ORDER BY Status asc";
+                    string query = "SELECT IdAtivo, Tipo, Descricao, Preco, Serial, Patrimonio FROM ativos WHERE Status <> 5 OR Status IS NULL ORDER BY Status asc";
 
                     using (MySqlDataAdapter adapter = new MySqlDataAdapter(query, conn))
                     {
@@ -85,7 +80,7 @@ namespace GestaoEstoqueRN
                 HeaderText = "Ação",
                 Name = "ButtonColumn",
                 Text = "Detalhes",
-                UseColumnTextForButtonValue = true, // Exibe o texto em todas as células da coluna
+                UseColumnTextForButtonValue = true,
                 Width = 80
             };
             dataGridView1.Columns.Add(buttonColumn);
@@ -258,7 +253,7 @@ namespace GestaoEstoqueRN
             int idAtivo = Convert.ToInt32(registrosSelecionados.First().Cells["IdAtivo"].Value);
 
             // Abre o formulário de adicionar/editar com o ID do registro
-            var formAdicionar = new CadastroEstoque(idAtivo);
+            var formAdicionar = new CadastroAtivo(idAtivo);
             formAdicionar.ShowDialog();
 
             // Atualiza a grid após a edição (se necessário)
@@ -271,6 +266,25 @@ namespace GestaoEstoqueRN
             CadastroAtivo frmCadastroAtivo = new();
             frmCadastroAtivo.Text = "Cadastro de Ativo";
             frmCadastroAtivo.Show();
+            ConfigurarDataGridView();
+            CarregarDados();
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            // Verifica se o clique foi na coluna do botão
+            if (e.RowIndex >= 0 && e.ColumnIndex == dataGridView1.Columns["ButtonColumn"].Index)
+            {
+                // Obtém o ID do produto da linha selecionada
+                int idAtivo = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells["IdAtivo"].Value);
+
+                // Abre o formulário secundário e passa o ID do produto
+                CadastroAtivo formDetalhes = new(idAtivo);
+                formDetalhes.btnCadastrar.Visible = false;
+                formDetalhes.btnRetorno.Visible = false;
+                formDetalhes.Text = "Exibição de Informações";
+                formDetalhes.ShowDialog();
+            }
         }
     }
 }

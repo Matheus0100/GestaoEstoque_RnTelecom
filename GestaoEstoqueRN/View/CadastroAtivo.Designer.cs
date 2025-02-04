@@ -50,6 +50,8 @@
             txtModelo = new TextBox();
             txtMarca = new TextBox();
             nudValor = new NumericUpDown();
+            label1 = new Label();
+            cboStatus = new ComboBox();
             ((System.ComponentModel.ISupportInitialize)nudValor).BeginInit();
             SuspendLayout();
             // 
@@ -109,6 +111,7 @@
             btnRetorno.TabIndex = 51;
             btnRetorno.Text = "RETORNANDO AO\r\n ESTOQUE";
             btnRetorno.UseVisualStyleBackColor = true;
+            btnRetorno.Click += btnRetorno_Click;
             // 
             // dtpDataCompra
             // 
@@ -285,12 +288,36 @@
             nudValor.Size = new Size(215, 23);
             nudValor.TabIndex = 69;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Arial", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.ForeColor = SystemColors.Control;
+            label1.Location = new Point(63, 14);
+            label1.Name = "label1";
+            label1.Size = new Size(66, 18);
+            label1.TabIndex = 71;
+            label1.Text = "STATUS";
+            label1.Visible = false;
+            // 
+            // cboStatus
+            // 
+            cboStatus.FormattingEnabled = true;
+            cboStatus.Location = new Point(63, 35);
+            cboStatus.Margin = new Padding(4, 3, 4, 3);
+            cboStatus.Name = "cboStatus";
+            cboStatus.Size = new Size(215, 23);
+            cboStatus.TabIndex = 70;
+            cboStatus.Visible = false;
+            // 
             // CadastroAtivo
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Maroon;
             ClientSize = new Size(607, 589);
+            Controls.Add(label1);
+            Controls.Add(cboStatus);
             Controls.Add(nudValor);
             Controls.Add(txtMarca);
             Controls.Add(txtModelo);
@@ -325,14 +352,11 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnCadastrar;
         private System.Windows.Forms.TextBox txtObservacao;
         private System.Windows.Forms.TextBox txtSerial;
         private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.ComboBox cboAtivo;
-        private System.Windows.Forms.Button btnRetorno;
         private DateTimePicker dtpDataCompra;
         private DateTimePicker dtpDataGarantia;
         private Label label6;
@@ -350,5 +374,9 @@
         private TextBox txtModelo;
         private TextBox txtMarca;
         private NumericUpDown nudValor;
+        public Button btnCadastrar;
+        public Button btnRetorno;
+        private Label label1;
+        private ComboBox cboStatus;
     }
 }
