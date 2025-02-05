@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using GestaoEstoqueRN.DAO;
+using GestaoEstoqueRN.Views;
 using MySql.Data.MySqlClient;
 
 namespace GestaoEstoqueRN
@@ -28,6 +29,11 @@ namespace GestaoEstoqueRN
         private void ExibirTecnico_Load(object sender, EventArgs e)
         {
             CarregarDados();
+            ObterDataAtual();
+        }
+        private void ObterDataAtual()
+        {
+            dateTimePicker1.Value = DateTime.Now;
         }
         private void CarregarDados()
         {
@@ -96,6 +102,19 @@ namespace GestaoEstoqueRN
                 Width = 80
             };
             dataGridView1.Columns.Add(buttonColumn);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                DesignarTecnico frmDesignarTecnico = new();
+                frmDesignarTecnico.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Erro: {ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

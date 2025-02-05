@@ -21,23 +21,19 @@ namespace GestaoEstoqueRN.Views
         {
             try
             {
-                // Verifica se o formulário já está aberto
                 Form? frm = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is Estoque);
 
                 MudarCorTitulo(btnEstoque);
 
                 if (frm != null)
                 {
-                    // Se o formulário já está aberto, traz para o primeiro plano
                     frm.BringToFront();
                 }
                 else
                 {
-                    // Se não está aberto, cria uma nova instância e mostra
                     frm = new Estoque();
                     frm.MdiParent = this;
                     frm.Dock = DockStyle.Fill;
-                    //frm.Text = "";
                     frm.Show();
                 }
 
@@ -58,12 +54,10 @@ namespace GestaoEstoqueRN.Views
 
                 if (frm != null)
                 {
-                    // Se o formulário já está aberto, traz para o primeiro plano
                     frm.BringToFront();
                 }
                 else
                 {
-                    // Se não está aberto, cria uma nova instância e mostra
                     frm = new EstoqueAtivos();
                     frm.MdiParent = this;
                     frm.Dock = DockStyle.Fill;
@@ -83,17 +77,14 @@ namespace GestaoEstoqueRN.Views
             {
                 Form? frm = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is ExibirTecnico);
 
-                //this.toolStripButton1.ForeColor = Color.Black;
                 MudarCorTitulo(btnDesignarTecnico);
 
                 if (frm != null)
                 {
-                    // Se o formulário já está aberto, traz para o primeiro plano
                     frm.BringToFront();
                 }
                 else
                 {
-                    // Se não está aberto, cria uma nova instância e mostra
                     frm = new ExibirTecnico();
                     frm.MdiParent = this;
                     frm.Dock = DockStyle.Fill;

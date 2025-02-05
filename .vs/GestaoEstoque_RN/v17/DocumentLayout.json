@@ -3,6 +3,18 @@
   "WorkspaceRootPath": "H:\\Documents\\GestaoEstoque_RN\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{5E29D0CA-5636-4D81-81EF-56800C5AD77F}|GestaoEstoqueRN\\GestaoEstoqueRN.csproj|h:\\documents\\gestaoestoque_rn\\gestaoestoquern\\view\\exibirtecnico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5E29D0CA-5636-4D81-81EF-56800C5AD77F}|GestaoEstoqueRN\\GestaoEstoqueRN.csproj|solutionrelative:gestaoestoquern\\view\\exibirtecnico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5E29D0CA-5636-4D81-81EF-56800C5AD77F}|GestaoEstoqueRN\\GestaoEstoqueRN.csproj|H:\\Documents\\GestaoEstoque_RN\\gestaoestoquern\\view\\exibirtecnico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{5E29D0CA-5636-4D81-81EF-56800C5AD77F}|GestaoEstoqueRN\\GestaoEstoqueRN.csproj|solutionrelative:gestaoestoquern\\view\\exibirtecnico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5E29D0CA-5636-4D81-81EF-56800C5AD77F}|GestaoEstoqueRN\\GestaoEstoqueRN.csproj|H:\\Documents\\GestaoEstoque_RN\\gestaoestoquern\\view\\designartecnico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{5E29D0CA-5636-4D81-81EF-56800C5AD77F}|GestaoEstoqueRN\\GestaoEstoqueRN.csproj|solutionrelative:gestaoestoquern\\view\\designartecnico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{5E29D0CA-5636-4D81-81EF-56800C5AD77F}|GestaoEstoqueRN\\GestaoEstoqueRN.csproj|h:\\documents\\gestaoestoque_rn\\gestaoestoquern\\view\\principal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5E29D0CA-5636-4D81-81EF-56800C5AD77F}|GestaoEstoqueRN\\GestaoEstoqueRN.csproj|solutionrelative:gestaoestoquern\\view\\principal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -19,20 +31,8 @@
       "RelativeMoniker": "D:0:0:{5E29D0CA-5636-4D81-81EF-56800C5AD77F}|GestaoEstoqueRN\\GestaoEstoqueRN.csproj|solutionrelative:gestaoestoquern\\view\\estoque.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5E29D0CA-5636-4D81-81EF-56800C5AD77F}|GestaoEstoqueRN\\GestaoEstoqueRN.csproj|h:\\documents\\gestaoestoque_rn\\gestaoestoquern\\view\\exibirtecnico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5E29D0CA-5636-4D81-81EF-56800C5AD77F}|GestaoEstoqueRN\\GestaoEstoqueRN.csproj|solutionrelative:gestaoestoquern\\view\\exibirtecnico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5E29D0CA-5636-4D81-81EF-56800C5AD77F}|GestaoEstoqueRN\\GestaoEstoqueRN.csproj|H:\\Documents\\GestaoEstoque_RN\\gestaoestoquern\\view\\exibirtecnico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{5E29D0CA-5636-4D81-81EF-56800C5AD77F}|GestaoEstoqueRN\\GestaoEstoqueRN.csproj|solutionrelative:gestaoestoquern\\view\\exibirtecnico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{5E29D0CA-5636-4D81-81EF-56800C5AD77F}|GestaoEstoqueRN\\GestaoEstoqueRN.csproj|H:\\Documents\\GestaoEstoque_RN\\gestaoestoquern\\view\\cadastroestoque.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{5E29D0CA-5636-4D81-81EF-56800C5AD77F}|GestaoEstoqueRN\\GestaoEstoqueRN.csproj|solutionrelative:gestaoestoquern\\view\\cadastroestoque.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5E29D0CA-5636-4D81-81EF-56800C5AD77F}|GestaoEstoqueRN\\GestaoEstoqueRN.csproj|h:\\documents\\gestaoestoque_rn\\gestaoestoquern\\view\\designartecnico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{5E29D0CA-5636-4D81-81EF-56800C5AD77F}|GestaoEstoqueRN\\GestaoEstoqueRN.csproj|solutionrelative:gestaoestoquern\\view\\designartecnico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5E29D0CA-5636-4D81-81EF-56800C5AD77F}|GestaoEstoqueRN\\GestaoEstoqueRN.csproj|H:\\Documents\\GestaoEstoque_RN\\gestaoestoquern\\view\\estoqueativos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -99,18 +99,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "Estoque.cs [Projeto]",
-              "DocumentMoniker": "H:\\Documents\\GestaoEstoque_RN\\GestaoEstoqueRN\\View\\Estoque.cs",
-              "RelativeDocumentMoniker": "GestaoEstoqueRN\\View\\Estoque.cs",
-              "ToolTip": "H:\\Documents\\GestaoEstoque_RN\\GestaoEstoqueRN\\View\\Estoque.cs [Projeto]",
-              "RelativeToolTip": "GestaoEstoqueRN\\View\\Estoque.cs [Projeto]",
+              "Title": "Principal.cs",
+              "DocumentMoniker": "H:\\Documents\\GestaoEstoque_RN\\GestaoEstoqueRN\\View\\Principal.cs",
+              "RelativeDocumentMoniker": "GestaoEstoqueRN\\View\\Principal.cs",
+              "ToolTip": "H:\\Documents\\GestaoEstoque_RN\\GestaoEstoqueRN\\View\\Principal.cs",
+              "RelativeToolTip": "GestaoEstoqueRN\\View\\Principal.cs",
+              "ViewState": "AgIAAG0AAAAAAAAAAAAcwBYAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-13T19:13:43.319Z",
-              "EditorCaption": " [Projeto]"
+              "WhenOpened": "2025-01-13T14:29:08.747Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 1,
               "Title": "ExibirTecnico.cs [Projeto]",
               "DocumentMoniker": "H:\\Documents\\GestaoEstoque_RN\\GestaoEstoqueRN\\View\\ExibirTecnico.cs",
               "RelativeDocumentMoniker": "GestaoEstoqueRN\\View\\ExibirTecnico.cs",
@@ -122,20 +123,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ExibirTecnico.cs",
-              "DocumentMoniker": "H:\\Documents\\GestaoEstoque_RN\\GestaoEstoqueRN\\View\\ExibirTecnico.cs",
-              "RelativeDocumentMoniker": "GestaoEstoqueRN\\View\\ExibirTecnico.cs",
-              "ToolTip": "H:\\Documents\\GestaoEstoque_RN\\GestaoEstoqueRN\\View\\ExibirTecnico.cs",
-              "RelativeToolTip": "GestaoEstoqueRN\\View\\ExibirTecnico.cs",
-              "ViewState": "AgIAACYAAAAAAAAAAAAAAFkAAAA+AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-15T14:41:39.589Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "CadastroEstoque.cs [Projeto]",
               "DocumentMoniker": "H:\\Documents\\GestaoEstoque_RN\\GestaoEstoqueRN\\View\\CadastroEstoque.cs",
               "RelativeDocumentMoniker": "GestaoEstoqueRN\\View\\CadastroEstoque.cs",
@@ -147,79 +135,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Estoque.cs",
-              "DocumentMoniker": "H:\\Documents\\GestaoEstoque_RN\\GestaoEstoqueRN\\View\\Estoque.cs",
-              "RelativeDocumentMoniker": "GestaoEstoqueRN\\View\\Estoque.cs",
-              "ToolTip": "H:\\Documents\\GestaoEstoque_RN\\GestaoEstoqueRN\\View\\Estoque.cs",
-              "RelativeToolTip": "GestaoEstoqueRN\\View\\Estoque.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-15T13:53:30.478Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Principal.cs [Projeto]",
+              "DocumentIndex": 4,
+              "Title": "Principal.cs [Design]",
               "DocumentMoniker": "H:\\Documents\\GestaoEstoque_RN\\GestaoEstoqueRN\\View\\Principal.cs",
               "RelativeDocumentMoniker": "GestaoEstoqueRN\\View\\Principal.cs",
-              "ToolTip": "H:\\Documents\\GestaoEstoque_RN\\GestaoEstoqueRN\\View\\Principal.cs [Projeto]",
-              "RelativeToolTip": "GestaoEstoqueRN\\View\\Principal.cs [Projeto]",
+              "ToolTip": "H:\\Documents\\GestaoEstoque_RN\\GestaoEstoqueRN\\View\\Principal.cs [Design]",
+              "RelativeToolTip": "GestaoEstoqueRN\\View\\Principal.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-13T13:15:45.413Z",
-              "EditorCaption": " [Projeto]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Principal.cs",
-              "DocumentMoniker": "H:\\Documents\\GestaoEstoque_RN\\GestaoEstoqueRN\\View\\Principal.cs",
-              "RelativeDocumentMoniker": "GestaoEstoqueRN\\View\\Principal.cs",
-              "ToolTip": "H:\\Documents\\GestaoEstoque_RN\\GestaoEstoqueRN\\View\\Principal.cs",
-              "RelativeToolTip": "GestaoEstoqueRN\\View\\Principal.cs",
-              "ViewState": "AgIAAG4AAAAAAAAAAAAAwIQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-13T14:29:08.747Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{e5c86464-96be-4d7c-9a8b-abcb3bbf5f92}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "AssociarAtivo.cs [Projeto]",
-              "DocumentMoniker": "H:\\Documents\\GestaoEstoque_RN\\GestaoEstoqueRN\\View\\AssociarAtivo.cs",
-              "RelativeDocumentMoniker": "GestaoEstoqueRN\\View\\AssociarAtivo.cs",
-              "ToolTip": "H:\\Documents\\GestaoEstoque_RN\\GestaoEstoqueRN\\View\\AssociarAtivo.cs [Projeto]",
-              "RelativeToolTip": "GestaoEstoqueRN\\View\\AssociarAtivo.cs [Projeto]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-21T19:33:25.704Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "DesignarTecnico.cs [Projeto]",
-              "DocumentMoniker": "H:\\Documents\\GestaoEstoque_RN\\GestaoEstoqueRN\\View\\DesignarTecnico.cs",
-              "RelativeDocumentMoniker": "GestaoEstoqueRN\\View\\DesignarTecnico.cs",
-              "ToolTip": "H:\\Documents\\GestaoEstoque_RN\\GestaoEstoqueRN\\View\\DesignarTecnico.cs [Projeto]",
-              "RelativeToolTip": "GestaoEstoqueRN\\View\\DesignarTecnico.cs [Projeto]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-21T18:13:15.013Z",
-              "EditorCaption": " [Projeto]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "CadastroAtivo.cs [Projeto]",
-              "DocumentMoniker": "H:\\Documents\\GestaoEstoque_RN\\GestaoEstoqueRN\\View\\CadastroAtivo.cs",
-              "RelativeDocumentMoniker": "GestaoEstoqueRN\\View\\CadastroAtivo.cs",
-              "ToolTip": "H:\\Documents\\GestaoEstoque_RN\\GestaoEstoqueRN\\View\\CadastroAtivo.cs [Projeto]",
-              "RelativeToolTip": "GestaoEstoqueRN\\View\\CadastroAtivo.cs [Projeto]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-15T19:22:22.421Z"
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
@@ -231,7 +155,60 @@
               "RelativeToolTip": "GestaoEstoqueRN\\View\\EstoqueAtivos.cs",
               "ViewState": "AgIAAKEAAAAAAAAAAAAuwIoAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-15T14:41:50.926Z"
+              "WhenOpened": "2025-01-15T14:41:50.926Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DesignarTecnico.cs [Projeto]",
+              "DocumentMoniker": "H:\\Documents\\GestaoEstoque_RN\\GestaoEstoqueRN\\View\\DesignarTecnico.cs",
+              "RelativeDocumentMoniker": "GestaoEstoqueRN\\View\\DesignarTecnico.cs",
+              "ToolTip": "H:\\Documents\\GestaoEstoque_RN\\GestaoEstoqueRN\\View\\DesignarTecnico.cs [Projeto]",
+              "RelativeToolTip": "GestaoEstoqueRN\\View\\DesignarTecnico.cs [Projeto]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-21T18:13:15.013Z",
+              "EditorCaption": " [Projeto]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ExibirTecnico.cs",
+              "DocumentMoniker": "H:\\Documents\\GestaoEstoque_RN\\GestaoEstoqueRN\\View\\ExibirTecnico.cs",
+              "RelativeDocumentMoniker": "GestaoEstoqueRN\\View\\ExibirTecnico.cs",
+              "ToolTip": "H:\\Documents\\GestaoEstoque_RN\\GestaoEstoqueRN\\View\\ExibirTecnico.cs",
+              "RelativeToolTip": "GestaoEstoqueRN\\View\\ExibirTecnico.cs",
+              "ViewState": "AgIAADoAAAAAAAAAAAAcwFoAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-15T14:41:39.589Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e5c86464-96be-4d7c-9a8b-abcb3bbf5f92}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Estoque.cs [Projeto]",
+              "DocumentMoniker": "H:\\Documents\\GestaoEstoque_RN\\GestaoEstoqueRN\\View\\Estoque.cs",
+              "RelativeDocumentMoniker": "GestaoEstoqueRN\\View\\Estoque.cs",
+              "ToolTip": "H:\\Documents\\GestaoEstoque_RN\\GestaoEstoqueRN\\View\\Estoque.cs [Projeto]",
+              "RelativeToolTip": "GestaoEstoqueRN\\View\\Estoque.cs [Projeto]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-13T19:13:43.319Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Estoque.cs",
+              "DocumentMoniker": "H:\\Documents\\GestaoEstoque_RN\\GestaoEstoqueRN\\View\\Estoque.cs",
+              "RelativeDocumentMoniker": "GestaoEstoqueRN\\View\\Estoque.cs",
+              "ToolTip": "H:\\Documents\\GestaoEstoque_RN\\GestaoEstoqueRN\\View\\Estoque.cs",
+              "RelativeToolTip": "GestaoEstoqueRN\\View\\Estoque.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-15T13:53:30.478Z"
             },
             {
               "$type": "Document",
@@ -257,28 +234,6 @@
               "ViewState": "AgIAAMIAAAAAAAAAAAAIwNIAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-27T18:10:45.772Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "EstoqueAtivos.cs [Projeto]",
-              "DocumentMoniker": "H:\\Documents\\GestaoEstoque_RN\\GestaoEstoqueRN\\View\\EstoqueAtivos.cs",
-              "RelativeDocumentMoniker": "GestaoEstoqueRN\\View\\EstoqueAtivos.cs",
-              "ToolTip": "H:\\Documents\\GestaoEstoque_RN\\GestaoEstoqueRN\\View\\EstoqueAtivos.cs [Projeto]",
-              "RelativeToolTip": "GestaoEstoqueRN\\View\\EstoqueAtivos.cs [Projeto]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-15T14:41:48.686Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "Login.cs [Projeto]",
-              "DocumentMoniker": "H:\\Documents\\GestaoEstoque_RN\\GestaoEstoqueRN\\View\\Login.cs",
-              "RelativeDocumentMoniker": "GestaoEstoqueRN\\View\\Login.cs",
-              "ToolTip": "H:\\Documents\\GestaoEstoque_RN\\GestaoEstoqueRN\\View\\Login.cs [Projeto]",
-              "RelativeToolTip": "GestaoEstoqueRN\\View\\Login.cs [Projeto]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-22T17:54:57.938Z"
             },
             {
               "$type": "Document",
@@ -338,8 +293,7 @@
               "RelativeToolTip": "GestaoEstoqueRN\\View\\Estoque.Designer.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-15T19:54:12.217Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-15T19:54:12.217Z"
             },
             {
               "$type": "Document",
@@ -351,8 +305,51 @@
               "RelativeToolTip": "GestaoEstoqueRN\\View\\Principal.Designer.cs",
               "ViewState": "AgIAABYAAAAAAAAAAAAowBYAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-13T18:28:56.996Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-13T18:28:56.996Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "AssociarAtivo.cs [Projeto]",
+              "DocumentMoniker": "H:\\Documents\\GestaoEstoque_RN\\GestaoEstoqueRN\\View\\AssociarAtivo.cs",
+              "RelativeDocumentMoniker": "GestaoEstoqueRN\\View\\AssociarAtivo.cs",
+              "ToolTip": "H:\\Documents\\GestaoEstoque_RN\\GestaoEstoqueRN\\View\\AssociarAtivo.cs [Projeto]",
+              "RelativeToolTip": "GestaoEstoqueRN\\View\\AssociarAtivo.cs [Projeto]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-21T19:33:25.704Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "CadastroAtivo.cs [Projeto]",
+              "DocumentMoniker": "H:\\Documents\\GestaoEstoque_RN\\GestaoEstoqueRN\\View\\CadastroAtivo.cs",
+              "RelativeDocumentMoniker": "GestaoEstoqueRN\\View\\CadastroAtivo.cs",
+              "ToolTip": "H:\\Documents\\GestaoEstoque_RN\\GestaoEstoqueRN\\View\\CadastroAtivo.cs [Projeto]",
+              "RelativeToolTip": "GestaoEstoqueRN\\View\\CadastroAtivo.cs [Projeto]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-15T19:22:22.421Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "EstoqueAtivos.cs [Projeto]",
+              "DocumentMoniker": "H:\\Documents\\GestaoEstoque_RN\\GestaoEstoqueRN\\View\\EstoqueAtivos.cs",
+              "RelativeDocumentMoniker": "GestaoEstoqueRN\\View\\EstoqueAtivos.cs",
+              "ToolTip": "H:\\Documents\\GestaoEstoque_RN\\GestaoEstoqueRN\\View\\EstoqueAtivos.cs [Projeto]",
+              "RelativeToolTip": "GestaoEstoqueRN\\View\\EstoqueAtivos.cs [Projeto]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-15T14:41:48.686Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Login.cs [Projeto]",
+              "DocumentMoniker": "H:\\Documents\\GestaoEstoque_RN\\GestaoEstoqueRN\\View\\Login.cs",
+              "RelativeDocumentMoniker": "GestaoEstoqueRN\\View\\Login.cs",
+              "ToolTip": "H:\\Documents\\GestaoEstoque_RN\\GestaoEstoqueRN\\View\\Login.cs [Projeto]",
+              "RelativeToolTip": "GestaoEstoqueRN\\View\\Login.cs [Projeto]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-22T17:54:57.938Z"
             }
           ]
         }
