@@ -32,7 +32,7 @@
             label2 = new Label();
             label3 = new Label();
             label4 = new Label();
-            comboBox1 = new ComboBox();
+            cboRadu = new ComboBox();
             cboAtivo = new ComboBox();
             cboProduto = new ComboBox();
             btnSalvar = new Button();
@@ -42,7 +42,7 @@
             label5 = new Label();
             txtAssociado = new ComboBox();
             label6 = new Label();
-            textBox1 = new TextBox();
+            txtDescricao = new TextBox();
             label7 = new Label();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)nudQtdProduto).BeginInit();
@@ -96,20 +96,20 @@
             label4.TabIndex = 3;
             label4.Text = "QUANTIDADE";
             // 
-            // comboBox1
+            // cboRadu
             // 
-            comboBox1.ForeColor = Color.Silver;
-            comboBox1.FormatString = "Selecione";
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(53, 30);
-            comboBox1.Margin = new Padding(4, 3, 4, 3);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(183, 23);
-            comboBox1.TabIndex = 5;
+            cboRadu.ForeColor = Color.Black;
+            cboRadu.FormatString = "Selecione";
+            cboRadu.FormattingEnabled = true;
+            cboRadu.Location = new Point(53, 30);
+            cboRadu.Margin = new Padding(4, 3, 4, 3);
+            cboRadu.Name = "cboRadu";
+            cboRadu.Size = new Size(183, 23);
+            cboRadu.TabIndex = 5;
             // 
             // cboAtivo
             // 
-            cboAtivo.ForeColor = Color.Silver;
+            cboAtivo.ForeColor = Color.Black;
             cboAtivo.FormatString = "Selecione";
             cboAtivo.FormattingEnabled = true;
             cboAtivo.Location = new Point(271, 38);
@@ -117,11 +117,12 @@
             cboAtivo.Name = "cboAtivo";
             cboAtivo.Size = new Size(183, 24);
             cboAtivo.TabIndex = 6;
+            cboAtivo.SelectedIndexChanged += cboAtivo_SelectedIndexChanged;
             // 
             // cboProduto
             // 
             cboProduto.FlatStyle = FlatStyle.System;
-            cboProduto.ForeColor = Color.Silver;
+            cboProduto.ForeColor = Color.Black;
             cboProduto.FormatString = "Selecione";
             cboProduto.FormattingEnabled = true;
             cboProduto.Location = new Point(17, 40);
@@ -129,6 +130,7 @@
             cboProduto.Name = "cboProduto";
             cboProduto.Size = new Size(183, 24);
             cboProduto.TabIndex = 7;
+            cboProduto.SelectedIndexChanged += cboProduto_SelectedIndexChanged;
             // 
             // btnSalvar
             // 
@@ -141,6 +143,7 @@
             btnSalvar.TabIndex = 10;
             btnSalvar.Text = "SALVAR";
             btnSalvar.UseVisualStyleBackColor = true;
+            btnSalvar.Click += btnSalvar_Click;
             // 
             // groupBox1
             // 
@@ -183,13 +186,13 @@
             label5.Location = new Point(53, 238);
             label5.Margin = new Padding(4, 0, 4, 0);
             label5.Name = "label5";
-            label5.Size = new Size(45, 16);
+            label5.Size = new Size(104, 16);
             label5.TabIndex = 9;
-            label5.Text = "DATA";
+            label5.Text = "DATA DO USO";
             // 
             // txtAssociado
             // 
-            txtAssociado.ForeColor = Color.Silver;
+            txtAssociado.ForeColor = Color.Black;
             txtAssociado.FormatString = "Selecione";
             txtAssociado.FormattingEnabled = true;
             txtAssociado.Location = new Point(307, 260);
@@ -206,17 +209,17 @@
             label6.Location = new Point(307, 241);
             label6.Margin = new Padding(4, 0, 4, 0);
             label6.Name = "label6";
-            label6.Size = new Size(93, 16);
+            label6.Size = new Size(110, 16);
             label6.TabIndex = 13;
-            label6.Text = "ASSOCIADO";
+            label6.Text = "RESPONSÁVEL";
             // 
-            // textBox1
+            // txtDescricao
             // 
-            textBox1.Location = new Point(53, 323);
-            textBox1.Multiline = true;
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(347, 57);
-            textBox1.TabIndex = 15;
+            txtDescricao.Location = new Point(53, 323);
+            txtDescricao.Multiline = true;
+            txtDescricao.Name = "txtDescricao";
+            txtDescricao.Size = new Size(347, 57);
+            txtDescricao.TabIndex = 15;
             // 
             // label7
             // 
@@ -237,18 +240,22 @@
             BackColor = Color.DarkRed;
             ClientSize = new Size(557, 415);
             Controls.Add(label7);
-            Controls.Add(textBox1);
+            Controls.Add(txtDescricao);
             Controls.Add(txtAssociado);
             Controls.Add(label6);
             Controls.Add(label5);
             Controls.Add(dtpDataUso);
             Controls.Add(groupBox1);
             Controls.Add(btnSalvar);
-            Controls.Add(comboBox1);
+            Controls.Add(cboRadu);
             Controls.Add(label1);
             Margin = new Padding(4, 3, 4, 3);
+            MaximizeBox = false;
+            MaximumSize = new Size(573, 454);
+            MinimumSize = new Size(573, 454);
             Name = "DesignarTecnico";
             Text = "Designar Técnico";
+            Load += DesignarTecnico_Load;
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)nudQtdProduto).EndInit();
@@ -262,7 +269,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cboRadu;
         private System.Windows.Forms.ComboBox cboAtivo;
         private System.Windows.Forms.ComboBox cboProduto;
         private System.Windows.Forms.Button btnSalvar;
@@ -272,7 +279,7 @@
         private Label label5;
         private ComboBox txtAssociado;
         private Label label6;
-        private TextBox textBox1;
+        private TextBox txtDescricao;
         private Label label7;
     }
 }

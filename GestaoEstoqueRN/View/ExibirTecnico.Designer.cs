@@ -28,23 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            dataGridView1 = new DataGridView();
             dateTimePicker1 = new DateTimePicker();
             label1 = new Label();
             button1 = new Button();
+            dataGridView1 = new DataGridView();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
-            // 
-            // dataGridView1
-            // 
-            dataGridView1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(12, 81);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.RowTemplate.Height = 29;
-            dataGridView1.Size = new Size(747, 415);
-            dataGridView1.TabIndex = 7;
             // 
             // dateTimePicker1
             // 
@@ -56,12 +45,14 @@
             dateTimePicker1.Size = new Size(134, 30);
             dateTimePicker1.TabIndex = 8;
             dateTimePicker1.Value = new DateTime(2025, 1, 10, 2, 56, 31, 0);
+            dateTimePicker1.ValueChanged += dateTimePicker1_ValueChanged;
             // 
             // label1
             // 
             label1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             label1.AutoSize = true;
             label1.Font = new Font("Times New Roman", 19F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.ForeColor = Color.White;
             label1.Location = new Point(543, 45);
             label1.Name = "label1";
             label1.Size = new Size(76, 30);
@@ -82,6 +73,17 @@
             button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
             // 
+            // dataGridView1
+            // 
+            dataGridView1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(12, 81);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersWidth = 51;
+            dataGridView1.RowTemplate.Height = 29;
+            dataGridView1.Size = new Size(747, 415);
+            dataGridView1.TabIndex = 11;
+            // 
             // ExibirTecnico
             // 
             AutoScaleDimensions = new SizeF(7F, 13F);
@@ -89,12 +91,12 @@
             BackColor = Color.DarkRed;
             ClientSize = new Size(771, 508);
             ControlBox = false;
+            Controls.Add(dataGridView1);
             Controls.Add(button1);
             Controls.Add(label1);
             Controls.Add(dateTimePicker1);
-            Controls.Add(dataGridView1);
             Font = new Font("Times New Roman", 8.25F, FontStyle.Bold, GraphicsUnit.Point);
-            ForeColor = Color.White;
+            ForeColor = Color.Black;
             FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(4, 3, 4, 3);
             MdiChildrenMinimizedAnchorBottom = false;
@@ -109,9 +111,9 @@
         }
 
         #endregion
-        private DataGridView dataGridView1;
         private DateTimePicker dateTimePicker1;
         private Label label1;
         private Button button1;
+        private DataGridView dataGridView1;
     }
 }

@@ -12,6 +12,7 @@ using System.Windows.Forms;
 using GestaoEstoqueRN.Views;
 using MySql.Data.MySqlClient;
 using GestaoEstoqueRN.DAO;
+using GestaoEstoqueRN.Controller;
 
 namespace GestaoEstoqueRN
 {
@@ -39,38 +40,17 @@ namespace GestaoEstoqueRN
                 return;
             }
 
-            try
+            if (LoginController.AutenticarUsuario(usuario, senha))
             {
-                using (MySqlConnection conn = new MySqlConnection(Database.conn))
-                {
-                    conn.Open();
-                    string query = "SELECT COUNT(*) FROM usuarios WHERE usuario = @usuario AND senha = @senha";
-                    using (MySqlCommand cmd = new MySqlCommand(query, conn))
-                    {
-                        cmd.Parameters.AddWithValue("@usuario", usuario);
-                        cmd.Parameters.AddWithValue("@senha", senha);
-
-                        int count = Convert.ToInt32(cmd.ExecuteScalar());
-                        if (count > 0)
-                        {
-                            //MessageBox.Show("Login realizado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            this.Hide();
-                            Principal frmPrincipal = new Principal();
-                            frmPrincipal.Show();
-                        }
-                        else
-                        {
-                            lblMensagem.Text = "Usuário ou senha incorretos.";
-                            lblMensagem.Visible = true;
-                        }
-                    }
-                }
+                this.Hide();
+                Principal frmPrincipal = new Principal();
+                frmPrincipal.Show();
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show("Erro ao conectar ao banco de dados: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                lblMensagem.Text = "Usuário ou senha incorretos.";
+                lblMensagem.Visible = true;
             }
-
         }
 
         private void label5_Click(object sender, EventArgs e)

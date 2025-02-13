@@ -4,9 +4,11 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DocumentFormat.OpenXml.Spreadsheet;
 using GestaoEstoqueRN.DAO;
 using GestaoEstoqueRN.Views;
 using MySql.Data.MySqlClient;
@@ -37,8 +39,10 @@ namespace GestaoEstoqueRN
         }
         private void CarregarDados()
         {
+
             try
             {
+                dataGridView1.Columns.Clear();
                 using (MySqlConnection conn = new MySqlConnection(Database.conn))
                 {
                     conn.Open();
@@ -48,35 +52,44 @@ namespace GestaoEstoqueRN
                         "WHEN emuso.IdAtivo IS NOT NULL THEN ativos.Patrimonio ELSE NULL END AS ItemRelacionado, " +
                         "emuso.QtdProduto, emuso.Associado FROM emuso " +
                         "LEFT JOIN produtos ON emuso.IdProduto = produtos.IdProduto " +
-                        "LEFT JOIN ativos ON emuso.IdAtivo = ativos.IdAtivo ";
+                        "LEFT JOIN ativos ON emuso.IdAtivo = ativos.IdAtivo " +
+                        "WHERE DATE(emuso.DataUso) = @Data";
 
-                    using (MySqlDataAdapter adapter = new MySqlDataAdapter(query, conn))
+                    using (MySqlCommand cmd = new MySqlCommand(query, conn))
                     {
-                        tecnicosTable = new DataTable();
-                        adapter.Fill(tecnicosTable);
+                        string dataFormatada = dateTimePicker1.Value.ToString("yyyy-MM-dd");
+                        cmd.Parameters.AddWithValue("@Data", dataFormatada);
 
-                        foreach (DataColumn column in tecnicosTable.Columns)
+                        using (MySqlDataAdapter adapter = new MySqlDataAdapter(cmd))
                         {
-                            dataGridView1.Columns.Add(new DataGridViewTextBoxColumn
+                            DataTable tecnicosTable = new DataTable();
+                            adapter.Fill(tecnicosTable);
+
+                            foreach (DataColumn column in tecnicosTable.Columns)
                             {
-                                HeaderText = column.ColumnName,
-                                Name = column.ColumnName,
-                                DataPropertyName = column.ColumnName,
-                                AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
-                            });
+                                dataGridView1.Columns.Add(new DataGridViewTextBoxColumn
+                                {
+                                    HeaderText = column.ColumnName,
+                                    Name = column.ColumnName,
+                                    DataPropertyName = column.ColumnName,
+                                    AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+                                });
+                            }
+                            dataGridView1.DataSource = tecnicosTable;
                         }
-                        dataGridView1.DataSource = tecnicosTable;
                     }
                 }
+
                 AdicionarColunaBotaoResponsavel();
                 AdicionarColunaBotaoRetornoEstoque();
-
             }
             catch (Exception ex)
             {
                 MessageBox.Show($"Erro ao carregar os dados: {ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+
         private void AdicionarColunaBotaoResponsavel()
         {
             // Adiciona a coluna do botão no final
@@ -98,7 +111,7 @@ namespace GestaoEstoqueRN
                 HeaderText = "Ação",
                 Name = "ButtonColumn",
                 Text = "Detalhes",
-                UseColumnTextForButtonValue = true, // Exibe o texto em todas as células da coluna
+                UseColumnTextForButtonValue = true,
                 Width = 80
             };
             dataGridView1.Columns.Add(buttonColumn);
@@ -115,6 +128,11 @@ namespace GestaoEstoqueRN
             {
                 MessageBox.Show($"Erro: {ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+            CarregarDados();
         }
     }
 }
