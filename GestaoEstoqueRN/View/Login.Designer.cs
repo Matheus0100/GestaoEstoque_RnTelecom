@@ -79,7 +79,7 @@
             // label2
             // 
             label2.Font = new Font("Segoe UI", 20F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.ForeColor = SystemColors.ActiveCaptionText;
+            label2.ForeColor = SystemColors.Control;
             label2.Location = new Point(54, 133);
             label2.Name = "label2";
             label2.Size = new Size(449, 37);
@@ -90,7 +90,7 @@
             // label3
             // 
             label3.Font = new Font("Segoe UI", 20F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.ForeColor = SystemColors.ActiveCaptionText;
+            label3.ForeColor = SystemColors.Control;
             label3.Location = new Point(54, 246);
             label3.Name = "label3";
             label3.Size = new Size(449, 37);
@@ -111,7 +111,7 @@
             // label4
             // 
             label4.Font = new Font("Microsoft Sans Serif", 28.2F, FontStyle.Regular, GraphicsUnit.Point);
-            label4.ForeColor = SystemColors.ActiveCaptionText;
+            label4.ForeColor = SystemColors.Control;
             label4.Location = new Point(54, 66);
             label4.Name = "label4";
             label4.Size = new Size(449, 37);
@@ -126,7 +126,7 @@
             btnEntrar.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             btnEntrar.FlatStyle = FlatStyle.Flat;
             btnEntrar.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            btnEntrar.ForeColor = SystemColors.ActiveCaptionText;
+            btnEntrar.ForeColor = SystemColors.Control;
             btnEntrar.Image = Properties.Resources.log_in_outline1;
             btnEntrar.ImageAlign = ContentAlignment.MiddleLeft;
             btnEntrar.Location = new Point(384, 350);
@@ -143,7 +143,7 @@
             // 
             lblMensagem.AutoSize = true;
             lblMensagem.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            lblMensagem.ForeColor = SystemColors.ActiveCaptionText;
+            lblMensagem.ForeColor = SystemColors.Control;
             lblMensagem.Location = new Point(54, 364);
             lblMensagem.Name = "lblMensagem";
             lblMensagem.Size = new Size(105, 25);

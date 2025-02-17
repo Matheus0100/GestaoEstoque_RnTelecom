@@ -13,6 +13,8 @@ using GestaoEstoqueRN.Views;
 using MySql.Data.MySqlClient;
 using GestaoEstoqueRN.DAO;
 using GestaoEstoqueRN.Controller;
+using GestaoEstoqueRN.Services;
+using GestaoEstoqueRN.Model;
 
 namespace GestaoEstoqueRN
 {
@@ -42,6 +44,7 @@ namespace GestaoEstoqueRN
 
             if (LoginController.AutenticarUsuario(usuario, senha))
             {
+                HistoricoService.RegistrarAcao(Usuario.IdUsuario,"O usuário " + Usuario.NomeUsuario + " entrou no sistema utilizando a senha.");
                 this.Hide();
                 Principal frmPrincipal = new Principal();
                 frmPrincipal.Show();

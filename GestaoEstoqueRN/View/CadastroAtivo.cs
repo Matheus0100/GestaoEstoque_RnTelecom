@@ -8,6 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using GestaoEstoqueRN.DAO;
+using GestaoEstoqueRN.Helper;
+using GestaoEstoqueRN.Model;
+using GestaoEstoqueRN.Services;
 using MySql.Data.MySqlClient;
 using Org.BouncyCastle.Asn1.Cmp;
 
@@ -22,7 +25,6 @@ namespace GestaoEstoqueRN.Views
             InitializeComponent();
             this.idAtivo = idAtivo;
 
-            // Se o ID foi fornecido, carrega os dados do banco
             if (idAtivo.HasValue)
             {
                 CarregarDadosDoBanco(idAtivo.Value);
@@ -32,7 +34,6 @@ namespace GestaoEstoqueRN.Views
         {
             try
             {
-                // Conexão com o banco de dados
                 using (MySqlConnection connection = new MySqlConnection(Database.conn))
                 {
                     connection.Open();
@@ -45,7 +46,6 @@ namespace GestaoEstoqueRN.Views
                         {
                             if (reader.Read())
                             {
-                                // Preenche os campos do formulário com os dados do banco
                                 txtPatrimonio.Text = reader["Patrimonio"] != DBNull.Value ? reader["Patrimonio"].ToString() : string.Empty;
                                 txtObservacao.Text = reader["Descricao"] != DBNull.Value ? reader["Descricao"].ToString() : string.Empty;
                                 nudValor.Value = reader["Preco"] != DBNull.Value ? Convert.ToDecimal(reader["Preco"]) : 0;
@@ -80,7 +80,6 @@ namespace GestaoEstoqueRN.Views
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
-            // Coletar os dados dos TextBoxes e outros controles
             string patrimonio = txtPatrimonio.Text.Trim();
             string descricao = txtObservacao.Text.Trim();
             decimal preco = nudValor.Value;
@@ -92,7 +91,6 @@ namespace GestaoEstoqueRN.Views
             string notaFiscal = txtNotaFiscal.Text.Trim();
             DateTime dataCompra = dtpDataCompra.Value;
 
-            // Validação básica
             if (string.IsNullOrEmpty(patrimonio) || string.IsNullOrEmpty(descricao) || preco <= 0)
             {
                 MessageBox.Show("Preencha os campos obrigatórios!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -105,7 +103,6 @@ namespace GestaoEstoqueRN.Views
                 {
                     connection.Open();
 
-                    // Verifica se já existe um registro com o mesmo Patrimônio ou Serial
                     string checkQuery = @"SELECT IdAtivo, Status FROM ativos WHERE Patrimonio = @Patrimonio OR Serial = @Serial";
                     using (MySqlCommand checkCommand = new MySqlCommand(checkQuery, connection))
                     {
@@ -114,13 +111,13 @@ namespace GestaoEstoqueRN.Views
 
                         using (MySqlDataReader reader = checkCommand.ExecuteReader())
                         {
-                            if (reader.Read()) // Encontrou um registro com o mesmo Patrimônio ou Serial
+                            if (reader.Read())
                             {
                                 int idExistente = Convert.ToInt32(reader["IdAtivo"]);
                                 int statusExistente = Convert.ToInt32(reader["Status"]);
-                                reader.Close(); // Fecha o reader para executar outras consultas
+                                reader.Close();
 
-                                if (RetornoEstoque) // Se o ativo estiver retornando ao estoque, atualiza o Status para 1
+                                if (RetornoEstoque)
                                 {
                                     string updateStatusQuery = "UPDATE ativos SET Status = 1 WHERE IdAtivo = @IdAtivo";
                                     using (MySqlCommand updateCommand = new MySqlCommand(updateStatusQuery, connection))
@@ -128,13 +125,12 @@ namespace GestaoEstoqueRN.Views
                                         updateCommand.Parameters.AddWithValue("@IdAtivo", idExistente);
                                         updateCommand.ExecuteNonQuery();
                                     }
-
+                                    HistoricoService.RegistrarAcao(Usuario.IdUsuario, "O ativo com o ID: " + idExistente + " foi reativado.");
                                     MessageBox.Show("O ativo foi reativado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                     return;
                                 }
                                 else
                                 {
-                                    // Pergunta se o usuário deseja reativar o registro
                                     DialogResult result = MessageBox.Show("Já existe um ativo com este Patrimônio ou Serial. Deseja reativá-lo?",
                                                                           "Registro Existente",
                                                                           MessageBoxButtons.YesNo,
@@ -142,27 +138,24 @@ namespace GestaoEstoqueRN.Views
 
                                     if (result == DialogResult.Yes)
                                     {
-                                        // Atualiza o Status para 1 caso o usuário aceite reativar
                                         string updateStatusQuery = "UPDATE ativos SET Status = 1 WHERE IdAtivo = @IdAtivo";
                                         using (MySqlCommand updateCommand = new MySqlCommand(updateStatusQuery, connection))
                                         {
                                             updateCommand.Parameters.AddWithValue("@IdAtivo", idExistente);
                                             updateCommand.ExecuteNonQuery();
                                         }
-
+                                        HistoricoService.RegistrarAcao(Usuario.IdUsuario, "O ativo com o ID: " + idExistente + " foi reativado.");
                                         MessageBox.Show("O ativo foi reativado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                     }
-                                    return; // Sai da função para evitar nova inserção
+                                    return;
                                 }
                             }
                         }
                     }
 
-                    // Definição da query de inserção ou atualização
                     string query;
                     if (idAtivo.HasValue)
                     {
-                        // Atualiza o registro existente
                         query = @"UPDATE ativos 
                       SET Descricao = @Descricao, Preco = @Preco, Patrimonio = @Patrimonio, 
                           Serial = @Serial, Tipo = @Tipo, Marca = @Marca, Modelo = @Modelo, 
@@ -194,19 +187,25 @@ namespace GestaoEstoqueRN.Views
                         }
 
                         command.ExecuteNonQuery();
+
+
+                        if (idAtivo.HasValue)
+                        {
+                            HistoricoService.RegistrarAcao(Usuario.IdUsuario, "O ativo com o ID: " + idAtivo.Value + " foi atualizado.");
+                            this.Close();
+                        }
+                        else
+                        {
+                            command.CommandText = "SELECT LAST_INSERT_ID()";
+                            int ultimoIdInserido = Convert.ToInt32(command.ExecuteScalar());
+                            HistoricoService.RegistrarAcao(Usuario.IdUsuario, "O ativo com o ID: " + ultimoIdInserido + " foi inserido.");
+                            LimparCampos();
+                        }
+                        MessageBox.Show("Dados salvos com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                 }
 
-                MessageBox.Show("Dados salvos com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                if (idAtivo.HasValue)
-                {
-                    this.Close();
-                }
-                else
-                {
-                    LimparCampos();
-                }
             }
             catch (Exception ex)
             {
@@ -215,7 +214,6 @@ namespace GestaoEstoqueRN.Views
         }
         private void LimparCampos()
         {
-            // Limpa todos os campos do formulário após o cadastro
             cboAtivo.SelectedIndex = -1;
             txtObservacao.Clear();
             nudValor.Value = 0;
@@ -240,6 +238,11 @@ namespace GestaoEstoqueRN.Views
             {
                 RetornoEstoque = true;
             }
+        }
+
+        private void CadastroAtivo_Load(object sender, EventArgs e)
+        {
+            Combos.PreencherComboBox(cboAtivo,"tipoativo","IdTipoAtivo","NomeTipoAtivo");
         }
     }
 }

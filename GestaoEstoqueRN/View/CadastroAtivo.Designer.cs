@@ -346,6 +346,7 @@
             MinimumSize = new Size(623, 628);
             Name = "CadastroAtivo";
             Text = "Cadastrar Ativo";
+            Load += CadastroAtivo_Load;
             ((System.ComponentModel.ISupportInitialize)nudValor).EndInit();
             ResumeLayout(false);
             PerformLayout();

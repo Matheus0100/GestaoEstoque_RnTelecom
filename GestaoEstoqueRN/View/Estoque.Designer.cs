@@ -28,26 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            dataGridView1 = new DataGridView();
             btnAdicionar = new Button();
             btnExcluir = new Button();
             btnExportar = new Button();
             btnEditar = new Button();
             txtSearch = new TextBox();
+            dataGridView1 = new DataGridView();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
-            // 
-            // dataGridView1
-            // 
-            dataGridView1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(12, 81);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.RowTemplate.Height = 29;
-            dataGridView1.Size = new Size(1160, 595);
-            dataGridView1.TabIndex = 7;
-            dataGridView1.CellClick += dataGridView1_CellClick;
             // 
             // btnAdicionar
             // 
@@ -120,6 +108,19 @@
             txtSearch.TabIndex = 12;
             txtSearch.TextChanged += txtSearch_TextChanged;
             // 
+            // dataGridView1
+            // 
+            dataGridView1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(12, 81);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersWidth = 51;
+            dataGridView1.RowTemplate.Height = 29;
+            dataGridView1.Size = new Size(1160, 595);
+            dataGridView1.TabIndex = 13;
+            dataGridView1.CellClick += dataGridView1_CellClick;
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
+            // 
             // Estoque
             // 
             AutoScaleDimensions = new SizeF(7F, 13F);
@@ -128,12 +129,12 @@
             BackColor = Color.DarkRed;
             ClientSize = new Size(1184, 688);
             ControlBox = false;
+            Controls.Add(dataGridView1);
             Controls.Add(txtSearch);
             Controls.Add(btnEditar);
             Controls.Add(btnExportar);
             Controls.Add(btnExcluir);
             Controls.Add(btnAdicionar);
-            Controls.Add(dataGridView1);
             Font = new Font("Times New Roman", 8.25F, FontStyle.Bold, GraphicsUnit.Point);
             FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(4, 3, 4, 3);
@@ -149,11 +150,11 @@
         }
 
         #endregion
-        private DataGridView dataGridView1;
         private Button btnAdicionar;
         private Button btnExcluir;
         private Button btnExportar;
         private Button btnEditar;
         private TextBox txtSearch;
+        private DataGridView dataGridView1;
     }
 }

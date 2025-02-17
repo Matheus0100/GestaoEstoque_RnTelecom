@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using GestaoEstoqueRN.DAO;
 using GestaoEstoqueRN.Helper;
 using GestaoEstoqueRN.Model;
+using GestaoEstoqueRN.Services;
 using MySql.Data.MySqlClient;
 
 namespace GestaoEstoqueRN.Views
@@ -88,6 +89,7 @@ namespace GestaoEstoqueRN.Views
                                 command.Parameters.AddWithValue("@IdAtivo", idAtivo.Value);
                                 command.ExecuteNonQuery();
                             }
+                            HistoricoService.RegistrarAcao(Usuario.IdUsuario, "O usuário designou o Ativo: " + idAtivo.Value + " para o Radu: " + radu);
                         }
 
                         if (idProduto != null)
@@ -103,6 +105,7 @@ namespace GestaoEstoqueRN.Views
                                 {
                                     throw new Exception("Quantidade insuficiente no estoque.");
                                 }
+                                HistoricoService.RegistrarAcao(Usuario.IdUsuario, "O usuário designou o Produto: " + idProduto.Value + " com a quantidade: " + qtdProduto + " para o Radu: " + radu);
                             }
                         }
 

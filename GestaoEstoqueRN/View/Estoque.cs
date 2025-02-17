@@ -14,6 +14,8 @@ using Microsoft.Office.Interop.Excel;
 using Excel = Microsoft.Office.Interop.Excel;
 using DataTable = System.Data.DataTable;
 using ClosedXML.Excel;
+using GestaoEstoqueRN.Model;
+using GestaoEstoqueRN.Services;
 
 namespace GestaoEstoqueRN
 {
@@ -27,22 +29,25 @@ namespace GestaoEstoqueRN
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            if (e.ColumnIndex == dataGridView1.Columns["CheckBoxColumn"].Index && e.RowIndex >= 0)
+            {
+                dataGridView1.CommitEdit(DataGridViewDataErrorContexts.Commit);
+            }
         }
         private void ConfigurarDataGridView()
         {
-            // Configurar as colunas do DataGridView
-            dataGridView1.Columns.Clear(); // Limpa quaisquer colunas anteriores
+            dataGridView1.Columns.Clear();
 
-            // Adiciona a coluna de checkbox
-            DataGridViewCheckBoxColumn checkboxColumn = new DataGridViewCheckBoxColumn
+            DataGridViewCheckBoxColumn checkBoxColumn = new DataGridViewCheckBoxColumn
             {
                 HeaderText = "",
                 Name = "CheckBoxColumn",
                 Width = 30,
-                ReadOnly = false
+                ReadOnly = false,
+                TrueValue = true,
+                FalseValue = false,
             };
-            dataGridView1.Columns.Add(checkboxColumn);
+            dataGridView1.Columns.Add(checkBoxColumn);
 
         }
         private void CarregarDados()
@@ -88,26 +93,22 @@ namespace GestaoEstoqueRN
         }
         private void AdicionarColunaBotao()
         {
-            // Adiciona a coluna do botão no final
             DataGridViewButtonColumn buttonColumn = new DataGridViewButtonColumn
             {
                 HeaderText = "Ação",
                 Name = "ButtonColumn",
                 Text = "Detalhes",
-                UseColumnTextForButtonValue = true, // Exibe o texto em todas as células da coluna
+                UseColumnTextForButtonValue = true,
                 Width = 80
             };
             dataGridView1.Columns.Add(buttonColumn);
         }
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            // Verifica se o clique foi na coluna do botão
             if (e.RowIndex >= 0 && e.ColumnIndex == dataGridView1.Columns["ButtonColumn"].Index)
             {
-                // Obtém o ID do produto da linha selecionada
                 int idProduto = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells["IdProduto"].Value);
 
-                // Abre o formulário secundário e passa o ID do produto
                 CadastroEstoque formDetalhes = new(idProduto);
                 formDetalhes.btnCadastrar.Visible = false;
                 formDetalhes.Text = "Exibição de Informações";
@@ -116,14 +117,12 @@ namespace GestaoEstoqueRN
         }
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {
-            // Filtra os dados com base no texto da pesquisa 
             string filter = txtSearch.Text.Trim();
 
             if (produtosTable != null)
             {
                 string query = $"Nome LIKE '%{filter}%' OR Descricao LIKE '%{filter}%'";
 
-                // Aplica o filtro ao DataView
                 (dataGridView1.DataSource as DataTable).DefaultView.RowFilter = query;
             }
         }
@@ -139,7 +138,6 @@ namespace GestaoEstoqueRN
 
         private void button2_Click(object sender, EventArgs e)
         {
-            // Verificar se há linhas selecionadas
             bool linhaSelecionada = false;
 
             foreach (DataGridViewRow row in dataGridView1.Rows)
@@ -159,7 +157,6 @@ namespace GestaoEstoqueRN
                 return;
             }
 
-            // Confirmação de exclusão
             DialogResult result = MessageBox.Show(
                 "Tem certeza de que deseja excluir os registros selecionados?",
                 "Confirmação",
@@ -181,22 +178,21 @@ namespace GestaoEstoqueRN
 
                         if (checkBoxCell != null && Convert.ToBoolean(checkBoxCell.Value) == true)
                         {
-                            // Obter o IdProduto da linha selecionada
                             int idProduto = Convert.ToInt32(row.Cells["IdProduto"].Value);
 
-                            // Comando SQL para exclusão
                             string query = "UPDATE produtos SET Status = 5 WHERE IdProduto = @IdProduto";
 
                             using (MySqlCommand cmd = new MySqlCommand(query, conn))
                             {
                                 cmd.Parameters.AddWithValue("@IdProduto", idProduto);
                                 cmd.ExecuteNonQuery();
+                                HistoricoService.RegistrarAcao(Usuario.IdUsuario,"O usuário excluiu o produto " + idProduto + " do estoque.");
+
                             }
                         }
                     }
                 }
 
-                // Atualizar o DataGridView após a exclusão
                 MessageBox.Show("Registros excluídos com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 ConfigurarDataGridView();
                 CarregarDados();
@@ -219,7 +215,6 @@ namespace GestaoEstoqueRN
                 return;
             }
 
-            // Abre um diálogo para salvar o arquivo
             SaveFileDialog saveFileDialog = new SaveFileDialog
             {
                 Filter = "Arquivo Excel (*.xlsx)|*.xlsx",
@@ -231,18 +226,15 @@ namespace GestaoEstoqueRN
             {
                 try
                 {
-                    // Cria um novo arquivo Excel
                     using (var workbook = new XLWorkbook())
                     {
                         var worksheet = workbook.Worksheets.Add("Dados");
 
-                        // Adiciona os cabeçalhos das colunas
                         for (int col = 0; col < dataGridView.Columns.Count; col++)
                         {
                             worksheet.Cell(1, col + 1).Value = dataGridView.Columns[col].HeaderText;
                         }
 
-                        // Adiciona os dados das células
                         for (int row = 0; row < dataGridView.Rows.Count; row++)
                         {
                             for (int col = 0; col < dataGridView.Columns.Count; col++)
@@ -251,12 +243,11 @@ namespace GestaoEstoqueRN
                             }
                         }
 
-                        // Ajusta o tamanho das colunas automaticamente
                         worksheet.Columns().AdjustToContents();
 
-                        // Salva o arquivo no caminho selecionado
                         workbook.SaveAs(saveFileDialog.FileName);
                     }
+                    HistoricoService.RegistrarAcao(Usuario.IdUsuario, "O usuário exportou a tabela da aba Estoque.");
 
                     MessageBox.Show("Dados exportados para o Excel com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
@@ -322,10 +313,10 @@ namespace GestaoEstoqueRN
 
         private void button4_Click(object sender, EventArgs e)
         {
-            // Verifica se há apenas um registro selecionado
-            var registrosSelecionados = dataGridView1.Rows.Cast<DataGridViewRow>()
-                .Where(row => Convert.ToBoolean(row.Cells["CheckBoxColumn"].Value) == true)
-                .ToList();
+            var registrosSelecionados = dataGridView1.Rows
+            .Cast<DataGridViewRow>()
+            .Where(row => row.Cells["CheckBoxColumn"].Value != null && Convert.ToBoolean(row.Cells["CheckBoxColumn"].Value))
+            .ToList();
 
             if (registrosSelecionados.Count != 1)
             {
@@ -333,15 +324,12 @@ namespace GestaoEstoqueRN
                 return;
             }
 
-            // Obtém o ID do registro selecionado
             int idProduto = Convert.ToInt32(registrosSelecionados.First().Cells["IdProduto"].Value);
 
-            // Abre o formulário de adicionar/editar com o ID do registro
             var formAdicionar = new CadastroEstoque(idProduto);
             formAdicionar.Text = "Editar Estoque";
             formAdicionar.ShowDialog();
 
-            // Atualiza a grid após a edição (se necessário)
             ConfigurarDataGridView();
             CarregarDados();
         }

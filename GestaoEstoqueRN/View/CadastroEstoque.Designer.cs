@@ -47,7 +47,7 @@
             nudQtdEstoque = new NumericUpDown();
             txtNome = new TextBox();
             label11 = new Label();
-            txtTipo = new ComboBox();
+            cboTipo = new ComboBox();
             btnCadastrar = new Button();
             ((System.ComponentModel.ISupportInitialize)nudPreco).BeginInit();
             ((System.ComponentModel.ISupportInitialize)nudQtdEstoque).BeginInit();
@@ -245,14 +245,13 @@
             label11.TabIndex = 44;
             label11.Text = "NOME";
             // 
-            // txtTipo
+            // cboTipo
             // 
-            txtTipo.FormattingEnabled = true;
-            txtTipo.Items.AddRange(new object[] { "Fibra", "Conector", "Outro" });
-            txtTipo.Location = new Point(62, 161);
-            txtTipo.Name = "txtTipo";
-            txtTipo.Size = new Size(213, 23);
-            txtTipo.TabIndex = 46;
+            cboTipo.FormattingEnabled = true;
+            cboTipo.Location = new Point(62, 161);
+            cboTipo.Name = "cboTipo";
+            cboTipo.Size = new Size(213, 23);
+            cboTipo.TabIndex = 46;
             // 
             // btnCadastrar
             // 
@@ -277,7 +276,7 @@
             BackColor = Color.Maroon;
             ClientSize = new Size(618, 595);
             Controls.Add(btnCadastrar);
-            Controls.Add(txtTipo);
+            Controls.Add(cboTipo);
             Controls.Add(txtNome);
             Controls.Add(label11);
             Controls.Add(nudQtdEstoque);
@@ -303,6 +302,7 @@
             MinimumSize = new Size(634, 634);
             Name = "CadastroEstoque";
             Text = "Cadastrar Item ao Estoque";
+            Load += CadastroEstoque_Load;
             ((System.ComponentModel.ISupportInitialize)nudPreco).EndInit();
             ((System.ComponentModel.ISupportInitialize)nudQtdEstoque).EndInit();
             ResumeLayout(false);
@@ -335,7 +335,7 @@
         private NumericUpDown nudQtdEstoque;
         private TextBox txtNome;
         private Label label11;
-        private ComboBox txtTipo;
+        private ComboBox cboTipo;
         public Button btnCadastrar;
     }
 }
