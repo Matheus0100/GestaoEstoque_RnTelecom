@@ -24,11 +24,6 @@ namespace GestaoEstoqueRN.Views
         {
             InitializeComponent();
             this.idAtivo = idAtivo;
-
-            if (idAtivo.HasValue)
-            {
-                CarregarDadosDoBanco(idAtivo.Value);
-            }
         }
         private void CarregarDadosDoBanco(int idAtivo)
         {
@@ -242,7 +237,11 @@ namespace GestaoEstoqueRN.Views
 
         private void CadastroAtivo_Load(object sender, EventArgs e)
         {
-            Combos.PreencherComboBox(cboAtivo,"tipoativo","IdTipoAtivo","NomeTipoAtivo");
+            Combos.PreencherComboBox(cboAtivo, "tipoativo", "IdTipoAtivo", "NomeTipoAtivo");
+            if (idAtivo.HasValue)
+            {
+                CarregarDadosDoBanco(idAtivo.Value);
+            }
         }
     }
 }

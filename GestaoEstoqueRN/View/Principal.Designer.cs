@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Principal));
             toolStrip1 = new ToolStrip();
             btnEstoque = new ToolStripButton();
             toolStripSeparator1 = new ToolStripSeparator();
@@ -109,6 +110,7 @@
             ClientSize = new Size(862, 450);
             Controls.Add(toolStrip1);
             FormBorderStyle = FormBorderStyle.FixedSingle;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             IsMdiContainer = true;
             Name = "Principal";
             Text = "Gestão de Estoque - RN Telecom";

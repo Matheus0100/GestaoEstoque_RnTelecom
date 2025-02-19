@@ -35,7 +35,6 @@
             cboRadu = new ComboBox();
             cboAtivo = new ComboBox();
             cboProduto = new ComboBox();
-            btnSalvar = new Button();
             groupBox1 = new GroupBox();
             nudQtdProduto = new NumericUpDown();
             dtpDataUso = new DateTimePicker();
@@ -44,6 +43,7 @@
             label6 = new Label();
             txtDescricao = new TextBox();
             label7 = new Label();
+            btnSalvar = new Button();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)nudQtdProduto).BeginInit();
             SuspendLayout();
@@ -131,19 +131,6 @@
             cboProduto.Size = new Size(183, 24);
             cboProduto.TabIndex = 7;
             cboProduto.SelectedIndexChanged += cboProduto_SelectedIndexChanged;
-            // 
-            // btnSalvar
-            // 
-            btnSalvar.Font = new Font("Verdana", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            btnSalvar.ForeColor = Color.FromArgb(192, 0, 0);
-            btnSalvar.Location = new Point(415, 344);
-            btnSalvar.Margin = new Padding(4, 3, 4, 3);
-            btnSalvar.Name = "btnSalvar";
-            btnSalvar.Size = new Size(105, 36);
-            btnSalvar.TabIndex = 10;
-            btnSalvar.Text = "SALVAR";
-            btnSalvar.UseVisualStyleBackColor = true;
-            btnSalvar.Click += btnSalvar_Click;
             // 
             // groupBox1
             // 
@@ -233,12 +220,29 @@
             label7.TabIndex = 16;
             label7.Text = "DESCRIÇÃO";
             // 
+            // btnSalvar
+            // 
+            btnSalvar.Font = new Font("Segoe UI", 13F, FontStyle.Bold, GraphicsUnit.Point);
+            btnSalvar.ForeColor = Color.Black;
+            btnSalvar.Image = Properties.Resources.save_outline1;
+            btnSalvar.ImageAlign = ContentAlignment.MiddleLeft;
+            btnSalvar.Location = new Point(412, 338);
+            btnSalvar.Margin = new Padding(4, 3, 4, 3);
+            btnSalvar.Name = "btnSalvar";
+            btnSalvar.Size = new Size(108, 42);
+            btnSalvar.TabIndex = 50;
+            btnSalvar.Text = "Salvar";
+            btnSalvar.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnSalvar.UseVisualStyleBackColor = true;
+            btnSalvar.Click += btnSalvar_Click;
+            // 
             // DesignarTecnico
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.DarkRed;
             ClientSize = new Size(557, 415);
+            Controls.Add(btnSalvar);
             Controls.Add(label7);
             Controls.Add(txtDescricao);
             Controls.Add(txtAssociado);
@@ -246,7 +250,6 @@
             Controls.Add(label5);
             Controls.Add(dtpDataUso);
             Controls.Add(groupBox1);
-            Controls.Add(btnSalvar);
             Controls.Add(cboRadu);
             Controls.Add(label1);
             Margin = new Padding(4, 3, 4, 3);
@@ -272,7 +275,6 @@
         private System.Windows.Forms.ComboBox cboRadu;
         private System.Windows.Forms.ComboBox cboAtivo;
         private System.Windows.Forms.ComboBox cboProduto;
-        private System.Windows.Forms.Button btnSalvar;
         private GroupBox groupBox1;
         private NumericUpDown nudQtdProduto;
         private DateTimePicker dtpDataUso;
@@ -281,5 +283,6 @@
         private Label label6;
         private TextBox txtDescricao;
         private Label label7;
+        public Button btnSalvar;
     }
 }

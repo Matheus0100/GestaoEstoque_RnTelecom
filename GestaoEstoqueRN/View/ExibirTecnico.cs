@@ -80,7 +80,7 @@ namespace GestaoEstoqueRN
                     }
                 }
 
-                AdicionarColunaBotaoResponsavel();
+                //AdicionarColunaBotaoOk();
                 AdicionarColunaBotaoRetornoEstoque();
             }
             catch (Exception ex)
@@ -90,30 +90,29 @@ namespace GestaoEstoqueRN
         }
 
 
-        private void AdicionarColunaBotaoResponsavel()
+        private void AdicionarColunaBotaoOk()
         {
-            // Adiciona a coluna do botão no final
             DataGridViewButtonColumn buttonColumn = new DataGridViewButtonColumn
             {
-                HeaderText = "Ação",
-                Name = "ButtonColumn",
-                Text = "Detalhes",
-                UseColumnTextForButtonValue = true, // Exibe o texto em todas as células da coluna
+                HeaderText = "Confirmar",
+                Name = "ButtonColumnOk",
+                Text = "",
+                UseColumnTextForButtonValue = true,
                 Width = 80
             };
             dataGridView1.Columns.Add(buttonColumn);
         }
         private void AdicionarColunaBotaoRetornoEstoque()
         {
-            // Adiciona a coluna do botão no final
             DataGridViewButtonColumn buttonColumn = new DataGridViewButtonColumn
             {
-                HeaderText = "Ação",
+                HeaderText = "Retornar",
                 Name = "ButtonColumn",
-                Text = "Detalhes",
+                Text = "",
                 UseColumnTextForButtonValue = true,
                 Width = 80
             };
+
             dataGridView1.Columns.Add(buttonColumn);
         }
 
@@ -133,6 +132,36 @@ namespace GestaoEstoqueRN
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
             CarregarDados();
+        }
+
+        private void dataGridView1_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
+        {
+            //if (e.ColumnIndex == dataGridView1.Columns["ButtonColumnOk"].Index && e.RowIndex >= 0)
+            //{
+
+            //    e.Paint(e.CellBounds, DataGridViewPaintParts.All);
+
+            //    var w = Properties.Resources.save_outline.Width;
+            //    var h = Properties.Resources.save_outline.Height;
+            //    var x = e.CellBounds.Left + (e.CellBounds.Width - w) / 2;
+            //    var y = e.CellBounds.Top + (e.CellBounds.Height - h) / 2;
+
+            //    e.Graphics.DrawImage(Properties.Resources.checkmark_outline, new Rectangle(x, y, w, h));
+            //    e.Handled = true;
+            //}
+            if (e.ColumnIndex == dataGridView1.Columns["ButtonColumn"].Index && e.RowIndex >= 0)
+            {
+
+                e.Paint(e.CellBounds, DataGridViewPaintParts.All);
+
+                var w = Properties.Resources.save_outline.Width;
+                var h = Properties.Resources.save_outline.Height;
+                var x = e.CellBounds.Left + (e.CellBounds.Width - w) / 2;
+                var y = e.CellBounds.Top + (e.CellBounds.Height - h) / 2;
+
+                e.Graphics.DrawImage(Properties.Resources.arrow_undo_outline, new Rectangle(x, y, w, h));
+                e.Handled = true;
+            }
         }
     }
 }

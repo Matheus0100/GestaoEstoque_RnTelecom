@@ -30,10 +30,10 @@
         {
             dataGridView1 = new DataGridView();
             txtSearch = new TextBox();
-            btnEditar = new Button();
-            btnExportar = new Button();
-            btnExcluir = new Button();
-            btnAdicionar = new Button();
+            button1 = new Button();
+            button2 = new Button();
+            button3 = new Button();
+            button4 = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -48,6 +48,7 @@
             dataGridView1.Size = new Size(1160, 595);
             dataGridView1.TabIndex = 7;
             dataGridView1.CellClick += dataGridView1_CellClick;
+            dataGridView1.CellPainting += dataGridView1_CellPainting;
             // 
             // txtSearch
             // 
@@ -61,62 +62,78 @@
             txtSearch.TabIndex = 17;
             txtSearch.TextChanged += txtSearch_TextChanged;
             // 
-            // btnEditar
+            // button1
             // 
-            btnEditar.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            btnEditar.FlatStyle = FlatStyle.Popup;
-            btnEditar.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            btnEditar.ForeColor = SystemColors.ControlLightLight;
-            btnEditar.Location = new Point(847, 44);
-            btnEditar.Name = "btnEditar";
-            btnEditar.Size = new Size(118, 31);
-            btnEditar.TabIndex = 16;
-            btnEditar.Text = "Editar";
-            btnEditar.UseVisualStyleBackColor = true;
-            btnEditar.Click += btnEditar_Click;
+            button1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            button1.FlatStyle = FlatStyle.Popup;
+            button1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            button1.ForeColor = SystemColors.ActiveCaptionText;
+            button1.Image = Properties.Resources.options_outline;
+            button1.Location = new Point(846, 44);
+            button1.Margin = new Padding(4, 3, 4, 3);
+            button1.Name = "button1";
+            button1.Size = new Size(118, 31);
+            button1.TabIndex = 21;
+            button1.Text = "Editar";
+            button1.TextAlign = ContentAlignment.MiddleRight;
+            button1.TextImageRelation = TextImageRelation.ImageBeforeText;
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += btnEditar_Click;
             // 
-            // btnExportar
+            // button2
             // 
-            btnExportar.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            btnExportar.FlatStyle = FlatStyle.Popup;
-            btnExportar.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            btnExportar.ForeColor = SystemColors.ControlLightLight;
-            btnExportar.Location = new Point(698, 44);
-            btnExportar.Name = "btnExportar";
-            btnExportar.Size = new Size(117, 31);
-            btnExportar.TabIndex = 15;
-            btnExportar.Text = "Exportar";
-            btnExportar.UseVisualStyleBackColor = true;
-            btnExportar.Click += btnExportar_Click;
+            button2.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            button2.FlatStyle = FlatStyle.Popup;
+            button2.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            button2.ForeColor = SystemColors.ActiveCaptionText;
+            button2.Image = Properties.Resources.print_outline;
+            button2.Location = new Point(697, 44);
+            button2.Margin = new Padding(4, 3, 4, 3);
+            button2.Name = "button2";
+            button2.Size = new Size(117, 31);
+            button2.TabIndex = 20;
+            button2.Text = "Exportar";
+            button2.TextAlign = ContentAlignment.MiddleRight;
+            button2.TextImageRelation = TextImageRelation.ImageBeforeText;
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += btnExportar_Click;
             // 
-            // btnExcluir
+            // button3
             // 
-            btnExcluir.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            btnExcluir.FlatStyle = FlatStyle.Popup;
-            btnExcluir.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            btnExcluir.ForeColor = SystemColors.ControlLightLight;
-            btnExcluir.Location = new Point(540, 44);
-            btnExcluir.Name = "btnExcluir";
-            btnExcluir.Size = new Size(117, 31);
-            btnExcluir.TabIndex = 14;
-            btnExcluir.Text = "Excluir";
-            btnExcluir.UseVisualStyleBackColor = true;
-            btnExcluir.Click += btnExcluir_Click;
+            button3.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            button3.FlatStyle = FlatStyle.Popup;
+            button3.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            button3.ForeColor = SystemColors.ActiveCaptionText;
+            button3.Image = Properties.Resources.close_circle_outline;
+            button3.Location = new Point(539, 44);
+            button3.Margin = new Padding(4, 3, 4, 3);
+            button3.Name = "button3";
+            button3.Size = new Size(117, 31);
+            button3.TabIndex = 19;
+            button3.Text = "Excluir";
+            button3.TextAlign = ContentAlignment.MiddleRight;
+            button3.TextImageRelation = TextImageRelation.ImageBeforeText;
+            button3.UseVisualStyleBackColor = true;
+            button3.Click += btnExcluir_Click;
             // 
-            // btnAdicionar
+            // button4
             // 
-            btnAdicionar.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            btnAdicionar.FlatAppearance.BorderColor = Color.White;
-            btnAdicionar.FlatStyle = FlatStyle.Popup;
-            btnAdicionar.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            btnAdicionar.ForeColor = SystemColors.ControlLightLight;
-            btnAdicionar.Location = new Point(387, 44);
-            btnAdicionar.Name = "btnAdicionar";
-            btnAdicionar.Size = new Size(116, 31);
-            btnAdicionar.TabIndex = 13;
-            btnAdicionar.Text = "Adicionar";
-            btnAdicionar.UseVisualStyleBackColor = true;
-            btnAdicionar.Click += btnAdicionar_Click;
+            button4.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            button4.FlatAppearance.BorderColor = Color.White;
+            button4.FlatStyle = FlatStyle.Popup;
+            button4.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            button4.ForeColor = SystemColors.ActiveCaptionText;
+            button4.Image = Properties.Resources.add_circle_outline;
+            button4.Location = new Point(386, 44);
+            button4.Margin = new Padding(4, 3, 4, 3);
+            button4.Name = "button4";
+            button4.Size = new Size(115, 31);
+            button4.TabIndex = 18;
+            button4.Text = "Adicionar";
+            button4.TextAlign = ContentAlignment.MiddleRight;
+            button4.TextImageRelation = TextImageRelation.ImageBeforeText;
+            button4.UseVisualStyleBackColor = true;
+            button4.Click += btnAdicionar_Click;
             // 
             // EstoqueAtivos
             // 
@@ -125,11 +142,11 @@
             BackColor = Color.DarkRed;
             ClientSize = new Size(1184, 688);
             ControlBox = false;
+            Controls.Add(button1);
+            Controls.Add(button2);
+            Controls.Add(button3);
+            Controls.Add(button4);
             Controls.Add(txtSearch);
-            Controls.Add(btnEditar);
-            Controls.Add(btnExportar);
-            Controls.Add(btnExcluir);
-            Controls.Add(btnAdicionar);
             Controls.Add(dataGridView1);
             Font = new Font("Times New Roman", 8.25F, FontStyle.Bold, GraphicsUnit.Point);
             FormBorderStyle = FormBorderStyle.None;
@@ -150,9 +167,9 @@
         #endregion
         private DataGridView dataGridView1;
         private TextBox txtSearch;
-        private Button btnEditar;
-        private Button btnExportar;
-        private Button btnExcluir;
-        private Button btnAdicionar;
+        private Button button1;
+        private Button button2;
+        private Button button3;
+        private Button button4;
     }
 }

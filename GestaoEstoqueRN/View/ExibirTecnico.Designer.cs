@@ -64,12 +64,15 @@
             button1.AutoSize = true;
             button1.BackColor = Color.White;
             button1.Font = new Font("Segoe UI", 15F, FontStyle.Bold, GraphicsUnit.Point);
-            button1.ForeColor = Color.DarkRed;
+            button1.ForeColor = Color.Black;
+            button1.Image = Properties.Resources.people_outline1;
             button1.Location = new Point(12, 37);
             button1.Name = "button1";
-            button1.Size = new Size(132, 38);
+            button1.Size = new Size(138, 38);
             button1.TabIndex = 10;
             button1.Text = "Designar";
+            button1.TextAlign = ContentAlignment.MiddleRight;
+            button1.TextImageRelation = TextImageRelation.ImageBeforeText;
             button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
             // 
@@ -83,6 +86,8 @@
             dataGridView1.RowTemplate.Height = 29;
             dataGridView1.Size = new Size(747, 415);
             dataGridView1.TabIndex = 11;
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
+            dataGridView1.CellPainting += dataGridView1_CellPainting;
             // 
             // ExibirTecnico
             // 

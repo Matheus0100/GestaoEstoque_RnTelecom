@@ -136,7 +136,6 @@ namespace GestaoEstoqueRN.Views
             }
             else
             {
-                //cboAtivo.SelectedIndex = 0;
                 cboAtivo.Enabled = true;
             }
         }
@@ -152,7 +151,6 @@ namespace GestaoEstoqueRN.Views
             }
             else
             {
-                //cboProduto.SelectedIndex = 0;
                 cboProduto.Enabled = true;
                 nudQtdProduto.Enabled = true;
             }

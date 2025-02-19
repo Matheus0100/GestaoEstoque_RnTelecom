@@ -103,13 +103,14 @@
             // btnRetorno
             // 
             btnRetorno.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            btnRetorno.ForeColor = Color.FromArgb(192, 0, 0);
+            btnRetorno.ForeColor = Color.Black;
             btnRetorno.Location = new Point(420, 14);
             btnRetorno.Margin = new Padding(4, 3, 4, 3);
             btnRetorno.Name = "btnRetorno";
             btnRetorno.Size = new Size(123, 41);
             btnRetorno.TabIndex = 51;
             btnRetorno.Text = "RETORNANDO AO\r\n ESTOQUE";
+            btnRetorno.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnRetorno.UseVisualStyleBackColor = true;
             btnRetorno.Click += btnRetorno_Click;
             // 

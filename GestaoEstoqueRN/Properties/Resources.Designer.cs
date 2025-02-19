@@ -103,6 +103,26 @@ namespace GestaoEstoqueRN.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap arrow_undo_outline {
+            get {
+                object obj = ResourceManager.GetObject("arrow-undo-outline", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap arrow_undo_outline16 {
+            get {
+                object obj = ResourceManager.GetObject("arrow-undo-outline16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap attach_outline {
             get {
                 object obj = ResourceManager.GetObject("attach-outline", resourceCulture);
@@ -163,6 +183,26 @@ namespace GestaoEstoqueRN.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap checkmark_outline {
+            get {
+                object obj = ResourceManager.GetObject("checkmark-outline", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap checkmark_outline16 {
+            get {
+                object obj = ResourceManager.GetObject("checkmark-outline16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap close_circle_outline {
             get {
                 object obj = ResourceManager.GetObject("close-circle-outline", resourceCulture);
@@ -216,6 +256,46 @@ namespace GestaoEstoqueRN.Properties {
         internal static System.Drawing.Bitmap information_circle_outline1 {
             get {
                 object obj = ResourceManager.GetObject("information-circle-outline1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap information_outline {
+            get {
+                object obj = ResourceManager.GetObject("information-outline", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap information_outline16 {
+            get {
+                object obj = ResourceManager.GetObject("information-outline16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap location_outline {
+            get {
+                object obj = ResourceManager.GetObject("location-outline", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap location_outline16 {
+            get {
+                object obj = ResourceManager.GetObject("location-outline16", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -22,11 +22,6 @@ namespace GestaoEstoqueRN.Views
         {
             InitializeComponent();
             this.idProduto = idProduto;
-
-            if (idProduto.HasValue)
-            {
-                CarregarDadosDoBanco(idProduto.Value);
-            }
         }
         private void CarregarDadosDoBanco(int idProduto)
         {
@@ -177,7 +172,12 @@ namespace GestaoEstoqueRN.Views
 
         private void CadastroEstoque_Load(object sender, EventArgs e)
         {
-            Combos.PreencherComboBox(cboTipo,"tipoestoque","IdTipoEstoque","NomeTipoEstoque");
+            Combos.PreencherComboBox(cboTipo, "tipoestoque", "IdTipoEstoque", "NomeTipoEstoque");
+
+            if (idProduto.HasValue)
+            {
+                CarregarDadosDoBanco(idProduto.Value);
+            }
         }
     }
 }

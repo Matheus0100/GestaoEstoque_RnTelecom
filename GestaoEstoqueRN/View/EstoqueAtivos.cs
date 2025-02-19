@@ -31,7 +31,16 @@ namespace GestaoEstoqueRN
                 {
                     conn.Open();
 
-                    string query = "SELECT IdAtivo, Tipo, Descricao, Preco, Serial, Patrimonio FROM ativos WHERE Status <> 5 OR Status IS NULL ORDER BY Status asc";
+                    string query = "SELECT IdAtivo, Tipo, Descricao, Preco, Serial, Patrimonio, " +
+                        "CASE WHEN Status = 1 THEN 'Em estoque' " +
+                        "WHEN Status = 2 THEN 'Em uso' " +
+                        "WHEN Status = 3 THEN 'Em manutenção' " +
+                        "WHEN Status = 4 THEN 'Desativado' " +
+                        "WHEN Status = 5 THEN 'Excluído' " +
+                        "ELSE 'Indefinido' END AS Status " +
+                        "FROM ativos " +
+                        "WHERE Status <> 5 OR Status IS NULL " +
+                        "ORDER BY Status ASC;";
 
                     using (MySqlDataAdapter adapter = new MySqlDataAdapter(query, conn))
                     {
@@ -51,7 +60,8 @@ namespace GestaoEstoqueRN
                         dataGridView1.DataSource = ativosTable;
                     }
                 }
-                AdicionarColunaBotao();
+                AdicionarColunaBotaoLoc();
+                AdicionarColunaBotaoInfo();
             }
             catch (Exception ex)
             {
@@ -72,13 +82,25 @@ namespace GestaoEstoqueRN
             dataGridView1.Columns.Add(checkboxColumn);
 
         }
-        private void AdicionarColunaBotao()
+        private void AdicionarColunaBotaoLoc()
         {
             DataGridViewButtonColumn buttonColumn = new DataGridViewButtonColumn
             {
-                HeaderText = "Ação",
-                Name = "ButtonColumn",
-                Text = "Detalhes",
+                HeaderText = "Localização",
+                Name = "ButtonColumnLoc",
+                Text = "",
+                UseColumnTextForButtonValue = true,
+                Width = 80
+            };
+            dataGridView1.Columns.Add(buttonColumn);
+        }
+        private void AdicionarColunaBotaoInfo()
+        {
+            DataGridViewButtonColumn buttonColumn = new DataGridViewButtonColumn
+            {
+                HeaderText = "Detalhes",
+                Name = "ButtonColumnInfo",
+                Text = "",
                 UseColumnTextForButtonValue = true,
                 Width = 80
             };
@@ -256,7 +278,7 @@ namespace GestaoEstoqueRN
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex >= 0 && e.ColumnIndex == dataGridView1.Columns["ButtonColumn"].Index)
+            if (e.RowIndex >= 0 && e.ColumnIndex == dataGridView1.Columns["ButtonColumnInfo"].Index)
             {
                 int idAtivo = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells["IdAtivo"].Value);
 
@@ -265,6 +287,36 @@ namespace GestaoEstoqueRN
                 formDetalhes.btnRetorno.Visible = false;
                 formDetalhes.Text = "Exibição de Informações";
                 formDetalhes.ShowDialog();
+            }
+        }
+
+        private void dataGridView1_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
+        {
+            if (e.ColumnIndex == dataGridView1.Columns["ButtonColumnLoc"].Index && e.RowIndex >= 0)
+            {
+
+                e.Paint(e.CellBounds, DataGridViewPaintParts.All);
+
+                var w = Properties.Resources.save_outline.Width;
+                var h = Properties.Resources.save_outline.Height;
+                var x = e.CellBounds.Left + (e.CellBounds.Width - w) / 2;
+                var y = e.CellBounds.Top + (e.CellBounds.Height - h) / 2;
+
+                e.Graphics.DrawImage(Properties.Resources.location_outline, new Rectangle(x, y, w, h));
+                e.Handled = true;
+            }
+            if (e.ColumnIndex == dataGridView1.Columns["ButtonColumnInfo"].Index && e.RowIndex >= 0)
+            {
+
+                e.Paint(e.CellBounds, DataGridViewPaintParts.All);
+
+                var w = Properties.Resources.save_outline.Width;
+                var h = Properties.Resources.save_outline.Height;
+                var x = e.CellBounds.Left + (e.CellBounds.Width - w) / 2;
+                var y = e.CellBounds.Top + (e.CellBounds.Height - h) / 2;
+
+                e.Graphics.DrawImage(Properties.Resources.information_outline, new Rectangle(x, y, w, h));
+                e.Handled = true;
             }
         }
     }

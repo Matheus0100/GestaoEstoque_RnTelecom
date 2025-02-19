@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using GestaoEstoqueRN.DAO;
 using GestaoEstoqueRN.Views;
 using MySql.Data.MySqlClient;
-using Microsoft.Office.Interop.Excel;
+//using Microsoft.Office.Interop.Excel;
 using Excel = Microsoft.Office.Interop.Excel;
 using DataTable = System.Data.DataTable;
 using ClosedXML.Excel;
@@ -95,9 +95,9 @@ namespace GestaoEstoqueRN
         {
             DataGridViewButtonColumn buttonColumn = new DataGridViewButtonColumn
             {
-                HeaderText = "Ação",
+                HeaderText = "Detalhes",
                 Name = "ButtonColumn",
-                Text = "Detalhes",
+                Text = "",
                 UseColumnTextForButtonValue = true,
                 Width = 80
             };
@@ -186,7 +186,7 @@ namespace GestaoEstoqueRN
                             {
                                 cmd.Parameters.AddWithValue("@IdProduto", idProduto);
                                 cmd.ExecuteNonQuery();
-                                HistoricoService.RegistrarAcao(Usuario.IdUsuario,"O usuário excluiu o produto " + idProduto + " do estoque.");
+                                HistoricoService.RegistrarAcao(Usuario.IdUsuario, "O usuário excluiu o produto " + idProduto + " do estoque.");
 
                             }
                         }
@@ -257,59 +257,59 @@ namespace GestaoEstoqueRN
                 }
             }
         }
-        private void ExportarParaExcelInterop(DataGridView dataGridView)
-        {
-            if (dataGridView.Rows.Count == 0)
-            {
-                MessageBox.Show("Não há dados na grid para exportar.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
+        //private void ExportarParaExcelInterop(DataGridView dataGridView)
+        //{
+        //    if (dataGridView.Rows.Count == 0)
+        //    {
+        //        MessageBox.Show("Não há dados na grid para exportar.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        //        return;
+        //    }
 
-            try
-            {
-                // Cria uma aplicação do Excel
+        //    try
+        //    {
+        //        // Cria uma aplicação do Excel
 
-                Excel.Application excelApp = new Excel.Application
-                {
-                    Visible = true
-                };
+        //        Excel.Application excelApp = new Excel.Application
+        //        {
+        //            Visible = true
+        //        };
 
 
 
-                // Adiciona um novo workbook
-                Excel.Workbook workbook = excelApp.Workbooks.Add(Type.Missing);
-                Excel.Worksheet worksheet = (Worksheet)workbook.Sheets[1];
-                worksheet = (Worksheet)workbook.ActiveSheet;
-                worksheet.Name = "Dados Exportados";
+        //        // Adiciona um novo workbook
+        //        Excel.Workbook workbook = excelApp.Workbooks.Add(Type.Missing);
+        //        Excel.Worksheet worksheet = (Worksheet)workbook.Sheets[1];
+        //        worksheet = (Worksheet)workbook.ActiveSheet;
+        //        worksheet.Name = "Dados Exportados";
 
-                // Escreve os cabeçalhos das colunas
-                for (int i = 1; i <= dataGridView.Columns.Count; i++)
-                {
-                    worksheet.Cells[1, i] = dataGridView.Columns[i - 1].HeaderText;
-                }
+        //        // Escreve os cabeçalhos das colunas
+        //        for (int i = 1; i <= dataGridView.Columns.Count; i++)
+        //        {
+        //            worksheet.Cells[1, i] = dataGridView.Columns[i - 1].HeaderText;
+        //        }
 
-                // Escreve os dados das células
-                for (int i = 0; i < dataGridView.Rows.Count; i++)
-                {
-                    for (int j = 0; j < dataGridView.Columns.Count; j++)
-                    {
-                        worksheet.Cells[i + 2, j + 1] = dataGridView.Rows[i].Cells[j].Value?.ToString();
-                    }
-                }
+        //        // Escreve os dados das células
+        //        for (int i = 0; i < dataGridView.Rows.Count; i++)
+        //        {
+        //            for (int j = 0; j < dataGridView.Columns.Count; j++)
+        //            {
+        //                worksheet.Cells[i + 2, j + 1] = dataGridView.Rows[i].Cells[j].Value?.ToString();
+        //            }
+        //        }
 
-                // Ajusta o tamanho das colunas automaticamente
-                worksheet.Columns.AutoFit();
+        //        // Ajusta o tamanho das colunas automaticamente
+        //        worksheet.Columns.AutoFit();
 
-                workbook.SaveAs(@"C:\Caminho\DadosExportados.xlsx");
-                excelApp.Quit();
+        //        workbook.SaveAs(@"C:\Caminho\DadosExportados.xlsx");
+        //        excelApp.Quit();
 
-                MessageBox.Show("Dados exportados para o Excel com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Erro ao exportar para o Excel: {ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
+        //        MessageBox.Show("Dados exportados para o Excel com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        MessageBox.Show($"Erro ao exportar para o Excel: {ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        //    }
+        //}
 
         private void button4_Click(object sender, EventArgs e)
         {
@@ -332,6 +332,23 @@ namespace GestaoEstoqueRN
 
             ConfigurarDataGridView();
             CarregarDados();
+        }
+
+        private void dataGridView1_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
+        {
+            if (e.ColumnIndex == dataGridView1.Columns["ButtonColumn"].Index && e.RowIndex >= 0)
+            {
+
+                e.Paint(e.CellBounds, DataGridViewPaintParts.All);
+
+                var w = Properties.Resources.save_outline.Width;
+                var h = Properties.Resources.save_outline.Height;
+                var x = e.CellBounds.Left + (e.CellBounds.Width - w) / 2;
+                var y = e.CellBounds.Top + (e.CellBounds.Height - h) / 2;
+
+                e.Graphics.DrawImage(Properties.Resources.information_outline, new Rectangle(x, y, w, h));
+                e.Handled = true;
+            }
         }
     }
 }
