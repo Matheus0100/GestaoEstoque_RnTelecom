@@ -278,15 +278,62 @@ namespace GestaoEstoqueRN
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex >= 0 && e.ColumnIndex == dataGridView1.Columns["ButtonColumnInfo"].Index)
+            try
             {
-                int idAtivo = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells["IdAtivo"].Value);
+                if (e.RowIndex >= 0 && e.ColumnIndex == dataGridView1.Columns["ButtonColumnInfo"].Index)
+                {
+                    int idAtivo = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells["IdAtivo"].Value);
 
-                CadastroAtivo formDetalhes = new(idAtivo);
-                formDetalhes.btnCadastrar.Visible = false;
-                formDetalhes.btnRetorno.Visible = false;
-                formDetalhes.Text = "Exibição de Informações";
-                formDetalhes.ShowDialog();
+                    CadastroAtivo formDetalhes = new(idAtivo);
+                    formDetalhes.btnCadastrar.Visible = false;
+                    formDetalhes.btnRetorno.Visible = false;
+                    formDetalhes.txtLocalizacao.Visible = true;
+                    formDetalhes.lblLocalizacao.Visible = true;
+                    formDetalhes.Text = "Exibição de Informações";
+                    formDetalhes.ShowDialog();
+                }
+
+                if (e.ColumnIndex == dataGridView1.Columns["ButtonColumnLoc"].Index && e.RowIndex >= 0)
+                {
+                    int idAtivo = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells["IdAtivo"].Value);
+
+                    string local = Microsoft.VisualBasic.Interaction.InputBox(
+                        "Digite o local onde o ativo está:",
+                        "Atualizar Local",
+                        "");
+
+                    if (string.IsNullOrEmpty(local))
+                    {
+                        //MessageBox.Show("Local não inserido!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
+
+                    try
+                    {
+                        using (MySqlConnection connection = new MySqlConnection(Database.conn))
+                        {
+                            connection.Open();
+
+                            string query = "UPDATE ativos SET Localizacao = @Local WHERE IdAtivo = @IdAtivo";
+                            using (MySqlCommand command = new MySqlCommand(query, connection))
+                            {
+                                command.Parameters.AddWithValue("@Local", local);
+                                command.Parameters.AddWithValue("@IdAtivo", idAtivo);
+                                command.ExecuteNonQuery();
+                            }
+                        }
+
+                        MessageBox.Show("Local atualizado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show($"Erro ao atualizar o local: {ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+            catch(Exception ex)
+            {
+                return;
             }
         }
 

@@ -105,14 +105,21 @@ namespace GestaoEstoqueRN
         }
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex >= 0 && e.ColumnIndex == dataGridView1.Columns["ButtonColumn"].Index)
+            try
             {
-                int idProduto = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells["IdProduto"].Value);
+                if (e.RowIndex >= 0 && e.ColumnIndex == dataGridView1.Columns["ButtonColumn"].Index)
+                {
+                    int idProduto = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells["IdProduto"].Value);
 
-                CadastroEstoque formDetalhes = new(idProduto);
-                formDetalhes.btnCadastrar.Visible = false;
-                formDetalhes.Text = "Exibição de Informações";
-                formDetalhes.ShowDialog();
+                    CadastroEstoque formDetalhes = new(idProduto);
+                    formDetalhes.btnCadastrar.Visible = false;
+                    formDetalhes.Text = "Exibição de Informações";
+                    formDetalhes.ShowDialog();
+                }
+            }
+            catch(Exception ex)
+            {
+                return;
             }
         }
         private void txtSearch_TextChanged(object sender, EventArgs e)

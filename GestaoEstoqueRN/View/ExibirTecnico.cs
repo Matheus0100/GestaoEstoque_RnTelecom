@@ -47,7 +47,7 @@ namespace GestaoEstoqueRN
                 {
                     conn.Open();
 
-                    string query = "SELECT emuso.Radu, " +
+                    string query = "SELECT emuso.IdEmUso as 'Id', emuso.Radu, " +
                         "CASE WHEN emuso.IdProduto IS NOT NULL THEN produtos.Nome " +
                         "WHEN emuso.IdAtivo IS NOT NULL THEN ativos.Patrimonio ELSE NULL END AS ItemRelacionado, " +
                         "emuso.QtdProduto, emuso.Associado FROM emuso " +
@@ -162,6 +162,71 @@ namespace GestaoEstoqueRN
                 e.Graphics.DrawImage(Properties.Resources.arrow_undo_outline, new Rectangle(x, y, w, h));
                 e.Handled = true;
             }
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                if (e.ColumnIndex == dataGridView1.Columns["ButtonColumn"].Index && e.RowIndex >= 0)
+                {
+                    int idEmUso = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells["Id"].Value);
+                    string itemRelacionado = dataGridView1.Rows[e.RowIndex].Cells["ItemRelacionado"].Value.ToString();
+                    int qtdProduto = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells["QtdProduto"].Value);
+
+                    try
+                    {
+                        using (MySqlConnection connection = new MySqlConnection(Database.conn))
+                        {
+                            connection.Open();
+
+                            if (IsNumero(itemRelacionado))
+                            {
+                                string queryAtivo = "UPDATE ativos SET Status = 1 WHERE Patrimonio = @Patrimonio";
+                                using (MySqlCommand command = new MySqlCommand(queryAtivo, connection))
+                                {
+                                    command.Parameters.AddWithValue("@Patrimonio", itemRelacionado);
+                                    command.ExecuteNonQuery();
+                                }
+                            }
+                            else
+                            {
+                                string queryProduto = "UPDATE produtos SET QtdEstoque = QtdEstoque + @QtdProduto WHERE Nome = @NomeProduto";
+                                using (MySqlCommand command = new MySqlCommand(queryProduto, connection))
+                                {
+                                    command.Parameters.AddWithValue("@QtdProduto", qtdProduto);
+                                    command.Parameters.AddWithValue("@NomeProduto", itemRelacionado);
+                                    command.ExecuteNonQuery();
+                                }
+                            }
+
+                            string queryExcluir = "DELETE FROM emuso WHERE IdEmUso = @IdEmUso";
+                            using (MySqlCommand command = new MySqlCommand(queryExcluir, connection))
+                            {
+                                command.Parameters.AddWithValue("@IdEmUso", idEmUso);
+                                command.ExecuteNonQuery();
+                            }
+                        }
+
+                        MessageBox.Show("Operação concluída com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        CarregarDados();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show($"Erro ao processar a operação: {ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+
+            }
+            catch(Exception ex)
+            {
+                return;
+            }
+        }
+
+        private bool IsNumero(string texto)
+        {
+            return texto.All(char.IsDigit);
         }
     }
 }

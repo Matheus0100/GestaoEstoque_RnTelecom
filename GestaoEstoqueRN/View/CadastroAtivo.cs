@@ -51,7 +51,7 @@ namespace GestaoEstoqueRN.Views
                                 dtpDataGarantia.Value = reader["DataGarantia"] != DBNull.Value ? Convert.ToDateTime(reader["DataGarantia"]) : DateTime.Now;
                                 txtNotaFiscal.Text = reader["NotaFiscal"] != DBNull.Value ? reader["NotaFiscal"].ToString() : string.Empty;
                                 dtpDataCompra.Value = reader["DataCompra"] != DBNull.Value ? Convert.ToDateTime(reader["DataCompra"]) : DateTime.Now;
-
+                                txtLocalizacao.Text = reader["Localizacao"] != DBNull.Value ? reader["Localizacao"].ToString() : string.Empty;
                             }
                             else
                             {

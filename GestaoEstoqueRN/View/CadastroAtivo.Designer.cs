@@ -52,6 +52,8 @@
             nudValor = new NumericUpDown();
             label1 = new Label();
             cboStatus = new ComboBox();
+            txtLocalizacao = new TextBox();
+            lblLocalizacao = new Label();
             ((System.ComponentModel.ISupportInitialize)nudValor).BeginInit();
             SuspendLayout();
             // 
@@ -311,12 +313,37 @@
             cboStatus.TabIndex = 70;
             cboStatus.Visible = false;
             // 
+            // txtLocalizacao
+            // 
+            txtLocalizacao.Location = new Point(328, 536);
+            txtLocalizacao.Margin = new Padding(4, 3, 4, 3);
+            txtLocalizacao.Multiline = true;
+            txtLocalizacao.Name = "txtLocalizacao";
+            txtLocalizacao.PlaceholderText = "INSERIR";
+            txtLocalizacao.Size = new Size(215, 23);
+            txtLocalizacao.TabIndex = 73;
+            txtLocalizacao.Visible = false;
+            // 
+            // lblLocalizacao
+            // 
+            lblLocalizacao.AutoSize = true;
+            lblLocalizacao.Font = new Font("Arial", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            lblLocalizacao.ForeColor = SystemColors.Control;
+            lblLocalizacao.Location = new Point(328, 515);
+            lblLocalizacao.Name = "lblLocalizacao";
+            lblLocalizacao.Size = new Size(111, 18);
+            lblLocalizacao.TabIndex = 72;
+            lblLocalizacao.Text = "LOCALIZAÇÃO";
+            lblLocalizacao.Visible = false;
+            // 
             // CadastroAtivo
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Maroon;
             ClientSize = new Size(607, 589);
+            Controls.Add(txtLocalizacao);
+            Controls.Add(lblLocalizacao);
             Controls.Add(label1);
             Controls.Add(cboStatus);
             Controls.Add(nudValor);
@@ -380,5 +407,8 @@
         public Button btnRetorno;
         private Label label1;
         private ComboBox cboStatus;
+        public TextBox txtLocalizacao;
+        public Label lblLocalizacao;
+        private Label label12;
     }
 }
