@@ -10,6 +10,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DocumentFormat.OpenXml.Spreadsheet;
 using GestaoEstoqueRN.DAO;
+using GestaoEstoqueRN.Model;
+using GestaoEstoqueRN.Services;
 using GestaoEstoqueRN.Views;
 using MySql.Data.MySqlClient;
 
@@ -53,7 +55,7 @@ namespace GestaoEstoqueRN
                         "emuso.QtdProduto, emuso.Associado FROM emuso " +
                         "LEFT JOIN produtos ON emuso.IdProduto = produtos.IdProduto " +
                         "LEFT JOIN ativos ON emuso.IdAtivo = ativos.IdAtivo " +
-                        "WHERE DATE(emuso.DataUso) = @Data";
+                        "WHERE DATE(emuso.DataUso) = @Data AND ";
 
                     using (MySqlCommand cmd = new MySqlCommand(query, conn))
                     {
@@ -80,7 +82,7 @@ namespace GestaoEstoqueRN
                     }
                 }
 
-                //AdicionarColunaBotaoOk();
+                AdicionarColunaBotaoOk();
                 AdicionarColunaBotaoRetornoEstoque();
             }
             catch (Exception ex)
@@ -122,6 +124,7 @@ namespace GestaoEstoqueRN
             {
                 DesignarTecnico frmDesignarTecnico = new();
                 frmDesignarTecnico.Show();
+                CarregarDados();
             }
             catch (Exception ex)
             {
@@ -136,19 +139,19 @@ namespace GestaoEstoqueRN
 
         private void dataGridView1_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
         {
-            //if (e.ColumnIndex == dataGridView1.Columns["ButtonColumnOk"].Index && e.RowIndex >= 0)
-            //{
+            if (e.ColumnIndex == dataGridView1.Columns["ButtonColumnOk"].Index && e.RowIndex >= 0)
+            {
 
-            //    e.Paint(e.CellBounds, DataGridViewPaintParts.All);
+                e.Paint(e.CellBounds, DataGridViewPaintParts.All);
 
-            //    var w = Properties.Resources.save_outline.Width;
-            //    var h = Properties.Resources.save_outline.Height;
-            //    var x = e.CellBounds.Left + (e.CellBounds.Width - w) / 2;
-            //    var y = e.CellBounds.Top + (e.CellBounds.Height - h) / 2;
+                var w = Properties.Resources.save_outline.Width;
+                var h = Properties.Resources.save_outline.Height;
+                var x = e.CellBounds.Left + (e.CellBounds.Width - w) / 2;
+                var y = e.CellBounds.Top + (e.CellBounds.Height - h) / 2;
 
-            //    e.Graphics.DrawImage(Properties.Resources.checkmark_outline, new Rectangle(x, y, w, h));
-            //    e.Handled = true;
-            //}
+                e.Graphics.DrawImage(Properties.Resources.checkmark_outline, new Rectangle(x, y, w, h));
+                e.Handled = true;
+            }
             if (e.ColumnIndex == dataGridView1.Columns["ButtonColumn"].Index && e.RowIndex >= 0)
             {
 
@@ -188,41 +191,101 @@ namespace GestaoEstoqueRN
                                     command.Parameters.AddWithValue("@Patrimonio", itemRelacionado);
                                     command.ExecuteNonQuery();
                                 }
+
+                                string queryConfirmado = "UPDATE emuso SET Confirmado = 1 WHERE IdEmUso = @IdEmUso";
+                                using (MySqlCommand command = new MySqlCommand(queryConfirmado, connection))
+                                {
+                                    command.Parameters.AddWithValue("@IdEmUso", idEmUso);
+                                    command.ExecuteNonQuery();
+                                }
+                                HistoricoService.RegistrarAcao(Usuario.IdUsuario, $"O usuário retornou o ativo '{itemRelacionado}' com a quantidade: {qtdProduto} para o estoque.");
                             }
                             else
                             {
+                                string input = Microsoft.VisualBasic.Interaction.InputBox(
+                                    "Digite a quantidade a devolver ao estoque:", "Devolver Produto", qtdProduto.ToString());
+
+                                if (!int.TryParse(input, out int qtdDevolvida) || qtdDevolvida <= 0 || qtdDevolvida > qtdProduto)
+                                {
+                                    MessageBox.Show("Quantidade inválida.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                    return;
+                                }
+
                                 string queryProduto = "UPDATE produtos SET QtdEstoque = QtdEstoque + @QtdProduto WHERE Nome = @NomeProduto";
                                 using (MySqlCommand command = new MySqlCommand(queryProduto, connection))
                                 {
-                                    command.Parameters.AddWithValue("@QtdProduto", qtdProduto);
+                                    command.Parameters.AddWithValue("@QtdProduto", qtdDevolvida);
                                     command.Parameters.AddWithValue("@NomeProduto", itemRelacionado);
                                     command.ExecuteNonQuery();
                                 }
-                            }
 
-                            string queryExcluir = "DELETE FROM emuso WHERE IdEmUso = @IdEmUso";
-                            using (MySqlCommand command = new MySqlCommand(queryExcluir, connection))
-                            {
-                                command.Parameters.AddWithValue("@IdEmUso", idEmUso);
-                                command.ExecuteNonQuery();
+                                if (qtdDevolvida == qtdProduto)
+                                {
+                                    string queryConfirmado = "UPDATE emuso SET Confirmado = 1 WHERE IdEmUso = @IdEmUso";
+                                    using (MySqlCommand command = new MySqlCommand(queryConfirmado, connection))
+                                    {
+                                        command.Parameters.AddWithValue("@IdEmUso", idEmUso);
+                                        command.ExecuteNonQuery();
+                                    }
+                                }
+                                else
+                                {
+                                    string queryAtualizarEmUso = "UPDATE emuso SET QtdProduto = QtdProduto - @QtdDevolvida WHERE IdEmUso = @IdEmUso";
+                                    using (MySqlCommand command = new MySqlCommand(queryAtualizarEmUso, connection))
+                                    {
+                                        command.Parameters.AddWithValue("@QtdDevolvida", qtdDevolvida);
+                                        command.Parameters.AddWithValue("@IdEmUso", idEmUso);
+                                        command.ExecuteNonQuery();
+                                    }
+                                }
+                                HistoricoService.RegistrarAcao(Usuario.IdUsuario, $"O usuário retornou o produto '{itemRelacionado}' com a quantidade: {qtdDevolvida} para o estoque.");
                             }
                         }
 
                         MessageBox.Show("Operação concluída com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         CarregarDados();
+
                     }
                     catch (Exception ex)
                     {
                         MessageBox.Show($"Erro ao processar a operação: {ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
+                if (e.ColumnIndex == dataGridView1.Columns["ButtonColumnOk"].Index && e.RowIndex >= 0)
+                {
+                    try
+                    {
+                        int idEmUso = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells["Id"].Value);
 
+                        using (MySqlConnection connection = new MySqlConnection(Database.conn))
+                        {
+                            connection.Open();
+
+                            string queryConfirmar = "UPDATE emuso SET Confirmado = 1 WHERE IdEmUso = @IdEmUso";
+                            using (MySqlCommand command = new MySqlCommand(queryConfirmar, connection))
+                            {
+                                command.Parameters.AddWithValue("@IdEmUso", idEmUso);
+                                command.ExecuteNonQuery();
+                            }
+                        }
+
+                        HistoricoService.RegistrarAcao(Usuario.IdUsuario, $"O usuário confirmou o item de ID {idEmUso} na tabela emuso.");
+                        MessageBox.Show("Item confirmado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        CarregarDados();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show($"Erro ao confirmar o item: {ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 return;
             }
         }
+
+
 
         private bool IsNumero(string texto)
         {

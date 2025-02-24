@@ -10,7 +10,6 @@ using System.Windows.Forms;
 using GestaoEstoqueRN.DAO;
 using GestaoEstoqueRN.Views;
 using MySql.Data.MySqlClient;
-//using Microsoft.Office.Interop.Excel;
 using Excel = Microsoft.Office.Interop.Excel;
 using DataTable = System.Data.DataTable;
 using ClosedXML.Excel;

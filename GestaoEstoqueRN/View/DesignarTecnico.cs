@@ -41,10 +41,10 @@ namespace GestaoEstoqueRN.Views
             string radu = cboRadu.Text.Trim();
             int qtdProduto = (int)nudQtdProduto.Value;
             string descricao = txtDescricao.Text.Trim();
-            string associado = txtAssociado.Text.Trim();
+            //string associado = txtAssociado.Text.Trim();
             DateTime dataUso = dtpDataUso.Value;
 
-            if (string.IsNullOrEmpty(radu) || string.IsNullOrEmpty(associado) || (idProduto == null && idAtivo == null))
+            if (string.IsNullOrEmpty(radu) || (idProduto == null && idAtivo == null))
             {
                 MessageBox.Show("Preencha todos os campos obrigatórios!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
@@ -66,7 +66,7 @@ namespace GestaoEstoqueRN.Views
                     try
                     {
                         string query = @"INSERT INTO emuso (IdProduto, IdAtivo, DataUso, Radu, QtdProduto, Descricao, Associado)
-                                 VALUES (@IdProduto, @IdAtivo, @DataUso, @Radu, @QtdProduto, @Descricao, @Associado)";
+                                 VALUES (@IdProduto, @IdAtivo, @DataUso, @Radu, @QtdProduto, @Descricao)";
 
                         using (MySqlCommand command = new MySqlCommand(query, connection, transaction))
                         {
@@ -76,7 +76,7 @@ namespace GestaoEstoqueRN.Views
                             command.Parameters.AddWithValue("@Radu", radu);
                             command.Parameters.AddWithValue("@QtdProduto", qtdProduto);
                             command.Parameters.AddWithValue("@Descricao", descricao);
-                            command.Parameters.AddWithValue("@Associado", associado);
+                            //command.Parameters.AddWithValue("@Associado", associado);
 
                             command.ExecuteNonQuery();
                         }

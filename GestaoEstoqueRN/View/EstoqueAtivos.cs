@@ -320,6 +320,8 @@ namespace GestaoEstoqueRN
                                 command.Parameters.AddWithValue("@Local", local);
                                 command.Parameters.AddWithValue("@IdAtivo", idAtivo);
                                 command.ExecuteNonQuery();
+                                HistoricoService.RegistrarAcao(Usuario.IdUsuario, "O usuário inseriu a localização: " + local + " para o ativo: " + idAtivo);
+
                             }
                         }
 

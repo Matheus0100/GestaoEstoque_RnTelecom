@@ -187,6 +187,7 @@
             txtAssociado.Name = "txtAssociado";
             txtAssociado.Size = new Size(183, 23);
             txtAssociado.TabIndex = 14;
+            txtAssociado.Visible = false;
             // 
             // label6
             // 
@@ -199,6 +200,7 @@
             label6.Size = new Size(110, 16);
             label6.TabIndex = 13;
             label6.Text = "RESPONSÁVEL";
+            label6.Visible = false;
             // 
             // txtDescricao
             // 
