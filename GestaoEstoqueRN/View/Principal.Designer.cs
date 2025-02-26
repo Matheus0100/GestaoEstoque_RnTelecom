@@ -35,6 +35,8 @@
             btnEstoqueAtivos = new ToolStripButton();
             toolStripSeparator2 = new ToolStripSeparator();
             btnDesignarTecnico = new ToolStripButton();
+            toolStripSeparator3 = new ToolStripSeparator();
+            btnCadastrarClientes = new ToolStripButton();
             toolStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -44,7 +46,7 @@
             toolStrip1.BackColor = Color.DarkRed;
             toolStrip1.GripStyle = ToolStripGripStyle.Hidden;
             toolStrip1.ImageScalingSize = new Size(20, 20);
-            toolStrip1.Items.AddRange(new ToolStripItem[] { btnEstoque, toolStripSeparator1, btnEstoqueAtivos, toolStripSeparator2, btnDesignarTecnico });
+            toolStrip1.Items.AddRange(new ToolStripItem[] { btnEstoque, toolStripSeparator1, btnEstoqueAtivos, toolStripSeparator2, btnDesignarTecnico, toolStripSeparator3, btnCadastrarClientes });
             toolStrip1.LayoutStyle = ToolStripLayoutStyle.HorizontalStackWithOverflow;
             toolStrip1.Location = new Point(0, 0);
             toolStrip1.Name = "toolStrip1";
@@ -52,12 +54,14 @@
             toolStrip1.Stretch = true;
             toolStrip1.TabIndex = 1;
             toolStrip1.Text = "toolStrip1";
+            toolStrip1.ItemClicked += toolStrip1_ItemClicked;
             // 
             // btnEstoque
             // 
             btnEstoque.DisplayStyle = ToolStripItemDisplayStyle.Text;
             btnEstoque.Font = new Font("Segoe UI", 20F, FontStyle.Regular, GraphicsUnit.Point);
             btnEstoque.ForeColor = SystemColors.ControlLightLight;
+            btnEstoque.Image = Properties.Resources.options_outline1;
             btnEstoque.ImageTransparentColor = Color.Magenta;
             btnEstoque.Margin = new Padding(20, 1, 15, 2);
             btnEstoque.Name = "btnEstoque";
@@ -102,6 +106,23 @@
             btnDesignarTecnico.ToolTipText = "Designar Estoque / Ativo para os Técnicos";
             btnDesignarTecnico.Click += btnDesignarTecnico_Click;
             // 
+            // toolStripSeparator3
+            // 
+            toolStripSeparator3.Name = "toolStripSeparator3";
+            toolStripSeparator3.Size = new Size(6, 47);
+            // 
+            // btnCadastrarClientes
+            // 
+            btnCadastrarClientes.BackColor = Color.DarkRed;
+            btnCadastrarClientes.DisplayStyle = ToolStripItemDisplayStyle.Text;
+            btnCadastrarClientes.Font = new Font("Segoe UI", 20F, FontStyle.Regular, GraphicsUnit.Point);
+            btnCadastrarClientes.ForeColor = SystemColors.ButtonHighlight;
+            btnCadastrarClientes.ImageTransparentColor = Color.Magenta;
+            btnCadastrarClientes.Name = "btnCadastrarClientes";
+            btnCadastrarClientes.Size = new Size(314, 41);
+            btnCadastrarClientes.Text = "CADASTRO DE CLIENTES";
+            btnCadastrarClientes.Click += btnCadastrarClientes_Click;
+            // 
             // Principal
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -129,5 +150,7 @@
         private ToolStripButton btnDesignarTecnico;
         private ToolStripSeparator toolStripSeparator1;
         private ToolStripSeparator toolStripSeparator2;
+        private ToolStripSeparator toolStripSeparator3;
+        private ToolStripButton btnCadastrarClientes;
     }
 }

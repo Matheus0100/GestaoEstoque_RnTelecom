@@ -256,10 +256,35 @@ namespace GestaoEstoqueRN
                     try
                     {
                         int idEmUso = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells["Id"].Value);
+                        string itemRelacionado = dataGridView1.Rows[e.RowIndex].Cells["ItemRelacionado"].Value.ToString();
 
                         using (MySqlConnection connection = new MySqlConnection(Database.conn))
                         {
                             connection.Open();
+
+                            if (IsNumero(itemRelacionado))
+                            {
+                                using (var frmCliente = new AssociarAtivo())
+                                {
+                                    if (frmCliente.ShowDialog() == DialogResult.OK)
+                                    {
+                                        int idCliente = frmCliente.IdClienteSelecionado;
+
+                                        string queryAtualizarAtivo = "UPDATE ativos SET Status = 2, Localizacao = @IdCliente WHERE Patrimonio = @Patrimonio";
+                                        using (MySqlCommand command = new MySqlCommand(queryAtualizarAtivo, connection))
+                                        {
+                                            command.Parameters.AddWithValue("@IdCliente", idCliente);
+                                            command.Parameters.AddWithValue("@Patrimonio", itemRelacionado);
+                                            command.ExecuteNonQuery();
+                                        }
+                                    }
+                                    else
+                                    {
+                                        MessageBox.Show("Operação cancelada. Nenhum cliente foi associado.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                        return;
+                                    }
+                                }
+                            }
 
                             string queryConfirmar = "UPDATE emuso SET Confirmado = 1 WHERE IdEmUso = @IdEmUso";
                             using (MySqlCommand command = new MySqlCommand(queryConfirmar, connection))
@@ -269,7 +294,7 @@ namespace GestaoEstoqueRN
                             }
                         }
 
-                        HistoricoService.RegistrarAcao(Usuario.IdUsuario, $"O usuário confirmou o item de ID {idEmUso} na tabela emuso.");
+                        HistoricoService.RegistrarAcao(Usuario.IdUsuario, $"O usuário confirmou o item {itemRelacionado} na tabela emuso.");
                         MessageBox.Show("Item confirmado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         CarregarDados();
                     }

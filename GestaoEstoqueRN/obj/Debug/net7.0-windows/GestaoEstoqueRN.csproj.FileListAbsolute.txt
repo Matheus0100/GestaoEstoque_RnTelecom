@@ -121,3 +121,4 @@ H:\Documents\GestaoEstoque_RN\GestaoEstoqueRN\obj\Debug\net7.0-windows\refint\Ge
 H:\Documents\GestaoEstoque_RN\GestaoEstoqueRN\obj\Debug\net7.0-windows\GestaoEstoqueRN.pdb
 H:\Documents\GestaoEstoque_RN\GestaoEstoqueRN\obj\Debug\net7.0-windows\GestaoEstoqueRN.genruntimeconfig.cache
 H:\Documents\GestaoEstoque_RN\GestaoEstoqueRN\obj\Debug\net7.0-windows\ref\GestaoEstoqueRN.dll
+H:\Documents\GestaoEstoque_RN\GestaoEstoqueRN\obj\Debug\net7.0-windows\GestaoEstoqueRN.View.CadastroCliente.resources

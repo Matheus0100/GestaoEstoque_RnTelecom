@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using GestaoEstoqueRN.View;
 
 namespace GestaoEstoqueRN.Views
 {
@@ -118,6 +119,38 @@ namespace GestaoEstoqueRN.Views
         private void Principal_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void btnCadastrarClientes_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Form? frm = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is CadastroCliente);
+
+                MudarCorTitulo(btnCadastrarClientes);
+
+                if (frm != null)
+                {
+                    frm.BringToFront();
+                }
+                else
+                {
+                    frm = new CadastroCliente();
+                    //frm.MdiParent = this;
+                    //frm.Dock = DockStyle.Fill;
+                    frm.Show();
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ocorreu um erro ao clicar no botão Cadastro de Clientes. Erro: " + ex.Message);
+            }
         }
     }
 }
