@@ -346,6 +346,7 @@
             MinimumSize = new Size(583, 566);
             Name = "CadastroCliente";
             Text = "Cadastro de Clientes";
+            Load += CadastroCliente_Load;
             ResumeLayout(false);
             PerformLayout();
         }

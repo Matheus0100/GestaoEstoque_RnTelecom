@@ -30,7 +30,7 @@
         {
             dateTimePicker1 = new DateTimePicker();
             label1 = new Label();
-            button1 = new Button();
+            btnDesignar = new Button();
             dataGridView1 = new DataGridView();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
@@ -59,22 +59,22 @@
             label1.TabIndex = 9;
             label1.Text = "Data:";
             // 
-            // button1
+            // btnDesignar
             // 
-            button1.AutoSize = true;
-            button1.BackColor = Color.White;
-            button1.Font = new Font("Segoe UI", 15F, FontStyle.Bold, GraphicsUnit.Point);
-            button1.ForeColor = Color.Black;
-            button1.Image = Properties.Resources.people_outline1;
-            button1.Location = new Point(12, 37);
-            button1.Name = "button1";
-            button1.Size = new Size(138, 38);
-            button1.TabIndex = 10;
-            button1.Text = "Designar";
-            button1.TextAlign = ContentAlignment.MiddleRight;
-            button1.TextImageRelation = TextImageRelation.ImageBeforeText;
-            button1.UseVisualStyleBackColor = false;
-            button1.Click += button1_Click;
+            btnDesignar.AutoSize = true;
+            btnDesignar.BackColor = Color.White;
+            btnDesignar.Font = new Font("Segoe UI", 15F, FontStyle.Bold, GraphicsUnit.Point);
+            btnDesignar.ForeColor = Color.Black;
+            btnDesignar.Image = Properties.Resources.people_outline1;
+            btnDesignar.Location = new Point(12, 37);
+            btnDesignar.Name = "btnDesignar";
+            btnDesignar.Size = new Size(138, 38);
+            btnDesignar.TabIndex = 10;
+            btnDesignar.Text = "Designar";
+            btnDesignar.TextAlign = ContentAlignment.MiddleRight;
+            btnDesignar.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnDesignar.UseVisualStyleBackColor = false;
+            btnDesignar.Click += button1_Click;
             // 
             // dataGridView1
             // 
@@ -98,7 +98,7 @@
             ClientSize = new Size(771, 508);
             ControlBox = false;
             Controls.Add(dataGridView1);
-            Controls.Add(button1);
+            Controls.Add(btnDesignar);
             Controls.Add(label1);
             Controls.Add(dateTimePicker1);
             Font = new Font("Times New Roman", 8.25F, FontStyle.Bold, GraphicsUnit.Point);
@@ -119,7 +119,7 @@
         #endregion
         private DateTimePicker dateTimePicker1;
         private Label label1;
-        private Button button1;
+        private Button btnDesignar;
         private DataGridView dataGridView1;
     }
 }

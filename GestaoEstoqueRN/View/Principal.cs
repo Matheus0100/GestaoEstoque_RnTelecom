@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using GestaoEstoqueRN.Model;
 using GestaoEstoqueRN.View;
 
 namespace GestaoEstoqueRN.Views
@@ -150,6 +151,23 @@ namespace GestaoEstoqueRN.Views
             catch (Exception ex)
             {
                 MessageBox.Show("Ocorreu um erro ao clicar no botão Cadastro de Clientes. Erro: " + ex.Message);
+            }
+        }
+
+        private void Principal_Load(object sender, EventArgs e)
+        {
+            try
+            {
+                if(Usuario.Cargo != "OP" && Usuario.Cargo != "AD")
+                {
+                    btnCadastrarClientes.Enabled = false;
+                    btnCadastrarClientes.Visible = false;
+                    toolStripSeparator3.Visible = false;
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Ocorreu um erro ao carregar formulário. Erro: " + ex.Message);
             }
         }
     }

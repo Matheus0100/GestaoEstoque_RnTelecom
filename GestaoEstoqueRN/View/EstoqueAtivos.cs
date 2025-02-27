@@ -111,6 +111,14 @@ namespace GestaoEstoqueRN
         {
             ConfigurarDataGridView();
             CarregarDados();
+
+            if (Usuario.Cargo != "OP" && Usuario.Cargo != "AD")
+            {
+                btnAdicionar.Enabled = false;
+                btnExcluir.Enabled = false;
+                btnExportar.Enabled = false;
+                btnEditar.Enabled = false;
+            }
         }
 
         private void txtSearch_TextChanged(object sender, EventArgs e)
@@ -291,6 +299,12 @@ namespace GestaoEstoqueRN
                     formDetalhes.lblLocalizacao.Visible = true;
                     formDetalhes.Text = "Exibição de Informações";
                     formDetalhes.ShowDialog();
+                }
+
+                if (Usuario.Cargo != "OP" && Usuario.Cargo != "AD")
+                {
+                    MessageBox.Show("Usuário sem permissão.");
+                    return;
                 }
 
                 if (e.ColumnIndex == dataGridView1.Columns["ButtonColumnLoc"].Index && e.RowIndex >= 0)

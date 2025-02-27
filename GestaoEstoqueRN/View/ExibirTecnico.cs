@@ -34,6 +34,10 @@ namespace GestaoEstoqueRN
         {
             CarregarDados();
             ObterDataAtual();
+            if (Usuario.Cargo != "OP" && Usuario.Cargo != "AD")
+            {
+                btnDesignar.Enabled = false;
+            }
         }
         private void ObterDataAtual()
         {
@@ -171,6 +175,12 @@ namespace GestaoEstoqueRN
         {
             try
             {
+                if (Usuario.Cargo != "OP" && Usuario.Cargo != "AD")
+                {
+                    MessageBox.Show("Usuário sem permissão.");
+                    return;
+                }
+
                 if (e.ColumnIndex == dataGridView1.Columns["ButtonColumn"].Index && e.RowIndex >= 0)
                 {
                     int idEmUso = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells["Id"].Value);

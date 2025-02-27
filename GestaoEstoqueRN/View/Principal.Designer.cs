@@ -137,6 +137,7 @@
             Text = "Gestão de Estoque - RN Telecom";
             WindowState = FormWindowState.Maximized;
             FormClosing += Principal_FormClosing;
+            Load += Principal_Load;
             toolStrip1.ResumeLayout(false);
             toolStrip1.PerformLayout();
             ResumeLayout(false);

@@ -89,6 +89,14 @@ namespace GestaoEstoqueRN
         {
             ConfigurarDataGridView();
             CarregarDados();
+
+            if (Usuario.Cargo != "OP" && Usuario.Cargo != "AD")
+            {
+                btnAdicionar.Enabled = false;
+                btnExcluir.Enabled = false;
+                btnExportar.Enabled = false;
+                btnEditar.Enabled = false;
+            }
         }
         private void AdicionarColunaBotao()
         {

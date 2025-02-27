@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using GestaoEstoqueRN.DAO;
+using GestaoEstoqueRN.Helper;
 using MySql.Data.MySqlClient;
 
 namespace GestaoEstoqueRN.View
@@ -24,10 +25,10 @@ namespace GestaoEstoqueRN.View
             string nome = txtNome.Text.Trim();
             string telefone = txtTelefone.Text.Trim().Replace("(", "").Replace(")", "").Replace("-", "").Replace(" ", "");
             //string email = txtEmail.Text.Trim();
-            string tipo = cboTipo.SelectedItem?.ToString();
+            string tipo = cboTipo.Text == "-- Selecione --" ? "" : cboTipo.Text;
             string cpfCnpj = txtCpfCnpj.Text.Trim().Replace(".", "").Replace("-", "").Replace("/", "");
             string rg = txtRg.Text.Trim().Replace(".", "").Replace("-", "");
-            string genero = cboGenero.SelectedItem?.ToString();
+            string genero = cboGenero.Text == "-- Selecione --" ? "" : cboGenero.Text;
             DateTime dataNasc = dtpDataNascimento.Value;
             string cep = txtCep.Text.Trim().Replace("-", "");
             string endereco = txtEndereco.Text.Trim();
@@ -90,15 +91,21 @@ namespace GestaoEstoqueRN.View
             txtTelefone.Clear();
             //txtEmail.Clear();
             txtCodigo.Clear();
-            cboTipo.SelectedIndex = -1;
+            cboTipo.SelectedIndex = 0;
             txtCpfCnpj.Clear();
             txtRg.Clear();
-            cboGenero.SelectedIndex = -1;
+            cboGenero.SelectedIndex = 0;
             dtpDataNascimento.Value = DateTime.Now;
             txtCep.Clear();
             txtEndereco.Clear();
             txtCidade.Clear();
             txtBairro.Clear();
+        }
+
+        private void CadastroCliente_Load(object sender, EventArgs e)
+        {
+            Combos.PreencherComboBox(cboTipo, "tipocliente", "IdTipoCliente", "NomeTipoCliente");
+            Combos.PreencherComboBox(cboGenero, "tipogenero", "IdTipoGenero", "NomeTipoGenero");
         }
     }
 }
