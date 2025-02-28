@@ -9,7 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using GestaoEstoqueRN.DAO;
 using GestaoEstoqueRN.Views;
-using MySql.Data.MySqlClient;
+//using MySql.Data.MySqlClient;
+using MySqlConnector;
 using Excel = Microsoft.Office.Interop.Excel;
 using DataTable = System.Data.DataTable;
 using ClosedXML.Excel;
@@ -96,6 +97,10 @@ namespace GestaoEstoqueRN
                 btnExcluir.Enabled = false;
                 btnExportar.Enabled = false;
                 btnEditar.Enabled = false;
+            }
+            if (Usuario.Cargo == "OP")
+            {
+                btnExcluir.Enabled = false;
             }
         }
         private void AdicionarColunaBotao()

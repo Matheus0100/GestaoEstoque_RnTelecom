@@ -9,7 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using GestaoEstoqueRN.DAO;
 using GestaoEstoqueRN.Helper;
-using MySql.Data.MySqlClient;
+//using MySql.Data.MySqlClient;
+using MySqlConnector;
 
 namespace GestaoEstoqueRN.View
 {

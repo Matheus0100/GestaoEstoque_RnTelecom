@@ -12,7 +12,8 @@ using GestaoEstoqueRN.DAO;
 using GestaoEstoqueRN.Model;
 using GestaoEstoqueRN.Services;
 using GestaoEstoqueRN.Views;
-using MySql.Data.MySqlClient;
+//using MySql.Data.MySqlClient;
+using MySqlConnector;
 
 namespace GestaoEstoqueRN
 {
@@ -118,6 +119,10 @@ namespace GestaoEstoqueRN
                 btnExcluir.Enabled = false;
                 btnExportar.Enabled = false;
                 btnEditar.Enabled = false;
+            }
+            if (Usuario.Cargo == "OP")
+            {
+                btnExcluir.Enabled = false;
             }
         }
 

@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 using GestaoEstoqueRN.DAO;
 using GestaoEstoqueRN.Helper;
 using GestaoEstoqueRN.Model;
-using MySql.Data.MySqlClient;
+//using MySql.Data.MySqlClient;
+using MySqlConnector;
 
 namespace GestaoEstoqueRN.Controller
 {
@@ -30,9 +31,9 @@ namespace GestaoEstoqueRN.Controller
                             if (reader.Read())
                             {
                                 string senhaHashBanco = reader["Senha"].ToString();
-                                string senhaHashDigitada = Criptografia.GerarHashSHA256(senha);
+                                //string senhaHashDigitada = Criptografia.GerarHashSHA256(senha);
 
-                                if (senhaHashBanco == senhaHashDigitada)
+                                if (senhaHashBanco == senha)
                                 {
                                     int idUsuario = Convert.ToInt32(reader["IdUsuario"]);
                                     string cargoUsuario = reader["Cargo"].ToString();

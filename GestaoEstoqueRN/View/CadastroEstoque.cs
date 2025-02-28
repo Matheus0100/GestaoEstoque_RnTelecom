@@ -11,7 +11,8 @@ using GestaoEstoqueRN.DAO;
 using GestaoEstoqueRN.Helper;
 using GestaoEstoqueRN.Model;
 using GestaoEstoqueRN.Services;
-using MySql.Data.MySqlClient;
+//using MySql.Data.MySqlClient;
+using MySqlConnector;
 
 namespace GestaoEstoqueRN.Views
 {

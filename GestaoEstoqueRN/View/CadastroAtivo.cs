@@ -11,8 +11,9 @@ using GestaoEstoqueRN.DAO;
 using GestaoEstoqueRN.Helper;
 using GestaoEstoqueRN.Model;
 using GestaoEstoqueRN.Services;
-using MySql.Data.MySqlClient;
-using Org.BouncyCastle.Asn1.Cmp;
+//using MySql.Data.MySqlClient;
+using MySqlConnector;
+//using Org.BouncyCastle.Asn1.Cmp;
 
 namespace GestaoEstoqueRN.Views
 {

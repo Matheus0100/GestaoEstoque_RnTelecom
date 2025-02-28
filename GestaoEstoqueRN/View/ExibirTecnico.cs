@@ -13,7 +13,8 @@ using GestaoEstoqueRN.DAO;
 using GestaoEstoqueRN.Model;
 using GestaoEstoqueRN.Services;
 using GestaoEstoqueRN.Views;
-using MySql.Data.MySqlClient;
+//using MySql.Data.MySqlClient;
+using MySqlConnector;
 
 namespace GestaoEstoqueRN
 {
@@ -59,7 +60,7 @@ namespace GestaoEstoqueRN
                         "emuso.QtdProduto, emuso.Associado FROM emuso " +
                         "LEFT JOIN produtos ON emuso.IdProduto = produtos.IdProduto " +
                         "LEFT JOIN ativos ON emuso.IdAtivo = ativos.IdAtivo " +
-                        "WHERE DATE(emuso.DataUso) = @Data AND ";
+                        "WHERE DATE(emuso.DataUso) = @Data";
 
                     using (MySqlCommand cmd = new MySqlCommand(query, conn))
                     {
@@ -263,11 +264,11 @@ namespace GestaoEstoqueRN
                 }
                 if (e.ColumnIndex == dataGridView1.Columns["ButtonColumnOk"].Index && e.RowIndex >= 0)
                 {
+                    
+                    int idEmUso = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells["Id"].Value);
+                    string itemRelacionado = dataGridView1.Rows[e.RowIndex].Cells["ItemRelacionado"].Value.ToString();
                     try
                     {
-                        int idEmUso = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells["Id"].Value);
-                        string itemRelacionado = dataGridView1.Rows[e.RowIndex].Cells["ItemRelacionado"].Value.ToString();
-
                         using (MySqlConnection connection = new MySqlConnection(Database.conn))
                         {
                             connection.Open();
