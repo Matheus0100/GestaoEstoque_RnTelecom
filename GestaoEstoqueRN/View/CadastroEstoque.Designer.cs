@@ -41,7 +41,6 @@
             label10 = new Label();
             dtpDataGarantia = new DateTimePicker();
             dtpDataCompra = new DateTimePicker();
-            txtMarca = new TextBox();
             txtModelo = new TextBox();
             nudPreco = new NumericUpDown();
             nudQtdEstoque = new NumericUpDown();
@@ -49,6 +48,7 @@
             label11 = new Label();
             cboTipo = new ComboBox();
             btnCadastrar = new Button();
+            cboMarca = new ComboBox();
             ((System.ComponentModel.ISupportInitialize)nudPreco).BeginInit();
             ((System.ComponentModel.ISupportInitialize)nudQtdEstoque).BeginInit();
             SuspendLayout();
@@ -76,7 +76,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Arial", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label2.Font = new Font("Arial", 11.25F, FontStyle.Bold);
             label2.ForeColor = SystemColors.Control;
             label2.Location = new Point(62, 140);
             label2.Name = "label2";
@@ -87,7 +87,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Font = new Font("Arial", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label3.Font = new Font("Arial", 11.25F, FontStyle.Bold);
             label3.ForeColor = SystemColors.Control;
             label3.Location = new Point(351, 140);
             label3.Name = "label3";
@@ -98,7 +98,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Font = new Font("Arial", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label4.Font = new Font("Arial", 11.25F, FontStyle.Bold);
             label4.ForeColor = SystemColors.Control;
             label4.Location = new Point(63, 215);
             label4.Name = "label4";
@@ -109,7 +109,7 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Font = new Font("Arial", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label5.Font = new Font("Arial", 11.25F, FontStyle.Bold);
             label5.ForeColor = SystemColors.Control;
             label5.Location = new Point(62, 351);
             label5.Name = "label5";
@@ -120,7 +120,7 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Font = new Font("Arial", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label6.Font = new Font("Arial", 11.25F, FontStyle.Bold);
             label6.ForeColor = SystemColors.Control;
             label6.Location = new Point(351, 351);
             label6.Name = "label6";
@@ -131,7 +131,7 @@
             // label7
             // 
             label7.AutoSize = true;
-            label7.Font = new Font("Arial", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label7.Font = new Font("Arial", 11.25F, FontStyle.Bold);
             label7.ForeColor = SystemColors.Control;
             label7.Location = new Point(351, 215);
             label7.Name = "label7";
@@ -142,7 +142,7 @@
             // label8
             // 
             label8.AutoSize = true;
-            label8.Font = new Font("Arial", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label8.Font = new Font("Arial", 11.25F, FontStyle.Bold);
             label8.ForeColor = SystemColors.Control;
             label8.Location = new Point(62, 283);
             label8.Name = "label8";
@@ -153,7 +153,7 @@
             // label9
             // 
             label9.AutoSize = true;
-            label9.Font = new Font("Arial", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label9.Font = new Font("Arial", 11.25F, FontStyle.Bold);
             label9.ForeColor = SystemColors.Control;
             label9.Location = new Point(351, 283);
             label9.Name = "label9";
@@ -164,7 +164,7 @@
             // label10
             // 
             label10.AutoSize = true;
-            label10.Font = new Font("Arial", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label10.Font = new Font("Arial", 11.25F, FontStyle.Bold);
             label10.ForeColor = SystemColors.Control;
             label10.Location = new Point(62, 416);
             label10.Name = "label10";
@@ -187,16 +187,6 @@
             dtpDataCompra.Name = "dtpDataCompra";
             dtpDataCompra.Size = new Size(213, 23);
             dtpDataCompra.TabIndex = 38;
-            // 
-            // txtMarca
-            // 
-            txtMarca.Location = new Point(351, 161);
-            txtMarca.Margin = new Padding(4, 3, 4, 3);
-            txtMarca.Multiline = true;
-            txtMarca.Name = "txtMarca";
-            txtMarca.PlaceholderText = "INSERIR";
-            txtMarca.Size = new Size(212, 23);
-            txtMarca.TabIndex = 39;
             // 
             // txtModelo
             // 
@@ -237,7 +227,7 @@
             // label11
             // 
             label11.AutoSize = true;
-            label11.Font = new Font("Arial", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label11.Font = new Font("Arial", 11.25F, FontStyle.Bold);
             label11.ForeColor = SystemColors.Control;
             label11.Location = new Point(62, 70);
             label11.Name = "label11";
@@ -255,7 +245,7 @@
             // 
             // btnCadastrar
             // 
-            btnCadastrar.Font = new Font("Segoe UI", 13F, FontStyle.Bold, GraphicsUnit.Point);
+            btnCadastrar.Font = new Font("Segoe UI", 13F, FontStyle.Bold);
             btnCadastrar.ForeColor = Color.Black;
             btnCadastrar.Image = Properties.Resources.save_outline1;
             btnCadastrar.ImageAlign = ContentAlignment.MiddleLeft;
@@ -269,12 +259,21 @@
             btnCadastrar.UseVisualStyleBackColor = true;
             btnCadastrar.Click += btnCadastrar_Click;
             // 
+            // cboMarca
+            // 
+            cboMarca.FormattingEnabled = true;
+            cboMarca.Location = new Point(350, 161);
+            cboMarca.Name = "cboMarca";
+            cboMarca.Size = new Size(213, 23);
+            cboMarca.TabIndex = 50;
+            // 
             // CadastroEstoque
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Maroon;
             ClientSize = new Size(618, 595);
+            Controls.Add(cboMarca);
             Controls.Add(btnCadastrar);
             Controls.Add(cboTipo);
             Controls.Add(txtNome);
@@ -282,7 +281,6 @@
             Controls.Add(nudQtdEstoque);
             Controls.Add(nudPreco);
             Controls.Add(txtModelo);
-            Controls.Add(txtMarca);
             Controls.Add(dtpDataCompra);
             Controls.Add(dtpDataGarantia);
             Controls.Add(label10);
@@ -328,7 +326,6 @@
         private Label label10;
         private DateTimePicker dtpDataGarantia;
         private DateTimePicker dtpDataCompra;
-        private TextBox txtMarca;
         private TextBox txtModelo;
         //private TextBox txtTipo;
         private NumericUpDown nudPreco;
@@ -337,5 +334,6 @@
         private Label label11;
         private ComboBox cboTipo;
         public Button btnCadastrar;
+        private ComboBox cboMarca;
     }
 }

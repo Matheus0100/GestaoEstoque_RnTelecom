@@ -30,6 +30,7 @@ namespace GestaoEstoqueRN.View
             string cpfCnpj = txtCpfCnpj.Text.Trim().Replace(".", "").Replace("-", "").Replace("/", "");
             string rg = txtRg.Text.Trim().Replace(".", "").Replace("-", "");
             string genero = cboGenero.Text == "-- Selecione --" ? "" : cboGenero.Text;
+            string empresa = cboEmpresa.Text == "-- Selecione --" ? "" : cboEmpresa.Text;
             DateTime dataNasc = dtpDataNascimento.Value;
             string cep = txtCep.Text.Trim().Replace("-", "");
             string endereco = txtEndereco.Text.Trim();
@@ -55,8 +56,8 @@ namespace GestaoEstoqueRN.View
                 {
                     connection.Open();
 
-                    string query = @"INSERT INTO clientes (Nome, Telefone, Codigo, Tipo, CpfCnpj, Rg, Genero, DataNasc, Cep, Endereco, Cidade, Bairro) 
-                             VALUES (@Nome, @Telefone, @Codigo, @Tipo, @CpfCnpj, @Rg, @Genero, @DataNasc, @Cep, @Endereco, @Cidade, @Bairro)";
+                    string query = @"INSERT INTO clientes (Nome, Telefone, Codigo, Tipo, CpfCnpj, Rg, Genero, DataNasc, Cep, Endereco, Cidade, Bairro, Empresa) 
+                             VALUES (@Nome, @Telefone, @Codigo, @Tipo, @CpfCnpj, @Rg, @Genero, @DataNasc, @Cep, @Endereco, @Cidade, @Bairro, @Empresa)";
 
                     using (MySqlCommand command = new MySqlCommand(query, connection))
                     {
@@ -73,6 +74,7 @@ namespace GestaoEstoqueRN.View
                         command.Parameters.AddWithValue("@Endereco", string.IsNullOrEmpty(endereco) ? DBNull.Value : (object)endereco);
                         command.Parameters.AddWithValue("@Cidade", string.IsNullOrEmpty(cidade) ? DBNull.Value : (object)cidade);
                         command.Parameters.AddWithValue("@Bairro", string.IsNullOrEmpty(bairro) ? DBNull.Value : (object)bairro);
+                        command.Parameters.AddWithValue("@Empresa", string.IsNullOrEmpty(empresa) ? DBNull.Value : (object)empresa);
 
                         command.ExecuteNonQuery();
                     }
@@ -101,12 +103,14 @@ namespace GestaoEstoqueRN.View
             txtEndereco.Clear();
             txtCidade.Clear();
             txtBairro.Clear();
+            cboEmpresa.SelectedIndex = 0;
         }
 
         private void CadastroCliente_Load(object sender, EventArgs e)
         {
             Combos.PreencherComboBox(cboTipo, "tipocliente", "IdTipoCliente", "NomeTipoCliente");
             Combos.PreencherComboBox(cboGenero, "tipogenero", "IdTipoGenero", "NomeTipoGenero");
+            Combos.PreencherComboBox(cboEmpresa, "empresas", "IdEmpresa", "NomeEmpresa");
         }
     }
 }

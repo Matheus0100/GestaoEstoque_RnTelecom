@@ -47,7 +47,7 @@ namespace GestaoEstoqueRN.Views
                                 nudValor.Value = reader["Preco"] != DBNull.Value ? Convert.ToDecimal(reader["Preco"]) : 0;
                                 txtSerial.Text = reader["Serial"] != DBNull.Value ? reader["Serial"].ToString() : string.Empty;
                                 cboAtivo.Text = reader["Tipo"] != DBNull.Value ? reader["Tipo"].ToString() : string.Empty;
-                                txtMarca.Text = reader["Marca"] != DBNull.Value ? reader["Marca"].ToString() : string.Empty;
+                                cboMarca.Text = reader["Marca"] != DBNull.Value ? reader["Marca"].ToString() : string.Empty;
                                 txtModelo.Text = reader["Modelo"] != DBNull.Value ? reader["Modelo"].ToString() : string.Empty;
                                 dtpDataGarantia.Value = reader["DataGarantia"] != DBNull.Value ? Convert.ToDateTime(reader["DataGarantia"]) : DateTime.Now;
                                 txtNotaFiscal.Text = reader["NotaFiscal"] != DBNull.Value ? reader["NotaFiscal"].ToString() : string.Empty;
@@ -80,8 +80,8 @@ namespace GestaoEstoqueRN.Views
             string descricao = txtObservacao.Text.Trim();
             decimal preco = nudValor.Value;
             string serial = txtSerial.Text.Trim();
-            string tipo = cboAtivo.Text.Trim();
-            string marca = txtMarca.Text.Trim();
+            string tipo = cboAtivo.Text == "-- Selecione --" ? "" : cboAtivo.Text;
+            string marca = cboMarca.Text == "-- Selecione --" ? "" : cboMarca.Text;
             string modelo = txtModelo.Text.Trim();
             DateTime dataGarantia = dtpDataGarantia.Value;
             string notaFiscal = txtNotaFiscal.Text.Trim();
@@ -210,12 +210,12 @@ namespace GestaoEstoqueRN.Views
         }
         private void LimparCampos()
         {
-            cboAtivo.SelectedIndex = -1;
+            cboAtivo.SelectedIndex = 0;
             txtObservacao.Clear();
             nudValor.Value = 0;
             txtPatrimonio.ResetText();
             txtSerial.ResetText();
-            txtMarca.Clear();
+            cboMarca.SelectedIndex = 0;
             txtModelo.Clear();
             dtpDataGarantia.Value = DateTime.Now;
             txtNotaFiscal.Clear();
@@ -239,6 +239,8 @@ namespace GestaoEstoqueRN.Views
         private void CadastroAtivo_Load(object sender, EventArgs e)
         {
             Combos.PreencherComboBox(cboAtivo, "tipoativo", "IdTipoAtivo", "NomeTipoAtivo");
+            Combos.PreencherComboBox(cboMarca,"tipomarca", "IdTipoMarca", "NomeTipoMarca");
+
             if (idAtivo.HasValue)
             {
                 CarregarDadosDoBanco(idAtivo.Value);

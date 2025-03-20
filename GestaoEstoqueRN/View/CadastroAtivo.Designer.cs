@@ -48,18 +48,18 @@
             txtPatrimonio = new TextBox();
             txtNotaFiscal = new TextBox();
             txtModelo = new TextBox();
-            txtMarca = new TextBox();
             nudValor = new NumericUpDown();
             label1 = new Label();
             cboStatus = new ComboBox();
             txtLocalizacao = new TextBox();
             lblLocalizacao = new Label();
+            cboMarca = new ComboBox();
             ((System.ComponentModel.ISupportInitialize)nudValor).BeginInit();
             SuspendLayout();
             // 
             // btnCadastrar
             // 
-            btnCadastrar.Font = new Font("Segoe UI", 13F, FontStyle.Bold, GraphicsUnit.Point);
+            btnCadastrar.Font = new Font("Segoe UI", 13F, FontStyle.Bold);
             btnCadastrar.ForeColor = Color.Black;
             btnCadastrar.Image = Properties.Resources.save_outline1;
             btnCadastrar.ImageAlign = ContentAlignment.MiddleLeft;
@@ -104,7 +104,7 @@
             // 
             // btnRetorno
             // 
-            btnRetorno.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            btnRetorno.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             btnRetorno.ForeColor = Color.Black;
             btnRetorno.Location = new Point(420, 14);
             btnRetorno.Margin = new Padding(4, 3, 4, 3);
@@ -135,7 +135,7 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Font = new Font("Arial", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label6.Font = new Font("Arial", 11.25F, FontStyle.Bold);
             label6.ForeColor = SystemColors.Control;
             label6.Location = new Point(328, 349);
             label6.Name = "label6";
@@ -146,7 +146,7 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Font = new Font("Arial", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label5.Font = new Font("Arial", 11.25F, FontStyle.Bold);
             label5.ForeColor = SystemColors.Control;
             label5.Location = new Point(328, 433);
             label5.Name = "label5";
@@ -157,7 +157,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Arial", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label2.Font = new Font("Arial", 11.25F, FontStyle.Bold);
             label2.ForeColor = SystemColors.Control;
             label2.Location = new Point(63, 349);
             label2.Name = "label2";
@@ -168,7 +168,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Font = new Font("Arial", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label3.Font = new Font("Arial", 11.25F, FontStyle.Bold);
             label3.ForeColor = SystemColors.Control;
             label3.Location = new Point(328, 263);
             label3.Name = "label3";
@@ -179,7 +179,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Font = new Font("Arial", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label4.Font = new Font("Arial", 11.25F, FontStyle.Bold);
             label4.ForeColor = SystemColors.Control;
             label4.Location = new Point(328, 177);
             label4.Name = "label4";
@@ -190,7 +190,7 @@
             // label7
             // 
             label7.AutoSize = true;
-            label7.Font = new Font("Arial", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label7.Font = new Font("Arial", 11.25F, FontStyle.Bold);
             label7.ForeColor = SystemColors.Control;
             label7.Location = new Point(63, 263);
             label7.Name = "label7";
@@ -201,7 +201,7 @@
             // label8
             // 
             label8.AutoSize = true;
-            label8.Font = new Font("Arial", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label8.Font = new Font("Arial", 11.25F, FontStyle.Bold);
             label8.ForeColor = SystemColors.Control;
             label8.Location = new Point(63, 90);
             label8.Name = "label8";
@@ -212,7 +212,7 @@
             // label9
             // 
             label9.AutoSize = true;
-            label9.Font = new Font("Arial", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label9.Font = new Font("Arial", 11.25F, FontStyle.Bold);
             label9.ForeColor = SystemColors.Control;
             label9.Location = new Point(328, 90);
             label9.Name = "label9";
@@ -223,7 +223,7 @@
             // label10
             // 
             label10.AutoSize = true;
-            label10.Font = new Font("Arial", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label10.Font = new Font("Arial", 11.25F, FontStyle.Bold);
             label10.ForeColor = SystemColors.Control;
             label10.Location = new Point(63, 177);
             label10.Name = "label10";
@@ -234,7 +234,7 @@
             // label11
             // 
             label11.AutoSize = true;
-            label11.Font = new Font("Arial", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label11.Font = new Font("Arial", 11.25F, FontStyle.Bold);
             label11.ForeColor = SystemColors.Control;
             label11.Location = new Point(63, 433);
             label11.Name = "label11";
@@ -272,16 +272,6 @@
             txtModelo.Size = new Size(215, 23);
             txtModelo.TabIndex = 67;
             // 
-            // txtMarca
-            // 
-            txtMarca.Location = new Point(328, 111);
-            txtMarca.Margin = new Padding(4, 3, 4, 3);
-            txtMarca.Multiline = true;
-            txtMarca.Name = "txtMarca";
-            txtMarca.PlaceholderText = "INSERIR";
-            txtMarca.Size = new Size(215, 23);
-            txtMarca.TabIndex = 68;
-            // 
             // nudValor
             // 
             nudValor.DecimalPlaces = 2;
@@ -294,7 +284,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Arial", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.Font = new Font("Arial", 11.25F, FontStyle.Bold);
             label1.ForeColor = SystemColors.Control;
             label1.Location = new Point(63, 14);
             label1.Name = "label1";
@@ -327,7 +317,7 @@
             // lblLocalizacao
             // 
             lblLocalizacao.AutoSize = true;
-            lblLocalizacao.Font = new Font("Arial", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            lblLocalizacao.Font = new Font("Arial", 11.25F, FontStyle.Bold);
             lblLocalizacao.ForeColor = SystemColors.Control;
             lblLocalizacao.Location = new Point(328, 515);
             lblLocalizacao.Name = "lblLocalizacao";
@@ -336,18 +326,27 @@
             lblLocalizacao.Text = "LOCALIZAÇÃO";
             lblLocalizacao.Visible = false;
             // 
+            // cboMarca
+            // 
+            cboMarca.FormattingEnabled = true;
+            cboMarca.Location = new Point(328, 111);
+            cboMarca.Margin = new Padding(4, 3, 4, 3);
+            cboMarca.Name = "cboMarca";
+            cboMarca.Size = new Size(215, 23);
+            cboMarca.TabIndex = 74;
+            // 
             // CadastroAtivo
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Maroon;
             ClientSize = new Size(607, 589);
+            Controls.Add(cboMarca);
             Controls.Add(txtLocalizacao);
             Controls.Add(lblLocalizacao);
             Controls.Add(label1);
             Controls.Add(cboStatus);
             Controls.Add(nudValor);
-            Controls.Add(txtMarca);
             Controls.Add(txtModelo);
             Controls.Add(txtNotaFiscal);
             Controls.Add(txtPatrimonio);
@@ -401,7 +400,6 @@
         private TextBox txtPatrimonio;
         private TextBox txtNotaFiscal;
         private TextBox txtModelo;
-        private TextBox txtMarca;
         private NumericUpDown nudValor;
         public Button btnCadastrar;
         public Button btnRetorno;
@@ -410,5 +408,6 @@
         public TextBox txtLocalizacao;
         public Label lblLocalizacao;
         private Label label12;
+        private ComboBox cboMarca;
     }
 }
