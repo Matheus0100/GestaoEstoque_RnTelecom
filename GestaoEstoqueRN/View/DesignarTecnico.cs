@@ -160,7 +160,7 @@ namespace GestaoEstoqueRN.Views
         private void DesignarTecnico_Load(object sender, EventArgs e)
         {
             dtpDataUso.Value = DateTime.Now;
-            Combos.PreencherComboBox(cboRadu, "usuarios", "IdUsuario", "Usuario","Cargo","TC");
+            Combos.PreencherComboBox(cboRadu, "usuarios", "IdUsuario", "Nome","Cargo","TC");
             Combos.PreencherComboBox(cboProduto, "produtos", "IdProduto", "Nome","Status","1");
             Combos.PreencherComboBox(cboAtivo, "ativos", "IdAtivo", "Patrimonio","Status","1");
             Combos.PreencherComboBox(txtAssociado,"clientes","IdCliente","Nome");

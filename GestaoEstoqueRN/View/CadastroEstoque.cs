@@ -98,13 +98,13 @@ namespace GestaoEstoqueRN.Views
                               SET Nome = @Nome, Descricao = @Descricao, Preco = @Preco, 
                                   QtdEstoque = @QtdEstoque, Tipo = @Tipo, Marca = @Marca, 
                                   Modelo = @Modelo, DataGarantia = @DataGarantia, 
-                                  NotaFiscal = @NotaFiscal, DataCompra = @DataCompra 
+                                  NotaFiscal = @NotaFiscal, DataCompra = @DataCompra, Status = 1 
                               WHERE IdProduto = @IdProduto";
                     }
                     else
                     {
-                        query = @"INSERT INTO produtos (Nome, Descricao, Preco, QtdEstoque, Tipo, Marca, Modelo, DataGarantia, NotaFiscal, DataCompra) 
-                              VALUES (@Nome, @Descricao, @Preco, @QtdEstoque, @Tipo, @Marca, @Modelo, @DataGarantia, @NotaFiscal, @DataCompra)";
+                        query = @"INSERT INTO produtos (Nome, Descricao, Preco, QtdEstoque, Tipo, Marca, Modelo, DataGarantia, NotaFiscal, DataCompra, Status) 
+                              VALUES (@Nome, @Descricao, @Preco, @QtdEstoque, @Tipo, @Marca, @Modelo, @DataGarantia, @NotaFiscal, @DataCompra, 1)";
                     }
 
                     using (MySqlCommand command = new MySqlCommand(query, connection))

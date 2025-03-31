@@ -149,7 +149,7 @@ namespace GestaoEstoqueRN
         private void button1_Click(object sender, EventArgs e)
         {
             CadastroEstoque frmCadastroEstoque = new();
-            frmCadastroEstoque.Text = "Cadastro de Estoque";
+            frmCadastroEstoque.Text = "LANÇAMENTO DE ITENS - ESTOQUE";
             frmCadastroEstoque.Show();
             ConfigurarDataGridView();
             CarregarDados();

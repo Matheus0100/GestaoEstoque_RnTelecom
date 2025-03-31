@@ -283,7 +283,7 @@ namespace GestaoEstoqueRN
         private void btnAdicionar_Click(object sender, EventArgs e)
         {
             CadastroAtivo frmCadastroAtivo = new();
-            frmCadastroAtivo.Text = "Cadastro de Ativo";
+            frmCadastroAtivo.Text = "LANÇAMENTO DE EQUIPAMENTOS - ATIVOS";
             frmCadastroAtivo.Show();
             ConfigurarDataGridView();
             CarregarDados();
