@@ -57,6 +57,12 @@ namespace GestaoEstoqueRN.Views
                 return;
             }
 
+            if(qtdProduto <= 0)
+            {
+                MessageBox.Show("A quantidade não pode ser menor que 1.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             try
             {
                 using (MySqlConnection connection = new MySqlConnection(Database.conn))
@@ -66,7 +72,7 @@ namespace GestaoEstoqueRN.Views
 
                     try
                     {
-                        string query = @"INSERT INTO emuso (IdProduto, IdAtivo, DataUso, Radu, QtdProduto, Descricao, Associado)
+                        string query = @"INSERT INTO emuso (IdProduto, IdAtivo, DataUso, Radu, QtdProduto, Descricao)
                                  VALUES (@IdProduto, @IdAtivo, @DataUso, @Radu, @QtdProduto, @Descricao)";
 
                         using (MySqlCommand command = new MySqlCommand(query, connection, transaction))

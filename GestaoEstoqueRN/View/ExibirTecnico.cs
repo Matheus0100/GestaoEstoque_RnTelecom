@@ -60,7 +60,7 @@ namespace GestaoEstoqueRN
                         "emuso.QtdProduto, emuso.Associado FROM emuso " +
                         "LEFT JOIN produtos ON emuso.IdProduto = produtos.IdProduto " +
                         "LEFT JOIN ativos ON emuso.IdAtivo = ativos.IdAtivo " +
-                        "WHERE DATE(emuso.DataUso) = @Data";
+                        "WHERE DATE(emuso.DataUso) = @Data AND emuso.Confirmado <> 1";
 
                     using (MySqlCommand cmd = new MySqlCommand(query, conn))
                     {
@@ -264,7 +264,7 @@ namespace GestaoEstoqueRN
                 }
                 if (e.ColumnIndex == dataGridView1.Columns["ButtonColumnOk"].Index && e.RowIndex >= 0)
                 {
-                    
+
                     int idEmUso = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells["Id"].Value);
                     string itemRelacionado = dataGridView1.Rows[e.RowIndex].Cells["ItemRelacionado"].Value.ToString();
                     try
@@ -326,6 +326,11 @@ namespace GestaoEstoqueRN
         private bool IsNumero(string texto)
         {
             return texto.All(char.IsDigit);
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            CarregarDados();
         }
     }
 }
